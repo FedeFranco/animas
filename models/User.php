@@ -2,7 +2,9 @@
 
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+use dektrium\user\models\User as BaseUser;
+
+class User extends BaseUser
 {
     public $id;
     public $username;
