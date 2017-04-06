@@ -21,7 +21,7 @@ create table publicaciones(
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on
-                delete no action on update cascade
+                delete set null on update cascade
 
 );
 
