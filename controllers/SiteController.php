@@ -8,6 +8,9 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Publicacion;
+use yii\data\ActiveDataProvider;
+use app\models\PublicacionSearch;
 
 class SiteController extends Controller
 {
@@ -60,7 +63,13 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new PublicacionSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'dataProvider' => $dataProvider,
+        ]);
+
     }
 
     /**
@@ -122,4 +131,5 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
 }

@@ -16,9 +16,15 @@ create table alertas (
 drop table if exists publicaciones cascade;
 create table publicaciones(
     id bigserial constraint pk_publicaciones primary key,
+    cuerpo text not null,
+    titulo varchar(50) not null,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on
                 delete no action on update cascade
 
 );
+
+insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
+                                                    ('ACOGIDA'),
+                                                        ('APADRINAMIENTO');

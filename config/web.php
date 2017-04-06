@@ -26,9 +26,9 @@ $config = [
             ],
             'modelMap' => [
                 'Profile' => 'app\models\Profile',
+                'User' => 'app\models\User',
                 //'SettingsForm' => 'app\models\SettingsForm',
                 //'Module' => 'app\models\Module',
-                //'User' => 'app\models\User',
             ],
 
         ],

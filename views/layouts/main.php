@@ -27,9 +27,9 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     $items = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
+        ['label' => 'Inicio', 'url' => ['/site/index']],
+        ['label' => 'Sobre Animas', 'url' => ['/site/about']],
+        ['label' => 'Contacta con nosotros', 'url' => ['/site/contact']],
         Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'items' =>[['label' => 'Loguearse',
                                         'url' => ['/user/security/login']],
@@ -48,8 +48,10 @@ AppAsset::register($this);
     if (!(Yii::$app->user->isGuest)) {
 
          array_unshift($items, ['label' => 'Mi Perfil', 'url' => ['/user/profile'/* . Yii::$app->user->id*/]]);
-          array_unshift($items, ['label' => 'Configuración',  'url' => ['/user/settings/profile']]);
-     }
+         array_unshift($items, ['label' => 'Configuración',  'url' => ['/user/settings/profile']]);
+         array_unshift($items, ['label' => 'Publicar',  'url' => ['/publicaciones/create']]);
+    }
+
     NavBar::begin([
         'brandLabel' => 'My Company',
         'brandUrl' => Yii::$app->homeUrl,
