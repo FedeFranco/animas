@@ -25,12 +25,12 @@ class PublicacionesController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index'],
+                //'only' => [],
                 'rules' => [
                     [
                         'actions' => ['create', 'index'],
                         'allow' => true,
-                        'roles' => ['?'],
+                        'roles' => ['@'],
                     ],
                 ],
             ],
