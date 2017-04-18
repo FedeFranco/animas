@@ -25,7 +25,7 @@ class PublicacionesController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                //'only' => [],
+                'only' => ['create', 'index'],
                 'rules' => [
                     [
                         'actions' => ['create', 'index'],
