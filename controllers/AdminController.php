@@ -7,6 +7,6 @@ class AdminController extends BaseAdminController
 {
     public function actionDelete($id)
     {
-        var_dump($id); die();
+        //var_dump($id); die();
     }
 }  ?>

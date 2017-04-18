@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Publicacion;
+use yii\filters\AccessControl;
 use app\models\Categoria;
 use app\models\PublicacionSearch;
 use yii\web\Controller;
@@ -22,6 +23,18 @@ class PublicacionesController extends Controller
     public function behaviors()
     {
         return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'index'],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'index'],
+                        'allow' => true,
+                        'roles' => ['?'],
+                    ],
+                ],
+            ],
+
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -69,7 +82,7 @@ class PublicacionesController extends Controller
 
 
         if ($model->load(Yii::$app->request->post())) {
-        
+
             $model->usuario_id = Yii::$app->user->id;
             if($model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
