@@ -100,8 +100,8 @@ $config = [
         ],
         */
     ],
+    'language' => 'es_ES',
     'params' => $params,
-    'language' => 'es_ES'
 ];
 
 if (YII_ENV_DEV) {
