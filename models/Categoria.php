@@ -43,7 +43,7 @@ class Categoria extends \yii\db\ActiveRecord
         ];
     }
 
-    public function getPublicaciones()
+    public function getPublicacion()
     {
         return $this->hasMany(Publicacion::className(), ['categoria_id' => 'id'])->inverseOf('categoria');
     }

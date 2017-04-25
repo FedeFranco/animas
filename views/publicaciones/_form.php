@@ -17,11 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'cuerpo')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'categoria_id')->dropDownList($categorias)/*textInput()*/ ?>
+    <div>
+        <i>
+            Puede adjuntar un enlace con contenido similar a tu publicación
+        </i>
+    </div>
+    <?= $form->field($model, 'url')?>
+
+    <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Update',
+         ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -37,8 +37,9 @@ class Publicacion extends \yii\db\ActiveRecord
         return [
             [['cuerpo', 'titulo'], 'required'],
             [['cuerpo','categor_nom'], 'string'],
-            [['categor_nom'], 'safe'],
+            [['categor_nom','url'], 'safe'],
             [['categoria_id', 'usuario_id'], 'integer'],
+            [['url'],'url'],
             [['titulo'], 'string', 'max' => 50],
             [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
             [['usuario_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_id' => 'id']],
@@ -55,6 +56,7 @@ class Publicacion extends \yii\db\ActiveRecord
             'cuerpo' => 'Cuerpo',
             'titulo' => 'Titulo',
             'categor_nom' => 'Categoría',
+            'url' => 'URL',
             'categoria_id' => 'Categoria ID',
             'usuario_id' => 'Usuario ID',
         ];

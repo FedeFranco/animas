@@ -84,6 +84,7 @@ class PublicacionesController extends Controller
         if ($model->load(Yii::$app->request->post())) {
 
             $model->usuario_id = Yii::$app->user->id;
+            //var_dump($model->url); die();
             if($model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }

@@ -31,7 +31,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'cuerpo:ntext',
             'titulo',
-            'categoria_id',
+            'categoria.nombre_categoria',
+            'url',
             'usuario.username',
         ],
     ]) ?>
