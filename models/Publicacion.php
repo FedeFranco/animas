@@ -23,6 +23,7 @@ class Publicacion extends \yii\db\ActiveRecord
      */
 
      public $categor_nom;
+     public $confirm_pub = false;
 
     public static function tableName()
     {
@@ -35,7 +36,8 @@ class Publicacion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cuerpo', 'titulo'], 'required'],
+            [['cuerpo', 'titulo','confirm_pub'], 'required'],
+            [['confirm_pub'], 'boolean'],
             [['cuerpo','categor_nom'], 'string'],
             [['categor_nom','url'], 'safe'],
             [['categoria_id', 'usuario_id'], 'integer'],
@@ -57,6 +59,7 @@ class Publicacion extends \yii\db\ActiveRecord
             'titulo' => 'Titulo',
             'categor_nom' => 'Categoría',
             'url' => 'URL',
+            'confirm_pub' => 'He leído las normas de publicación',
             'categoria_id' => 'Categoria ID',
             'usuario_id' => 'Usuario ID',
         ];

@@ -6,7 +6,14 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 /* @var $form yii\widgets\ActiveForm */
-
+$this->registerJs("$('#botonpub').hide();
+$('#checknormas').click(function(){if($(this).prop('checked')){
+                                        $('#botonpub').css('display','block');
+                                    } else {
+                                        $('#botonpub').hide();
+                                    }
+                        })
+");
 ?>
 
 <div class="publicacion-form">
@@ -24,12 +31,15 @@ use yii\widgets\ActiveForm;
     </div>
     <?= $form->field($model, 'url')?>
 
+    <?= Html::a('Normas de publicaciones', ['publicaciones/normas']) ?>
+    <?= $form->field($model, 'confirm_pub')->checkbox(['id'=>'checknormas'])?>
+
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
-
     <div class="form-group">
+
         <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Update',
-         ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+         ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary', 'id' => 'botonpub']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
