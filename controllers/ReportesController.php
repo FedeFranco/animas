@@ -3,38 +3,24 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Publicacion;
-use yii\filters\AccessControl;
-use app\models\Categoria;
-use app\models\PublicacionSearch;
+use app\models\Reporte;
+use app\models\ReporteSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Publicacion;
 
 /**
- * PublicacionesController implements the CRUD actions for Publicacion model.
+ * ReportesController implements the CRUD actions for Reporte model.
  */
-class PublicacionesController extends Controller
+class ReportesController extends Controller
 {
     /**
      * @inheritdoc
      */
-     public $categorias = [];
     public function behaviors()
     {
         return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['create', 'index'],
-                'rules' => [
-                    [
-                        'actions' => ['create', 'index'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -45,12 +31,12 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Lists all Publicacion models.
+     * Lists all Reporte models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PublicacionSearch();
+        $searchModel = new ReporteSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -60,7 +46,7 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Displays a single Publicacion model.
+     * Displays a single Reporte model.
      * @param integer $id
      * @return mixed
      */
@@ -72,35 +58,29 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Creates a new Publicacion model.
+     * Creates a new Reporte model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id)
     {
-        $model = new Publicacion();
+        $model = new Reporte();
+        $model->reportador_id = Yii::$app->user->id;
+        $model->reportado_id = Publicacion::findOne($id)->usuario->id;
+        $model->publicacion_id = $id;
 
 
-        if ($model->load(Yii::$app->request->post())) {
-
-            $model->usuario_id = Yii::$app->user->id;
-            //var_dump($model->url); die();
-            if($model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
-        }
-
         } else {
-            $categorias = Categoria::find()->select('nombre_categoria, id')->indexBy('id')->column();
-
             return $this->render('create', [
                 'model' => $model,
-                'categorias' => $categorias,
             ]);
         }
     }
 
     /**
-     * Updates an existing Publicacion model.
+     * Updates an existing Reporte model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -119,7 +99,7 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Deletes an existing Publicacion model.
+     * Deletes an existing Reporte model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -131,22 +111,16 @@ class PublicacionesController extends Controller
         return $this->redirect(['index']);
     }
 
-    public function actionNormas()
-    {
-        return $this->render('normas');
-    }
-
-
     /**
-     * Finds the Publicacion model based on its primary key value.
+     * Finds the Reporte model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Publicacion the loaded model
+     * @return Reporte the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Publicacion::findOne($id)) !== null) {
+        if (($model = Reporte::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

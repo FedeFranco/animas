@@ -18,6 +18,20 @@
                 <?= $model->titulo?>
               </h4>
              <?= $model->cuerpo?>
+             <div class="row">
+                 <div class="col-md-2">
+                    Por <?= $model->usuario->username?>
+                 </div>
+                 <div class="col-md-2">
+                     <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
+                         'class' => 'btn btn-danger',
+                         'data' => [
+                             'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
+                             'method' => 'post',
+                         ],
+                     ]) ?>
+                 </div>
+             </div>
              <br/>
              <br/>
             <?php

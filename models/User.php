@@ -11,4 +11,14 @@ class User extends BaseUser
        return $this->hasMany(Publicacion::className(), ['usuario_id' => 'id'])->inverseOf('usuario');
    }
 
+   public function getReporteReportador()
+   {
+      return $this->hasOne(Reporte::className(), ['reportador_id' => 'id'])->inverseOf('reportador');
+   }
+
+   public function getReporteReportado()
+   {
+      return $this->hasOne(Reporte::className(), ['reportado_id' => 'id'])->inverseOf('reportado'); 
+   }
+
 }
