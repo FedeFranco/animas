@@ -26,6 +26,18 @@ create table publicaciones(
 
 );
 
+drop table if exists reportes cascade;
+create table reportes(
+    id bigserial constraint pk_reportes primary key,
+    reportador_id bigint constraint fk_usuario_reportador references public.user(id) on
+                delete set null on update cascade,
+    reportado_id bigint constraint fk_usuario_reportado references public.user(id) on
+                delete set null on update cascade,
+    publicacion_id bigint constraint fk_publicacion_reportes references publicaciones(id) on
+                delete no action on update cascade,
+    cuerpo text not null
+);
+
 insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
                                                     ('ACOGIDA'),
                                                         ('APADRINAMIENTO');
