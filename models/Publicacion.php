@@ -24,6 +24,7 @@ class Publicacion extends \yii\db\ActiveRecord
 
      public $categor_nom;
      public $confirm_pub = false;
+     //public $imageFile;
 
     public static function tableName()
     {
@@ -39,10 +40,11 @@ class Publicacion extends \yii\db\ActiveRecord
             [['cuerpo', 'titulo','confirm_pub'], 'required'],
             [['confirm_pub'], 'boolean'],
             [['cuerpo','categor_nom'], 'string'],
-            [['categor_nom','url'], 'safe'],
+            [['categor_nom','url','imageFile'], 'safe'],
             [['categoria_id', 'usuario_id'], 'integer'],
             [['url'],'url'],
             [['titulo'], 'string', 'max' => 50],
+            //[['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png'],
             [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
             [['usuario_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_id' => 'id']],
         ];
@@ -59,11 +61,14 @@ class Publicacion extends \yii\db\ActiveRecord
             'titulo' => 'Titulo',
             'categor_nom' => 'Categoría',
             'url' => 'URL',
+            'imageFile' => 'Subir imagen',
             'confirm_pub' => 'He leído las normas de publicación',
             'categoria_id' => 'Categoria ID',
             'usuario_id' => 'Usuario ID',
         ];
     }
+
+
 
     /**
      * @return \yii\db\ActiveQuery

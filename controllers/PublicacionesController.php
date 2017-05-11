@@ -7,9 +7,14 @@ use app\models\Publicacion;
 use yii\filters\AccessControl;
 use app\models\Categoria;
 use app\models\PublicacionSearch;
+use app\models\UploadForm;
+use app\models\Upload;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+
+
 
 /**
  * PublicacionesController implements the CRUD actions for Publicacion model.
@@ -79,12 +84,14 @@ class PublicacionesController extends Controller
     public function actionCreate()
     {
         $model = new Publicacion();
-
+        $upload = new UploadForm();
 
         if ($model->load(Yii::$app->request->post())) {
+            $upload->imageFile = UploadedFile::getInstances($upload, 'imageFile');
+            $upload->upload();
 
             $model->usuario_id = Yii::$app->user->id;
-            //var_dump($model->url); die();
+
             if($model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
@@ -95,6 +102,7 @@ class PublicacionesController extends Controller
             return $this->render('create', [
                 'model' => $model,
                 'categorias' => $categorias,
+                'upload' => $upload,
             ]);
         }
     }

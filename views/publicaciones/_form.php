@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\imagine\Image;
+use yii\helpers\Url;
+use kartik\file\FileInput;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
@@ -36,12 +39,30 @@ $('#checknormas').click(function(){if($(this).prop('checked')){
 
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
+    <?= $form->field($upload, "imageFile")->fileInput(['multiple' => true]) ?>
+
+ <?php /*echo $form->field($model, 'imageFile')->widget(FileInput::classname(), [
+    'options' => ['accept' => 'image/*'],
+]); */?>
+
     <div class="form-group">
+        <?php /*Image::crop(Yii::getAlias('@webroot/uploads/m.png', 200, 200,[5,5]))
+            ->save(Yii::getAlias('@runtime/crop-m.png'), ['quality' => 80]);*/
+            $image = yii\imagine\Image::getImagine();
+
+            // puedes añadir efectos y guardar de esta manera
+            /*$newImage = $image->open(Yii::getAlias('@webroot/uploads/m.png'));
+
+            $newImage->effects()->blur(10);
+
+            $newImage->save(Yii::getAlias('@runtime/blur-m.png'), ['quality' => 80]);*/
+        ?>
 
         <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Update',
          ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary', 'id' => 'botonpub']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+    <?php ActiveForm::end();
+    //$img = Url::to('@web/uploads'); ?>
 
 </div>
