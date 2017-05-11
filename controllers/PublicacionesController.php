@@ -93,7 +93,7 @@ class PublicacionesController extends Controller
             $model->usuario_id = Yii::$app->user->id;
 
             if($model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['site/index']);
         }
 
         } else {
@@ -144,7 +144,10 @@ class PublicacionesController extends Controller
         return $this->render('normas');
     }
 
-
+    public function actionMapa()
+    {
+        return $this->render('mapa');
+    }
     /**
      * Finds the Publicacion model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

@@ -38,6 +38,16 @@ create table reportes(
     cuerpo text not null
 );
 
+drop table if exists localizacion_publicaciones cascade;
+create table localizacion_publicaciones(
+    id bigserial constraint pk_localizacion_publicaciones primary key,
+    publicacion_id bigint constraint fk_publicacion_localizacion_publicaciones references
+                    publicaciones(id) on delete no action on update cascade,
+    lat real not null,
+    long real not null
+);
+
+
 insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
                                                     ('ACOGIDA'),
                                                         ('APADRINAMIENTO');
