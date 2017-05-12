@@ -24,7 +24,7 @@ class Publicacion extends \yii\db\ActiveRecord
 
      public $categor_nom;
      public $confirm_pub = false;
-     //public $imageFile;
+     public $imageFile;
 
     public static function tableName()
     {
@@ -44,7 +44,7 @@ class Publicacion extends \yii\db\ActiveRecord
             [['categoria_id', 'usuario_id'], 'integer'],
             [['url'],'url'],
             [['titulo'], 'string', 'max' => 50],
-            //[['imageFile'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png'],
+            ['imageFile', 'image', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
             [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
             [['usuario_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_id' => 'id']],
         ];
@@ -68,7 +68,35 @@ class Publicacion extends \yii\db\ActiveRecord
         ];
     }
 
+    public function upload()
+    {
+        $model = new UploadForm;
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = $this->imageFile;
+            $model->titulo = $this->titulo;
+            if ($model->upload($this->id)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 
+    public function getImagen()
+    {
+        $uploads = Yii::getAlias('@uploads');
+        $ficheroJpg = "{$this->id}.jpg";
+        $ficheroPng = "{$this->id}.png";
+        $ruta1 = "$uploads/{$ficheroJpg}";
+        $ruta2 = "$uploads/{$ficheroPng}";
+        if (file_exists($ruta1)) {
+            return "/$ruta1";
+        } elseif (file_exists($ruta2)) {
+            return "/$ruta2";
+        } else {
+            return false;
+        }
+    }
 
     /**
      * @return \yii\db\ActiveQuery

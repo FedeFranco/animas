@@ -84,25 +84,22 @@ class PublicacionesController extends Controller
     public function actionCreate()
     {
         $model = new Publicacion();
-        $upload = new UploadForm();
 
         if ($model->load(Yii::$app->request->post())) {
-            $upload->imageFile = UploadedFile::getInstances($upload, 'imageFile');
-            $upload->upload();
-
+            $imagen = UploadedFile::getInstance($model, 'imageFile');
             $model->usuario_id = Yii::$app->user->id;
-
-            if($model->save()) {
-            return $this->redirect(['site/index']);
-        }
-
+            if ($imagen !== null) {
+                $model->imageFile = $imagen;
+                if ($model->save() && $model->upload()) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         } else {
             $categorias = Categoria::find()->select('nombre_categoria, id')->indexBy('id')->column();
 
             return $this->render('create', [
                 'model' => $model,
                 'categorias' => $categorias,
-                'upload' => $upload,
             ]);
         }
     }

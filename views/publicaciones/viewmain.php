@@ -11,7 +11,7 @@
     <div class="panel panel-default">
         <div class="media">
           <div class="media-left">
-             <!-- imagen -->
+             <?= Html::a(Html::img($model->imagen), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>
           <div class="media-body">
               <h4 class="media-heading">
