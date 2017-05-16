@@ -4,10 +4,12 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\web\UrlManager;
 
 AppAsset::register($this);
 ?>
@@ -27,9 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     $items = [
-        ['label' => 'Inicio', 'url' => ['/site/index']],
         ['label' => 'Sobre Animas', 'url' => ['/site/about']],
-        ['label' => 'Contacta con nosotros', 'url' => ['/site/contact']],
         Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'items' =>[['label' => 'Loguearse',
                                         'url' => ['/user/security/login']],
@@ -53,7 +53,7 @@ AppAsset::register($this);
     }
 
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Animas',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -76,9 +76,14 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <div class="row">
+            <div class="col-sm-8">
+                <p class="pull-left">&copy; Proyecto Animas <?= date('Y') ?></p>
+            <div>
+            <div class="col-sm-8">
+                <p><?= Html::a('Contacta con nosotros',Url::to(['site/contact'])); ?></p>
+            </div>
+        </div>
     </div>
 </footer>
 

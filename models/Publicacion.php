@@ -37,14 +37,16 @@ class Publicacion extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['cuerpo', 'titulo','confirm_pub'], 'required'],
+            [['cuerpo', 'titulo','confirm_pub', 'latitud', 'longitud'], 'required'],
             [['confirm_pub'], 'boolean'],
-            [['cuerpo','categor_nom'], 'string'],
+            [['cuerpo','categor_nom', 'latitud', 'longitud'], 'string'],
             [['categor_nom','url','imageFile'], 'safe'],
             [['categoria_id', 'usuario_id'], 'integer'],
             [['url'],'url'],
             [['titulo'], 'string', 'max' => 50],
-            ['imageFile', 'image', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            ['imageFile', 'image', 'skipOnEmpty' => false, 'extensions' => ['png','jpg'],
+                'minWidth' => 400, 'maxWidth' => 2000,
+                'minHeight' => 200, 'maxHeight' => 20000,],
             [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
             [['usuario_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_id' => 'id']],
         ];
@@ -62,6 +64,8 @@ class Publicacion extends \yii\db\ActiveRecord
             'categor_nom' => 'Categoría',
             'url' => 'URL',
             'imageFile' => 'Subir imagen',
+            'latitud' => 'Latitud',
+            'longitud' => 'Longitud',
             'confirm_pub' => 'He leído las normas de publicación',
             'categoria_id' => 'Categoria ID',
             'usuario_id' => 'Usuario ID',

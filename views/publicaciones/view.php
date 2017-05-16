@@ -33,8 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'titulo',
             'categoria.nombre_categoria',
             'url',
+            'latitud',
+            'longitud',
             'usuario.username',
         ],
     ]) ?>
+
+    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?=$model->latitud?>,<?=$model->longitud?>&hl=es;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q='+<?=$model->latitud?>+','+<?=$model->longitud?>+'&hl=es;z=14&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">Ver en Google Maps</a></small>
+
 
 </div>

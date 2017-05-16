@@ -12,7 +12,7 @@
         "irc": "irc://irc.freenode.net/yii",
         "source": "https://github.com/yiisoft/yii2"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": "~7.0.0",
         "ext-gd": "*",
@@ -23,7 +23,8 @@
         "fxp/composer-asset-plugin": "^1.2.0",
 	"dektrium/yii2-user": "^0.9.12",
     "yiisoft/yii2-imagine": "*",
-    "kartik-v/yii2-widget-fileinput": "@dev"
+    "kartik-v/yii2-widget-fileinput": "@dev",
+        "rodzadra/geolocation": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

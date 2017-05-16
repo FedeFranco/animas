@@ -1,17 +1,16 @@
 <?php
     use app\models\Publicacion;
     use yii\helpers\Html;
+    use Imagine\Image\Box;
+    use Imagine\Image\Point;
     use Yii;
-?>
-
-<?php
 ?>
 
 <div class="publicaciones-view">
     <div class="panel panel-default">
         <div class="media">
           <div class="media-left">
-             <?= Html::a(Html::img($model->imagen), ['/publicaciones/view', 'id' => $model->id]) ?>
+             <?= Html::a(Html::img($model->imagen,['width' => '250px','height'=>'200px']), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>
           <div class="media-body">
               <h4 class="media-heading">

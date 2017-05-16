@@ -86,6 +86,7 @@ class PublicacionesController extends Controller
         $model = new Publicacion();
 
         if ($model->load(Yii::$app->request->post())) {
+
             $imagen = UploadedFile::getInstance($model, 'imageFile');
             $model->usuario_id = Yii::$app->user->id;
             if ($imagen !== null) {

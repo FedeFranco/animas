@@ -19,6 +19,8 @@ create table publicaciones(
     cuerpo text not null,
     url varchar(350),
     titulo varchar(50) not null,
+    latitud varchar(255) not null,
+    longitud varchar(255) not null,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on

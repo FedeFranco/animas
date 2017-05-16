@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22a09c2f2158e19a829d4aa7116329f0",
-    "content-hash": "c20ae310d6a8fffd6b37621b94ece041",
+    "hash": "24dcbf420766356b2995d160637c20a9",
+    "content-hash": "3c74c708e44329a81fda400d5b3895e6",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -648,6 +648,49 @@
                 "yii2"
             ],
             "time": "2017-04-15 05:25:51"
+        },
+        {
+            "name": "rodzadra/geolocation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rodzadra/yii2-geolocation.git",
+                "reference": "7875947b052e686274550f47b08f2cbdc5ff10d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rodzadra/yii2-geolocation/zipball/7875947b052e686274550f47b08f2cbdc5ff10d1",
+                "reference": "7875947b052e686274550f47b08f2cbdc5ff10d1",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "rodzadra\\geolocation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL V.3"
+            ],
+            "authors": [
+                {
+                    "name": "Rodrigo Z. Armond",
+                    "email": "rodzadra@gmail.com",
+                    "homepage": "https://github.com/rodzadra"
+                }
+            ],
+            "description": "Simple Yii2 component to find geo client information.",
+            "homepage": "https://github.com/rodzadra/yii2-geolocation",
+            "keywords": [
+                "extension",
+                "geolocation",
+                "yii2"
+            ],
+            "time": "2016-02-29 16:38:14"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4059,7 +4102,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "kartik-v/yii2-widget-fileinput": 20
     },
