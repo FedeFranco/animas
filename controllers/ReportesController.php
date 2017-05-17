@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\Publicacion;
+use yii\filters\AccessControl;
 
 /**
  * ReportesController implements the CRUD actions for Reporte model.
@@ -25,6 +26,21 @@ class ReportesController extends Controller
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                ],
+            ],
+
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index'],
+                'rules' => [
+                    [
+                        'actions' => ['index'],
+                        'roles'=>['@'],
+                        'allow' => true,
+                        'matchCallback' => function ($rule, $action) {
+                            return Yii::$app->user->username === 'admin';
+                        }
+                    ],
                 ],
             ],
         ];

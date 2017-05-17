@@ -65,6 +65,11 @@ class SiteController extends Controller
     {
         $searchModel = new PublicacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination = [
+            'defaultPageSize' => 12,
+            'pageSizeLimit' => [12, 100],
+        ];
+        $dataProvider->sort = ['defaultOrder' => ['fecha_publicacion' => SORT_DESC,]];
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
@@ -121,7 +126,7 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-    
+
     /**
      * Displays about page.
      *

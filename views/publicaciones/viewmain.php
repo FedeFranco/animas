@@ -14,22 +14,36 @@
           </div>
           <div class="media-body">
               <h4 class="media-heading">
-                <?= $model->titulo?>
+                <?= Html::a($model->titulo,['/publicaciones/view', 'id' => $model->id])?>
               </h4>
              <?= $model->cuerpo?>
              <div class="row">
-                 <div class="col-md-2">
+                 <div class="col-md-3">
                     Por <?= $model->usuario->username?>
                  </div>
-                 <div class="col-md-2">
-                     <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
-                         'class' => 'btn btn-danger',
-                         'data' => [
-                             'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
-                             'method' => 'post',
-                         ],
-                     ]) ?>
+                 <div class="col-md-3">
+                     <?= Yii::$app->formatter->asDateTime($model->fecha_publicacion,'full'); ?>
                  </div>
+                 <div class="col-md-3">
+                     <?= Html::a($model->url,$model->url); ?>
+                 </div>
+                 <div class="row">
+                     <div class="row">
+                         <div class="col-md-2">
+                            <?= $model->categoria['nombre_categoria']?>
+                         </div>
+                     </div>
+                     <div class="col-md-2">
+                         <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
+                             'class' => 'btn btn-danger',
+                             'data' => [
+                                 'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
+                                 'method' => 'post',
+                             ],
+                         ]) ?>
+                     </div>
+                </div>
+
              </div>
              <br/>
              <br/>

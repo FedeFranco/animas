@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'latitud',
             'longitud',
             'usuario.username',
+            'fecha_publicacion:relativeTime',
         ],
     ]) ?>
 

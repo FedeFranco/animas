@@ -7,12 +7,12 @@ $this->title = 'Animas';
 <div class="site-index">
 
 
-
     <?= ListView::widget([
            'dataProvider' => $dataProvider,
            'itemOptions' => ['class' => 'item'],
            'itemView' => '/publicaciones/viewmain',
+
        ]);  ?>
 
-   
+
 </div>

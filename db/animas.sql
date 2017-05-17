@@ -17,10 +17,11 @@ drop table if exists publicaciones cascade;
 create table publicaciones(
     id bigserial constraint pk_publicaciones primary key,
     cuerpo text not null,
-    url varchar(350),
+    url varchar(255),
     titulo varchar(50) not null,
     latitud varchar(255) not null,
     longitud varchar(255) not null,
+    fecha_publicacion date default current_timestamp,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on
