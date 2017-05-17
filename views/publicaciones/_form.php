@@ -31,10 +31,6 @@ var options = {
 
       function error(err) {
           console.warn('ERROR(' + err.code + '): ' + err.message);
-          if(err.code == 1) {
-              alert('dated save deny')
-          }
-          else {alert('non dated save deny')}
       };
 
       navigator.geolocation.getCurrentPosition(success,error, options);

@@ -2,36 +2,6 @@
 
 use yii\helpers\Html;
 
-/*$this->registerJs('
-var options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-      };
-
-      function success(pos) {
-      var crd = pos.coords;
-
-      console.log("Your current position is:");
-      console.log("Latitude : " + crd.latitude);
-      console.log("Longitude: " + crd.longitude);
-      console.log("More or less " + crd.accuracy + " meters.");
-      };
-
-      function error(err) {
-          console.warn("ERROR(" + err.code + "): " + err.message);
-          if(err.code == 1) {
-              alert("dated save deny")
-          }
-          else {alert("non dated save deny")}
-      };
-
-      navigator.geolocation.getCurrentPosition(success, error, options);
-
-
-
-');*/
-
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 
