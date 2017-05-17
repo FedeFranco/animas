@@ -15,7 +15,7 @@ $config = [
             'cost' => 12,
             'admins' => ['admin'],
             'mailer' => [
-                'sender'                => 'proyectoanimas14@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
+                'sender'                => 'animasporject15@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
                 'welcomeSubject'        => 'Bienvenido al proyecto animas',
                 'confirmationSubject'   => 'Mensaje de Confirmación',
                 'reconfirmationSubject' => 'Cambio de Email',
@@ -76,7 +76,7 @@ $config = [
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'host' => 'smtp.gmail.com',
-                'username' => 'proyectoanimas12@gmail.com',
+                'username' => 'animasporject15@gmail.com',
                 'password' => getenv('PASS'),
                 'port' => '587',
                 'encryption' => 'tls',
