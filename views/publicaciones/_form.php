@@ -10,6 +10,7 @@ use kartik\file\FileInput;
 /* @var $model app\models\Publicacion */
 /* @var $form yii\widgets\ActiveForm */
 $this->registerJs("
+//var confirmLoc = confirm('Animas quiere saber su ubicación');
 var crd;
 var options = {
       enableHighAccuracy: true,
@@ -36,7 +37,7 @@ var options = {
           else {alert('non dated save deny')}
       };
 
-      navigator.geolocation.getCurrentPosition(success, error, options);
+      navigator.geolocation.getCurrentPosition(success,error, options);
 
 $('#botonpub').hide();
 

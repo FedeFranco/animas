@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 
-$this->registerJs('
+/*$this->registerJs('
 var options = {
       enableHighAccuracy: true,
       timeout: 5000,
@@ -30,7 +30,7 @@ var options = {
 
 
 
-');
+');*/
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */

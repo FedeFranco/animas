@@ -15,7 +15,7 @@ $config = [
             'cost' => 12,
             'admins' => ['admin'],
             'mailer' => [
-                'sender'                => 'proyectoanimas12@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
+                'sender'                => 'proyectoanimas14@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
                 'welcomeSubject'        => 'Bienvenido al proyecto animas',
                 'confirmationSubject'   => 'Mensaje de Confirmación',
                 'reconfirmationSubject' => 'Cambio de Email',
