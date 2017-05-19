@@ -65,7 +65,17 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
+    <!-- nuevo-->
 
+    <?php if(!(Yii::$app->user->isGuest) && Yii::$app->user->identity->isAdmin) { ?>
+        <div class="container" style="background-color:black;">
+            <div class="row">
+                <div class="col-md-3"><?= Html::a("Reportes",['/reportes/index'],['class' => 'btn btn-default']) ?></div>
+                <div class="col-md-3"><?= Html::a("Usuarios",['/user/admin/index'],['class' => 'btn btn-default']) ?></div>
+                <div class="col-md-3"><?= Html::a("Publicaciones",['/publicaciones/index'],['class' => 'btn btn-default']) ?></div>
+            </div>
+        </div>
+    <?php } ?>
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

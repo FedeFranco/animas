@@ -6,6 +6,7 @@ use Yii;
 use app\models\Reporte;
 use app\models\ReporteSearch;
 use yii\web\Controller;
+use yii\web\User;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\Publicacion;
@@ -38,7 +39,7 @@ class ReportesController extends Controller
                         'roles'=>['@'],
                         'allow' => true,
                         'matchCallback' => function ($rule, $action) {
-                            return Yii::$app->user->username === 'admin';
+                            return Yii::$app->user->identity->isAdmin;
                         }
                     ],
                 ],
