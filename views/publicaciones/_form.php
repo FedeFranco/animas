@@ -1,5 +1,5 @@
 <?php
-
+use Yii;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\imagine\Image;
@@ -9,6 +9,7 @@ use kartik\file\FileInput;
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 /* @var $form yii\widgets\ActiveForm */
+
 $this->registerJs("
 //var confirmLoc = confirm('Animas quiere saber su ubicación');
 var crd;
@@ -49,6 +50,7 @@ $('#checknormas').click(function(){if($(this).prop('checked')){
                         })
 
 ");
+
 ?>
 
 <div class="publicacion-form">

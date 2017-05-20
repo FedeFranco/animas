@@ -65,8 +65,15 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-    <!-- nuevo-->
+    <?php
+    if(!(Yii::$app->user->isGuest)) {
+        $session = Yii::$app->session;
 
+        $session['numero'] = 4;
+
+
+    }
+    ?>
     <?php if(!(Yii::$app->user->isGuest) && Yii::$app->user->identity->isAdmin) { ?>
         <div class="container" style="background-color:black;">
             <div class="row">
@@ -83,7 +90,10 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
+<?php if(!(Yii::$app->user->isGuest)) { ?>
 
+<div><?= $session['__id'] ?></div>
+<?php } ?>
 <footer class="footer">
     <div class="container">
         <div class="row">
