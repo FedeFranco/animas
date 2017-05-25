@@ -2,9 +2,67 @@
 
 /* @var $this yii\web\View */
 use yii\widgets\ListView;
+use yii\widgets\ActiveForm;
+use yii\helpers\Html;
+
+
 $this->title = 'Animas';
-?>
+$this->registerCss("html,
+body {
+    height: 100%;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#C6E272,#86CC86, #3D8C84); /* Standard syntax */
+}");
+
+$this->registerJs("
+$('#comprobar-form').click(function(){
+   per = 'nuevo'
+   por = 'nuevo2'
+  var crd;
+  var options = {
+         enableHighAccuracy: true,
+         timeout: 5000,
+         maximumAge: 0
+         };
+
+         function success(pos) {
+            crd = pos.coords;
+            alert('d');
+            console.log(crd.latitude);
+            per = crd.latitude;
+            por = crd.longitude;
+            alert(per);
+            $('#prueba').val('p');
+            $('#oculto1').attr('value',per);
+            $('#oculto2').attr('value',por);
+
+         };
+
+         function error(err) {
+             console.warn('ERROR(' + err.code + '): ' + err.message);
+         };
+
+         navigator.geolocation.getCurrentPosition(success,error, options);
+
+});"); ?>
+
 <div class="site-index">
+    <?php $form = ActiveForm::begin(['id' => 'comprobar-form', 'method' => 'post']); ?>
+     <!-- <div>  Html::hiddenInput("latitud", '', ['id' => 'oculto1'])  </div> -->
+      <input type="hidden" id="oculto1" name="longitud" value="" />
+      <input type="hidden" id="oculto2" name="latitud" value=""/>
+      <input type="text"   id="prueba" name="" value="">
+
+    <div class="form-group">
+           <div class="col-lg-offset-1 col-lg-11">
+               <?= Html::submitButton('Comprobar', ['class' => 'btn btn-primary', 'id' => 'botcomprobar']) ?>
+           </div>
+       </div>
+   <?php ActiveForm::end() ?>
+
 
 
     <?= ListView::widget([
@@ -13,6 +71,4 @@ $this->title = 'Animas';
            'itemView' => '/publicaciones/viewmain',
 
        ]);  ?>
-
-
 </div>

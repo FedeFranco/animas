@@ -21,7 +21,7 @@ create table publicaciones(
     titulo varchar(50) not null,
     latitud varchar(255) not null,
     longitud varchar(255) not null,
-    fecha_publicacion date default current_timestamp,
+    fecha_publicacion timestamptz default current_timestamp,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on
@@ -37,18 +37,10 @@ create table reportes(
     reportado_id bigint constraint fk_usuario_reportado references public.user(id) on
                 delete set null on update cascade,
     publicacion_id bigint constraint fk_publicacion_reportes references publicaciones(id) on
-                delete no action on update cascade,
+                delete set null on update cascade,
     cuerpo text not null
 );
 
-drop table if exists localizacion_publicaciones cascade;
-create table localizacion_publicaciones(
-    id bigserial constraint pk_localizacion_publicaciones primary key,
-    publicacion_id bigint constraint fk_publicacion_localizacion_publicaciones references
-                    publicaciones(id) on delete no action on update cascade,
-    lat real not null,
-    long real not null
-);
 
 
 insert into categorias (nombre_categoria) values ('ADOPCIÓN'),

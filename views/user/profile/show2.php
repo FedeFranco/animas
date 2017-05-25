@@ -52,13 +52,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     <p><?= Html::encode($profile->bio) ?></p>
                 <?php endif; ?>
             </div>
-            <div>Sooooob !</div>
-            <div style="color: red;">
-                <?= $id_user; ?>
-            </div>
-            <div style="color: salmon;">
-                <?= $id_url; ?>
-            </div>
         </div>
     </div>
 </div>

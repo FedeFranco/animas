@@ -9,8 +9,10 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\assets\FontAsset;
 use yii\web\UrlManager;
 
+FontAsset::register($this);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -53,7 +55,7 @@ AppAsset::register($this);
     }
 
     NavBar::begin([
-        'brandLabel' => 'Animas',
+        'brandLabel' => Html::img('@web/animas-logo2.png', ['alt'=>Yii::$app->name]),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -65,11 +67,17 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
+    <br />
+    <br />
+    <br />
     <?php
     if(!(Yii::$app->user->isGuest)) {
         $session = Yii::$app->session;
-
-        $session['numero'] = 4;
+        $session['cap'] = [
+            'id' => $session['__id'],
+            'number' => 5,
+            'lifetime' => 3600,
+        ];
 
 
     }
@@ -90,10 +98,7 @@ AppAsset::register($this);
         <?= $content ?>
     </div>
 </div>
-<?php if(!(Yii::$app->user->isGuest)) { ?>
 
-<div><?= $session['__id'] ?></div>
-<?php } ?>
 <footer class="footer">
     <div class="container">
         <div class="row">

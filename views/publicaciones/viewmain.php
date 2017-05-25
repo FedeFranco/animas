@@ -22,7 +22,7 @@
                     Por <?= $model->usuario->username?>
                  </div>
                  <div class="col-md-3">
-                     <?= Yii::$app->formatter->asDateTime($model->fecha_publicacion,'full'); ?>
+                     <?= Yii::$app->formatter->asDate($model->fecha_publicacion,'long'); ?>
                  </div>
                  <div class="col-md-3">
                      <?= Html::a($model->url,$model->url); ?>

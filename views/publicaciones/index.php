@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PublicacionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Publicacions';
+$this->title = 'Publicación';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="publicacion-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Publicacion', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Publicar', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -29,6 +29,9 @@ $this->params['breadcrumbs'][] = $this->title;
             'titulo',
             'categoria_id',
             'usuario_id',
+            'fecha_publicacion:datetime',
+            'latitud',
+            'longitud',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

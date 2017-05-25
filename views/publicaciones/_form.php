@@ -9,7 +9,7 @@ use kartik\file\FileInput;
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 /* @var $form yii\widgets\ActiveForm */
-
+$relacion = Url::to(['/publicaciones/normas']);
 $this->registerJs("
 //var confirmLoc = confirm('Animas quiere saber su ubicación');
 var crd;
@@ -45,6 +45,12 @@ $('#checknormas').click(function(){if($(this).prop('checked')){
                                     }
                         })
 
+$('#normas').click(function(){
+    var miwind = window.open('$relacion', '', 'toolbar=yes,menubar=yes,width=100,height=100');
+    miwind.moveTo(0,0)
+     miwind.resizeTo(screen.width,screen.height);
+})
+
 ");
 
 ?>
@@ -66,8 +72,8 @@ $('#checknormas').click(function(){if($(this).prop('checked')){
         </i>
     </div>
     <?= $form->field($model, 'url')?>
-
-    <?= Html::a('Normas de publicaciones', ['publicaciones/normas']) ?>
+    <a id="normas">Normas de publicación</a>
+     <!--Html::a('Normas de publicaciones', ['publicaciones/normas']) -->
     <?= $form->field($model, 'confirm_pub')->checkbox(['id'=>'checknormas'])?>
 
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>

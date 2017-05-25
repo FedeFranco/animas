@@ -142,10 +142,6 @@ class PublicacionesController extends Controller
         return $this->render('normas');
     }
 
-    public function actionMapa()
-    {
-        return $this->render('mapa');
-    }
     /**
      * Finds the Publicacion model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

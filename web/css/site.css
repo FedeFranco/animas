@@ -1,6 +1,11 @@
 html,
 body {
     height: 100%;
+    /*background: #3D8C84;
+    background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84);
+    background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84);
+    background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84);
+    background: linear-gradient(#C6E272,#86CC86, #3D8C84); */
 }
 
 .wrap {
@@ -89,11 +94,40 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
+.navbar-inverse .navbar-nav > li > a {
+     font-family: 'Ruda', sans-serif;
+     font-size: 20px;
+ }
 
 /* align the logout "link" (button in form) of the navbar */
 .nav li > form > button.logout {
-    padding: 15px;
+    padding: 26px;
     border: none;
+    font-family: 'Ruda', sans-serif;
+    font-size: 20px;
+}
+
+.navbar-brand img{
+    height: 80px;
+    width: 80px;
+
+}
+
+ .navbar-brand {
+  height: 100px;
+}
+
+ .nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+.navbar-toggle {
+  padding: 20px;
+  margin: 25px 15px 25px 0;
+}
+
+.footer {
+    background-color: black;
 }
 
 @media(max-width:767px) {

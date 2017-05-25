@@ -6,7 +6,7 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'aliases' => ['@uploads' => 'uploads'],
+    'aliases' => ['@uploads' => 'uploads', '@fotos-animas' => 'fotos-animas'],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',
@@ -36,6 +36,13 @@ $config = [
         ],
     ],
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'jsOptions' => [ 'position' => \yii\web\View::POS_HEAD ],
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'w5cHdQB39K1D9-XoTta2c0bsru_64z0h',
@@ -52,18 +59,6 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
 
-        /*'user' => [
-            //'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-
-            'mailer' => [
-                'sender'                => 'moonluna189@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
-                'welcomeSubject'        => 'Bienvenido al proyecto animas',
-                'confirmationSubject'   => 'Mensaje de Confirmación',
-                'reconfirmationSubject' => 'Cambio de Email',
-                'recoverySubject'       => 'Recuperación de Contraseña',
-            ],
-        ],*/
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],

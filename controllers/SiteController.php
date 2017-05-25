@@ -4,12 +4,13 @@ namespace app\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
-use yii\web\Controller;
 use yii\filters\VerbFilter;
+use yii\web\Controller;
+use yii\helpers\Json;
+use yii\data\ActiveDataProvider;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Publicacion;
-use yii\data\ActiveDataProvider;
 use app\models\PublicacionSearch;
 
 class SiteController extends Controller
@@ -61,7 +62,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionIndex($name=null)
     {
         $searchModel = new PublicacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -73,7 +74,7 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
-        ]);
+        ],Json::encode($name));
 
     }
 
