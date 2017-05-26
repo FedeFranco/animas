@@ -4,18 +4,29 @@
 use yii\widgets\ListView;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use app\assets\AppAssetJS;
 
+AppAssetJS::register($this);
 
 $this->title = 'Animas';
-$this->registerCss("html,
-body {
-    height: 100%;
-    background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#C6E272,#86CC86, #3D8C84); /* Standard syntax */
-}");
+$this->registerCss("
+  html, body {
+      height: 100%;
+      background: red; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#C6E272,#86CC86, #3D8C84); /* Standard syntax */
+  }
+
+  .img-banner {
+    width: 100%;
+    height: 150px;
+  }
+
+
+");
 
 $this->registerJs("
 $('#comprobar-form').click(function(){
@@ -72,3 +83,23 @@ $('#comprobar-form').click(function(){
 
        ]);  ?>
 </div>
+
+<div class="banners-imagenes">
+    <div><?= Html::img(Url::to('@banners/banner-cabecera-teaming.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@banners/slider-animales-infiernos.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@banners/slider-mascotas-avila.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@banners/slider-asoc-suerte.png'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@banners/slider-tienda-mascotas.jpg'),['class' => 'img-banner'])?></div>
+    <div><?= Html::img(Url::to('@banners/slider-veterinaria-landeta.jpg'),['class' => 'img-banner']) ?></div>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.banners-imagenes').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
+  });
+</script>

@@ -5,10 +5,24 @@
 /* @var $model app\models\ContactForm */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use app\assets\FontAsset;
 
-$this->title = 'Contact';
+FontAsset::register($this);
+$this->registerCss('
+    html, body {
+        background-color: #262233;
+    }
+
+    h1, p, label{
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+');
+$this->title = 'Contacta con Animas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
@@ -34,8 +48,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php else: ?>
 
         <p>
-            If you have business inquiries or other questions, please fill out the following form to contact us.
-            Thank you.
+            Si tienes una organización proanimalista o
+            te interesa nuestro proyecto y quieres colaborar o
+            simplemente tienes una pregunta no dudes en contactar
+            con nostros.
         </p>
 
         <div class="row">
@@ -62,7 +78,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php ActiveForm::end(); ?>
 
             </div>
+            <div class="col-lg-5">
+                <?= Html::img(Url::to('@fotos-animas/deer-dribble2.png'))?>
+            </div>
         </div>
 
     <?php endif; ?>
+
 </div>

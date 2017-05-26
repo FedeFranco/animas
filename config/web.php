@@ -6,7 +6,10 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'aliases' => ['@uploads' => 'uploads', '@fotos-animas' => 'fotos-animas'],
+    'aliases' => ['@uploads' => 'uploads',
+                  '@fotos-animas' => 'fotos-animas',
+                  '@banners' => 'banners',
+    ],
     'modules' => [
         'user' => [
             'class' => 'dektrium\user\Module',

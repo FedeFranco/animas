@@ -119,7 +119,7 @@ a.desc:after {
 
  .nav >li >a {
   padding-top: 30px;
-  padding-bottom: 0px;
+  padding-bottom: auto;
 }
 .navbar-toggle {
   padding: 20px;

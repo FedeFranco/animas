@@ -13,15 +13,16 @@ use yii\web\AssetBundle;
  * @author Jesús Federico Franco <j.francomedinilla@gmail.com>
  * @since 2.0
  */
-class AppAsset extends AssetBundle
+class AppAssetJS extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
-
+        'js/slick-master/slick/slick.css',
+        'js/slick-master/slick/slick-theme.css',
     ];
     public $js = [
+        'js/slick-master/slick/slick.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
