@@ -37,7 +37,19 @@ $config = [
             ],
 
         ],
+        'social' => [
+            // the module class
+            'class' => 'kartik\social\Module',
+
+            // the global settings for the facebook plugins widget
+            'facebook' => [
+                'appId' => '236921263462697',
+                'app_secret' => '6d473e79d6dbed62ab4a5db4a0df5620',
+
+            ],
+        ],
     ],
+
     'components' => [
         'assetManager' => [
             'bundles' => [

@@ -6,20 +6,15 @@ use yii\helpers\Html;
 use yii\helpers\BaseHtml;
 use yii\helpers\Url;
 use app\assets\FontAsset;
+use app\assets\AppAsset;
 
-
+AppAsset::register($this);
 FontAsset::register($this);
 
 $this->title = 'Sobre Animas';
 $this->registerCss('html, body {
                     background-color: #101727;
-                }
-
-                p, h1 {
-                    color: white;
-                    font-family: "Ubuntu", serif;
-                }
-       ');
+');
 ?>
 
 <br />

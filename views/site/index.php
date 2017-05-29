@@ -46,7 +46,7 @@ $('#comprobar-form').click(function(){
             per = crd.latitude;
             por = crd.longitude;
             alert(per);
-            $('#prueba').val('p');
+
             $('#oculto1').attr('value',per);
             $('#oculto2').attr('value',por);
 
@@ -65,7 +65,6 @@ $('#comprobar-form').click(function(){
      <!-- <div>  Html::hiddenInput("latitud", '', ['id' => 'oculto1'])  </div> -->
       <input type="hidden" id="oculto1" name="longitud" value="" />
       <input type="hidden" id="oculto2" name="latitud" value=""/>
-      <input type="text"   id="prueba" name="" value="">
 
     <div class="form-group">
            <div class="col-lg-offset-1 col-lg-11">

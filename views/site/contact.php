@@ -9,17 +9,16 @@ use yii\helpers\Url;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use app\assets\FontAsset;
+use app\assets\AppAsset;
 
+AppAsset::register($this);
 FontAsset::register($this);
+
 $this->registerCss('
     html, body {
         background-color: #262233;
     }
 
-    h1, p, label{
-        color: white;
-        font-family: "Ubuntu", sans-serif;
-    }
 
 ');
 $this->title = 'Contacta con Animas';
@@ -72,7 +71,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]) ?>
 
                     <div class="form-group">
-                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                        <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                     </div>
 
                 <?php ActiveForm::end(); ?>

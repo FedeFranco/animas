@@ -24,7 +24,8 @@
 	    "dektrium/yii2-user": "^0.9.12",
         "yiisoft/yii2-imagine": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
-        "rodzadra/geolocation": "*"
+        "rodzadra/geolocation": "*",
+        "kartik-v/yii2-social": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

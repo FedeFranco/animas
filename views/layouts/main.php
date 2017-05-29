@@ -14,7 +14,9 @@ use yii\web\UrlManager;
 
 FontAsset::register($this);
 AppAsset::register($this);
+
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
@@ -102,13 +104,19 @@ AppAsset::register($this);
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-lg-3">
                 <p class="pull-left">&copy; Proyecto Animas <?= date('Y') ?></p>
-            <div>
-            <div class="col-sm-8">
+            </div>
+            <div class="col-lg-3">
                 <p><?= Html::a('Contacta con nosotros',Url::to(['site/contact'])); ?></p>
             </div>
-        </div>
+            <div class="col-lg-3">
+                    <?=Html::a(Html::img(Url::to('@web/icon_fb.jpg'),['width' => '30px', 'height' => '30px']),Url::to('https://www.facebook.com/sharer/sharer.php?u=https://animas.herokuapp.com')) ?>
+            </div>
+            <div class="col-lg-3">
+                <?=Html::a(Html::img(Url::to('@web/icon_tw.jpg'),['width' => '30px', 'height' => '30px']),Url::to('https://twitter.com/intent/tweet?text=Proyecto+Animas+https://animas.herokuapp.com')) ?>
+            </div>
+        </div
     </div>
 </footer>
 

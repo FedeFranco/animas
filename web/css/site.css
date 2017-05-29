@@ -1,13 +1,20 @@
 html,
 body {
     height: 100%;
-    /*background: #3D8C84;
-    background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84);
-    background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84);
-    background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84);
-    background: linear-gradient(#C6E272,#86CC86, #3D8C84); */
+    background-color: #19254B;
+}
+h1, p, label {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
 }
 
+div.panel {
+    background-color: #08102C;
+}
+
+div.item div.panel {
+    background-color: white;
+}
 .wrap {
     min-height: 100%;
     height: auto;

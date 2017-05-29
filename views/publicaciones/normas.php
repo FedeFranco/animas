@@ -2,8 +2,9 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use app\assets\FontAsset;
+use app\assets\AppAsset;
 
-
+AppAsset::register($this);
 FontAsset::register($this);
 
 $this->registerCss('
@@ -11,7 +12,7 @@ html, body {
     background-color: #19254B;
 }
 
-p, ul, h1 {
+ul {
     color: white;
     font-family: "Ubuntu", serif;
 }

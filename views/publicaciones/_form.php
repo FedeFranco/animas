@@ -32,6 +32,8 @@ var options = {
 
       function error(err) {
           console.warn('ERROR(' + err.code + '): ' + err.message);
+          document.location.href='/';
+
       };
 
       navigator.geolocation.getCurrentPosition(success,error, options);

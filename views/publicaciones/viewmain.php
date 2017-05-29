@@ -3,6 +3,7 @@
     use yii\helpers\Html;
     use Imagine\Image\Box;
     use Imagine\Image\Point;
+    use kartik\social\FacebookPlugin;
     use Yii;
 ?>
 
@@ -28,20 +29,24 @@
                      <?= Html::a($model->url,$model->url); ?>
                  </div>
                  <div class="row">
-                     <div class="row">
-                         <div class="col-md-2">
+
+                         <div class="col-lg-5">
                             <?= $model->categoria['nombre_categoria']?>
                          </div>
-                     </div>
-                     <div class="col-md-2">
-                         <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
-                             'class' => 'btn btn-danger',
-                             'data' => [
-                                 'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
-                                 'method' => 'post',
-                             ],
-                         ]) ?>
-                     </div>
+
+                         <div class="col-lg-5">
+                             <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
+                                 'class' => 'btn btn-danger',
+                                 'data' => [
+                                     'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
+                                     'method' => 'post',
+                                 ],
+                             ]) ?>
+                         </div>
+
+                         <div class="col-lg-5">
+                             <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false']]) ?>
+                         </div>
                 </div>
 
              </div>
