@@ -31,6 +31,7 @@ class Publicacion extends \yii\db\ActiveRecord
         return 'publicaciones';
     }
 
+    
     /**
      * @inheritdoc
      */

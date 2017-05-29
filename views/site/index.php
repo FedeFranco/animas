@@ -9,6 +9,8 @@ use app\assets\AppAssetJS;
 
 AppAssetJS::register($this);
 
+$url = Url::to(['site/comprobar']);
+
 $this->title = 'Animas';
 $this->registerCss("
   html, body {
@@ -41,8 +43,7 @@ $('#comprobar-form').click(function(){
 
          function success(pos) {
             crd = pos.coords;
-            alert('d');
-            console.log(crd.latitude);
+            //console.log(crd.latitude);
             per = crd.latitude;
             por = crd.longitude;
             alert(per);
@@ -57,6 +58,20 @@ $('#comprobar-form').click(function(){
          };
 
          navigator.geolocation.getCurrentPosition(success,error, options);
+
+         $.ajax({
+           method: 'post',
+           url: '$url',
+           data: {
+             pos: $('#oculto1').val()
+
+           },
+           success: function (data, status, event) {
+             var posicion = JSON.parse(data);
+             console.log(posicion)
+           }
+
+         })
 
 });"); ?>
 

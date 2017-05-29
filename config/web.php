@@ -69,6 +69,10 @@ $config = [
                     '@dektrium/user/views' => '@app/views/user'
                 ],
             ],
+            
+            'as seo' => [
+                'class' => 'demi\seo\SeoViewBehavior',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

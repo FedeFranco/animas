@@ -25,7 +25,8 @@
         "yiisoft/yii2-imagine": "*",
         "kartik-v/yii2-widget-fileinput": "@dev",
         "rodzadra/geolocation": "*",
-        "kartik-v/yii2-social": "@dev"
+        "kartik-v/yii2-social": "@dev",
+        "demi/seo": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

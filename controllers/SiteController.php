@@ -62,7 +62,7 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex($name=null)
+    public function actionIndex()
     {
         $searchModel = new PublicacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -74,7 +74,7 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
-        ],Json::encode($name));
+        ]);
 
     }
 
@@ -126,6 +126,11 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
+    }
+
+    public function actionComprobar($pos = null)
+    {
+        return Json::encode(Yii::$app->request->post('pos'));
     }
 
     /**
