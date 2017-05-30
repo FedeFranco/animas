@@ -45,4 +45,5 @@ create table reportes(
 
 insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
                                                     ('ACOGIDA'),
-                                                        ('APADRINAMIENTO');
+                                                        ('APADRINAMIENTO'),
+                                                            ('ALERTA');

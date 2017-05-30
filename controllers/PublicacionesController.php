@@ -92,7 +92,15 @@ class PublicacionesController extends Controller
             if ($imagen !== null) {
                 $model->imageFile = $imagen;
                 if ($model->save() && $model->upload()) {
-                    return $this->redirect(['view', 'id' => $model->id]);
+                    if ($model->categoria['nombre_categoria'] === 'ALERTA') {
+                        //return $this->redirect(['view', 'id' => $model->id]);
+                        Yii::$app->session->setFlash('alerta', "Hay una mascota perdida!");
+                        return $this->redirect(['site/index']);
+                    }
+                    else {
+                        return $this->redirect(['view', 'id' => $model->id]);
+                    }
+
                 }
             }
         } else {

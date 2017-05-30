@@ -15,6 +15,11 @@ div.panel {
 div.item div.panel {
     background-color: white;
 }
+
+div.panel-alerta {
+    color: white;
+}
+
 .wrap {
     min-height: 100%;
     height: auto;

@@ -9,7 +9,11 @@
 
 <div class="publicaciones-view">
     <div class="panel panel-default">
-        <div class="media">
+        <?php if ($model->categoria['nombre_categoria'] === 'ALERTA'): ?>
+            <div class="media panel-alerta" style="background-color: #F45454;">
+        <?php else:?>
+            <div class="media">
+        <?php endif; ?>
           <div class="media-left">
              <?= Html::a(Html::img($model->imagen,['width' => '250px','height'=>'200px']), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>

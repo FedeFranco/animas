@@ -15,11 +15,13 @@ $this->title = 'Animas';
 $this->registerCss("
   html, body {
       height: 100%;
-      background: red; /* For browsers that do not support gradients */
-      background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Safari 5.1 to 6.0 */
-      background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Opera 11.1 to 12.0 */
-      background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84); /* For Firefox 3.6 to 15 */
-      background: linear-gradient(#C6E272,#86CC86, #3D8C84); /* Standard syntax */
+      /*background: red;
+      background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84);
+      background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84);
+      background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84);/
+      background: linear-gradient(#C6E272,#86CC86, #3D8C84);  */
+
+      background-color: #86CC86;
   }
 
   .img-banner {
@@ -74,6 +76,14 @@ $('#comprobar-form').click(function(){
          })
 
 });"); ?>
+
+<?php if (Yii::$app->session->hasFlash('alerta')): ?>
+  <div class="alert alert-danger alert-dismissable">
+    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+    <h4><i class="icon fa fa-check"></i>Atención!</h4>
+    <?= Yii::$app->session->getFlash('alerta') ?>
+  </div>
+<?php endif; ?>
 
 <div class="site-index">
     <?php $form = ActiveForm::begin(['id' => 'comprobar-form', 'method' => 'post']); ?>

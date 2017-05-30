@@ -64,13 +64,14 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $model = new Publicacion();
         $searchModel = new PublicacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->pagination = [
             'defaultPageSize' => 12,
             'pageSizeLimit' => [12, 100],
         ];
-        $dataProvider->sort = ['defaultOrder' => ['fecha_publicacion' => SORT_DESC,]];
+        $dataProvider->sort = ['defaultOrder' => ['fecha_publicacion' => SORT_DESC]];
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
