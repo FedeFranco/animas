@@ -4,27 +4,32 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Publicacion;
-use yii\filters\AccessControl;
 use app\models\Categoria;
 use app\models\PublicacionSearch;
 use app\models\UploadForm;
 use app\models\Upload;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+use yii\web\Session;
+use yii\web\Controller;
 use yii\web\UploadedFile;
+use yii\web\NotFoundHttpException;
 
 
 
 /**
  * PublicacionesController implements the CRUD actions for Publicacion model.
  */
+
 class PublicacionesController extends Controller
 {
     /**
      * @inheritdoc
      */
-     public $categorias = [];
+
+    public $categorias = [];
+
+
     public function behaviors()
     {
         return [
@@ -92,15 +97,7 @@ class PublicacionesController extends Controller
             if ($imagen !== null) {
                 $model->imageFile = $imagen;
                 if ($model->save() && $model->upload()) {
-                    if ($model->categoria['nombre_categoria'] === 'ALERTA') {
-                        //return $this->redirect(['view', 'id' => $model->id]);
-                        Yii::$app->session->setFlash('alerta', "Hay una mascota perdida!");
-                        return $this->redirect(['site/index']);
-                    }
-                    else {
-                        return $this->redirect(['view', 'id' => $model->id]);
-                    }
-
+                    return $this->redirect(['site/index']);    
                 }
             }
         } else {
@@ -112,6 +109,7 @@ class PublicacionesController extends Controller
             ]);
         }
     }
+
 
     /**
      * Updates an existing Publicacion model.

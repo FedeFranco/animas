@@ -73,18 +73,6 @@ AppAsset::register($this);
     <br />
     <br />
     <br />
-    <?php
-    if(!(Yii::$app->user->isGuest)) {
-        $session = Yii::$app->session;
-        $session['cap'] = [
-            'id' => $session['__id'],
-            'number' => 5,
-            'lifetime' => 3600,
-        ];
-
-
-    }
-    ?>
     <?php if(!(Yii::$app->user->isGuest) && Yii::$app->user->identity->isAdmin) { ?>
         <div class="container" style="background-color:black;">
             <div class="row">

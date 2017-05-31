@@ -6,6 +6,7 @@ use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
+use yii\web\Session;
 use yii\helpers\Json;
 use yii\data\ActiveDataProvider;
 use app\models\LoginForm;
@@ -18,6 +19,7 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+
     public function behaviors()
     {
         return [

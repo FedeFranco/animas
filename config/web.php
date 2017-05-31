@@ -28,6 +28,7 @@ $config = [
                 'profile' => 'app\controllers\ProfileController',
                 'settings' => 'app\controllers\SettingsController',
                 'admin' => 'app\controllers\user\AdminController',
+                'security' => 'app\controllers\user\SecurityController'
             ],
             'modelMap' => [
                 'Profile' => 'app\models\Profile',
@@ -69,7 +70,7 @@ $config = [
                     '@dektrium/user/views' => '@app/views/user'
                 ],
             ],
-            
+
             'as seo' => [
                 'class' => 'demi\seo\SeoViewBehavior',
             ]
