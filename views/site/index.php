@@ -32,48 +32,28 @@ $this->registerCss("
 
 ");
 
+$url = Url::to(['/publicaciones/comprobar']);
+
 $this->registerJs("
-$('#comprobar-form').click(function(){
-   per = 'nuevo'
-   por = 'nuevo2'
+$('.comprobar').click(function(){
   var crd;
+
   var options = {
          enableHighAccuracy: true,
          timeout: 5000,
          maximumAge: 0
-         };
+  };
 
-         function success(pos) {
-            crd = pos.coords;
-            //console.log(crd.latitude);
-            per = crd.latitude;
-            por = crd.longitude;
-            alert(per);
+  function success(pos) {
+    crd = pos.coords;
+    window.location.href = '$url&lat=' + crd.latitude + '&long=' + crd.longitude;
+  };
 
-            $('#oculto1').attr('value',per);
-            $('#oculto2').attr('value',por);
+  function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+  };
 
-         };
-
-         function error(err) {
-             console.warn('ERROR(' + err.code + '): ' + err.message);
-         };
-
-         navigator.geolocation.getCurrentPosition(success,error, options);
-
-         $.ajax({
-           method: 'post',
-           url: '$url',
-           data: {
-             pos: $('#oculto1').val()
-
-           },
-           success: function (data, status, event) {
-             var posicion = JSON.parse(data);
-             console.log(posicion)
-           }
-
-         })
+  navigator.geolocation.getCurrentPosition(success, error, options);
 
 });"); ?>
 
@@ -91,14 +71,7 @@ $('#comprobar-form').click(function(){
       <input type="hidden" id="oculto1" name="longitud" value="" />
       <input type="hidden" id="oculto2" name="latitud" value=""/>
 
-    <div class="form-group">
-           <div class="col-lg-offset-1 col-lg-11">
-               <?= Html::submitButton('Comprobar', ['class' => 'btn btn-primary', 'id' => 'botcomprobar']) ?>
-           </div>
-       </div>
-   <?php ActiveForm::end() ?>
-
-
+      <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar']) ?>
 
     <?= ListView::widget([
            'dataProvider' => $dataProvider,

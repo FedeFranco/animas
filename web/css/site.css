@@ -19,7 +19,9 @@ div.item div.panel {
 div.panel-alerta {
     color: white;
 }
-
+table.table-striped {
+    background-color: white;
+}
 .wrap {
     min-height: 100%;
     height: auto;
@@ -106,7 +108,7 @@ a.desc:after {
     padding: 10px 20px;
     margin: 0 0 15px 0;
 }
-.navbar-inverse .navbar-nav > li > a {
+ .navbar-nav > li > a {
      font-family: 'Ruda', sans-serif;
      font-size: 20px;
  }

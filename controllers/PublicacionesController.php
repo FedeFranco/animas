@@ -14,6 +14,7 @@ use yii\web\Session;
 use yii\web\Controller;
 use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
+use yii\data\ArrayDataProvider;
 
 
 
@@ -81,6 +82,33 @@ class PublicacionesController extends Controller
         ]);
     }
 
+    public function actionComprobar($lat, $long)
+    {
+        $publicaciones = Publicacion::find()->all();
+        $cercanos = [];
+
+        foreach ($publicaciones as $publicacion) {
+            $distancia = $this->getDistancia( $lat, $long, $publicacion->latitud, $publicacion->longitud );
+
+            if( $distancia < 1 ) {
+                $cercanos[] = $publicacion;
+            }
+        }
+
+        $provider = new ArrayDataProvider([
+            'allModels' => $cercanos,
+            'pagination' => [
+                'pageSize' => 10,
+            ],
+            'sort' => [
+                'attributes' => ['fecha_publicacion'],
+            ],
+        ]);
+
+        return $this->render('comprobar', [
+            'provider' => $provider,
+        ]);
+    }
     /**
      * Creates a new Publicacion model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -97,7 +125,7 @@ class PublicacionesController extends Controller
             if ($imagen !== null) {
                 $model->imageFile = $imagen;
                 if ($model->save() && $model->upload()) {
-                    return $this->redirect(['site/index']);    
+                    return $this->redirect(['site/index']);
                 }
             }
         } else {
@@ -162,5 +190,18 @@ class PublicacionesController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    private function getDistancia( $latitud1, $longitud1, $latitud2, $longitud2 ) {
+        $earth_radius = 6371;
+
+        $dLat = deg2rad( $latitud2 - $latitud1 );
+        $dLon = deg2rad( $longitud2 - $longitud1 );
+
+        $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad($latitud1)) * cos(deg2rad($latitud2)) * sin($dLon/2) * sin($dLon/2);
+        $c = 2 * asin(sqrt($a));
+        $d = $earth_radius * $c;
+
+        return $d;
     }
 }

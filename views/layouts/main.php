@@ -73,12 +73,14 @@ AppAsset::register($this);
     <br />
     <br />
     <br />
+    <br />
+    <br />
     <?php if(!(Yii::$app->user->isGuest) && Yii::$app->user->identity->isAdmin) { ?>
-        <div class="container" style="background-color:black;">
+        <div class="nav-pills" style="background-color:black;">
             <div class="row">
-                <div class="col-md-3"><?= Html::a("Reportes",['/reportes/index'],['class' => 'btn btn-default']) ?></div>
-                <div class="col-md-3"><?= Html::a("Usuarios",['/user/admin/index'],['class' => 'btn btn-default']) ?></div>
-                <div class="col-md-3"><?= Html::a("Publicaciones",['/publicaciones/index'],['class' => 'btn btn-default']) ?></div>
+                <div class="col-lg-3"><?= Html::a("Reportes",['/reportes/index'],['class' => 'btn btn-default']) ?></div>
+                <div class="col-lg-3"><?= Html::a("Usuarios",['/user/admin/index'],['class' => 'btn btn-default']) ?></div>
+                <div class="col-lg-3"><?= Html::a("Publicaciones",['/publicaciones/index'],['class' => 'btn btn-default']) ?></div>
             </div>
         </div>
     <?php } ?>
