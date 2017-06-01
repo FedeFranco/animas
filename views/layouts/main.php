@@ -70,7 +70,7 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-    <br />
+     <br />
     <br />
     <br />
     <br />

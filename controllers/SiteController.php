@@ -131,6 +131,48 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionPublicaciones($q = null)
+    {
+       if ($q !== null && $q !== '') {
+           $publicaciones = Publicacion::find()->select('*')->where(['ilike', 'titulo', $q])->all();
+           $json = [];
+           foreach ($publicaciones as $publicacion) {
+               $json[] = [
+                   'id' => $publicacion->id,
+                   'titulo' => $publicacion->titulo,
+                   /*'artista' => $cancion->idAlbum->idArtista->nombre,
+                   'artistaId' => $cancion->idAlbum->idArtista->id,*/
+               ];
+           }
+           return json_encode($json);
+       }
+   }
+
+
+
+   public function actionSearch($q = null)
+   {
+       if ($q !== null && $q !== '') {
+           $publicacionesProvider = new ActiveDataProvider([
+               'query' => Publicacion::find()->where(['ilike', 'titulo', $q]),
+           ]);
+           /*$artistasProvider = new ActiveDataProvider([
+               'query' => Artista::find()->where(['ilike', 'nombre', $q]),
+           ]);
+           $albumesProvider = new ActiveDataProvider([
+               'query' => Album::find()->where(['ilike', 'nombre', $q]),
+           ]);*/
+           return $this->render('search', [
+               'q' => $q,
+               'publicacionesProvider' => $publicacionesProvider,
+               /*'artistasProvider' => $artistasProvider,
+               'albumesProvider' => $albumesProvider,*/
+           ]);
+       }
+       return $this->refresh();
+   }
+
+
     public function actionComprobar($pos = null)
     {
         return Json::encode(Yii::$app->request->post('pos'));

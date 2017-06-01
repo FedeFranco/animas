@@ -25,7 +25,7 @@ $config = [
                 'recoverySubject'       => 'Recuperación de Contraseña',
             ],
             'controllerMap' => [
-                'profile' => 'app\controllers\ProfileController',
+                'profile' => 'app\controllers\user\ProfileController',
                 'settings' => 'app\controllers\SettingsController',
                 'admin' => 'app\controllers\user\AdminController',
                 'security' => 'app\controllers\user\SecurityController'

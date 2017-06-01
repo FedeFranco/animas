@@ -8,6 +8,7 @@
  * file that was distributed with this source code.
  */
 use yii\helpers\Html;
+use yii\helpers\Url;
 use Yii;
 use  yii\web\Request;
 /**
@@ -51,6 +52,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php if (!empty($profile->bio)): ?>
                     <p><?= Html::encode($profile->bio) ?></p>
                 <?php endif; ?>
+                <div class="col-sm-6 col-md-8" style="background-color: white; border-radius: 2px;">
+                    <ol>
+                        <?php
+                        foreach ($publicaciones as $value) { ?>
+                            <li><?=Html::a($value['titulo'],['/publicaciones/view', 'id' => $value['id']]) ?></li>
+                            <?php  } ?>
+                        </ol>
+                    </div>
             </div>
         </div>
     </div>

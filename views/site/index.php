@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 use yii\widgets\ListView;
+use yii\web\View;
 use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -9,7 +10,37 @@ use app\assets\AppAssetJS;
 
 AppAssetJS::register($this);
 
-$url = Url::to(['site/comprobar']);
+//$url = Url::to(['site/comprobar']);
+
+$urlPublicaciones = Url::to(['/publicaciones/view']) . '?q=%QUERY';
+
+$url = Url::to(['/publicaciones/comprobar']);
+
+$js = <<<JS
+
+$('.comprobar').click(function(){
+  var crd;
+
+  var options = {
+         enableHighAccuracy: true,
+         timeout: 5000,
+         maximumAge: 0
+  };
+
+  function success(pos) {
+    crd = pos.coords;
+    window.location.href = '$url&lat=' + crd.latitude + '&long=' + crd.longitude;
+  };
+
+  function error(err) {
+      console.warn('ERROR(' + err.code + '): ' + err.message);
+  };
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+
+});
+JS;
+$this->registerJs($js);
 
 $this->title = 'Animas';
 $this->registerCss("
@@ -31,31 +62,7 @@ $this->registerCss("
 
 
 ");
-
-$url = Url::to(['/publicaciones/comprobar']);
-
-$this->registerJs("
-$('.comprobar').click(function(){
-  var crd;
-
-  var options = {
-         enableHighAccuracy: true,
-         timeout: 5000,
-         maximumAge: 0
-  };
-
-  function success(pos) {
-    crd = pos.coords;
-    window.location.href = '$url&lat=' + crd.latitude + '&long=' + crd.longitude;
-  };
-
-  function error(err) {
-      console.warn('ERROR(' + err.code + '): ' + err.message);
-  };
-
-  navigator.geolocation.getCurrentPosition(success, error, options);
-
-});"); ?>
+ ?>
 
 <?php if (Yii::$app->session->hasFlash('alerta')): ?>
   <div class="alert alert-danger alert-dismissable">
@@ -72,6 +79,15 @@ $('.comprobar').click(function(){
       <input type="hidden" id="oculto2" name="latitud" value=""/>
 
       <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar']) ?>
+
+      <div class="search-index">
+            <form class="form-index row" method="GET" action="<?=Url::to(['/site/search'])?>">
+                <div class="form-group search-form">
+                    <input type="text" name="q" class="form-control typeahead" placeholder=" Busca publicaciones">
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </form>
+
 
     <?= ListView::widget([
            'dataProvider' => $dataProvider,

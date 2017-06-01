@@ -7,6 +7,9 @@ h1, p, label {
     font-family: 'Ubuntu', sans-serif;
     color: white;
 }
+div.banners-imagenes {
+    height: 300px;
+}
 
 div.panel {
     background-color: #08102C;
