@@ -31,20 +31,21 @@ class Publicacion extends \yii\db\ActiveRecord
         return 'publicaciones';
     }
 
-    
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['cuerpo', 'titulo','confirm_pub', 'latitud', 'longitud'], 'required'],
+            [['cuerpo', 'titulo','confirm_pub', 'latitud', 'longitud','telf_contacto'], 'required'],
             [['confirm_pub'], 'boolean'],
             [['cuerpo','categor_nom', 'latitud', 'longitud'], 'string'],
             [['categor_nom','url','imageFile','fecha_publicacion'], 'safe'],
-            [['categoria_id', 'usuario_id'], 'integer'],
+            [['categoria_id', 'usuario_id',], 'integer'],
             [['url'],'url'],
             [['fecha_publicacion'],'date'],
+            [['telf_contacto'], 'integer'],
             [['titulo'], 'string', 'max' => 50],
             ['imageFile', 'image', 'skipOnEmpty' => false, 'extensions' => ['png','jpg'],
                 'minWidth' => 400, 'maxWidth' => 2000,
@@ -72,6 +73,7 @@ class Publicacion extends \yii\db\ActiveRecord
             'categoria_id' => 'Categoria ID',
             'usuario_id' => 'Usuario ID',
             'fecha_publicacion' => 'Fecha',
+            'telf_contact' => 'Teléfono de contacto',
         ];
     }
 

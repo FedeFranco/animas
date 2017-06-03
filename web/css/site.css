@@ -22,9 +22,35 @@ div.item div.panel {
 div.panel-alerta {
     color: white;
 }
+/* Colocar categorias y clases animales*/
+a.fltr-check {
+    color: white;
+}
+
+div[data-property="categoria_id"] a.fltr-check:nth-child(2)::after {
+    content: " - ADOPCIÓN";
+    color: white;
+}
+
+div[data-property="categoria_id"] a.fltr-check:nth-child(3)::after {
+    content: " - ACOGIDA";
+    color: white;
+}
+
+div[data-property="categoria_id"] a.fltr-check:nth-child(4)::after {
+    content: " - APADRINAMIENTO";
+    color: white;
+}
+
+div[data-property="categoria_id"] a.fltr-check:nth-child(5)::after {
+    content: " - ALERTA";
+    color: white;
+}
+
 table.table-striped {
     background-color: white;
 }
+
 .wrap {
     min-height: 100%;
     height: auto;

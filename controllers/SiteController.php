@@ -8,11 +8,13 @@ use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\Session;
 use yii\helpers\Json;
+use yii\helpers\Url;
 use yii\data\ActiveDataProvider;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Publicacion;
 use app\models\PublicacionSearch;
+use sanex\simplefilter\SimpleFilter;
 
 class SiteController extends Controller
 {
@@ -67,6 +69,8 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = new Publicacion();
+
+
         $searchModel = new PublicacionSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->pagination = [
@@ -79,6 +83,28 @@ class SiteController extends Controller
             'dataProvider' => $dataProvider,
         ]);
 
+    }
+
+    public function actionFiltro()
+    {
+        $model = new Publicacion();
+
+        $ajaxViewFile = '@app/views/site/filtro-ajax';
+        $query = new \yii\db\ActiveQuery($model);
+        $query->select('titulo, categoria_id');/*->where(['country' => 'Canada'])->orderBy(['price' => SORT_ASC]);*/
+        $filter = SimpleFilter::getInstance();
+        $filter->setParams([
+            'model' => $model,
+            'query' => $query,
+            'useAjax' => true,
+            'useCache' => true,
+            'useDataProvider' => true,
+        ]);
+
+        return $this->render('filtro', [
+            'filter' => $filter,
+            'ajaxViewFile' => $ajaxViewFile
+        ]);
     }
 
     /**

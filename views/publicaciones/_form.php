@@ -80,6 +80,8 @@ $('#normas').click(function(){
 
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
+    <?= $form->field($model, 'telf_contacto')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'imageFile')->fileInput() ?>
 
     <div class="form-group">

@@ -4,13 +4,10 @@ create table categorias (
     nombre_categoria varchar(20) not null
 );
 
-drop table if exists alertas cascade;
-create table alertas (
-    id bigserial constraint pk_alertas primary key,
-    categoria_id bigint constraint fk_categoria_alerta references categorias (id)
-                on delete no action on update cascade,
-    usuario_id bigint constraint fk_usuario_alerta references public.user(id) on
-                delete no action on update cascade
+drop table if exists tipos_animales cascade;
+create table tipos_animales (
+    id bigserial constraint pk_tipos_animales primary key,
+    nombre_tipo_animal varchar(20) not null
 );
 
 drop table if exists publicaciones cascade;
@@ -21,7 +18,10 @@ create table publicaciones(
     titulo varchar(50) not null,
     latitud varchar(255) not null,
     longitud varchar(255) not null,
+    telf_contacto numeric(9) not null,
     fecha_publicacion timestamptz default current_timestamp,
+    tipo_animal_id bigint constraint fk_tipo_animal_publicacion references tipos_animales
+                on delete no action on update cascade,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
     usuario_id bigint constraint fk_usuario_publicacion references public.user(id) on
@@ -47,3 +47,5 @@ insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
                                                     ('ACOGIDA'),
                                                         ('APADRINAMIENTO'),
                                                             ('ALERTA');
+
+insert into tipos_animales (nombre_tipo_animal) values ('FELINO'),('CANINO'),('AVES'),('REPTIL')

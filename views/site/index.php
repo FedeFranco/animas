@@ -7,6 +7,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use app\assets\AppAssetJS;
+use sanex\simplefilter\SimpleFilter;
 
 AppAssetJS::register($this);
 

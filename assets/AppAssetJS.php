@@ -24,11 +24,11 @@ class AppAssetJS extends AssetBundle
     public $js = [
         'js/slick-master/slick/slick.min.js',
         'js/typeahead/jquery.typeahead.js',
-        'js/typeahead/url.js',
+        //'js/typeahead/url.js',
         'js/typeahead/bloodhound.js',
         'js/typeahead/search.js',
     ];
-    public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
+    //public $jsOptions = ['position' => \yii\web\View::POS_HEAD];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',

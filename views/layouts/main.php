@@ -11,10 +11,20 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use app\assets\FontAsset;
 use yii\web\UrlManager;
+use yii\web\View;
 
 FontAsset::register($this);
 AppAsset::register($this);
 
+$urlPublicaciones = Url::to(['/site/publicaciones']) . '?q=%QUERY';
+$publicacionesView = Url::to(['/publicaciones/view']) . '?id=';
+
+$js = <<<JS
+    var urlPublicaciones = "$urlPublicaciones";
+    var publicacionesView = "$publicacionesView";
+JS;
+
+$this->registerJs($js, View::POS_HEAD);
 ?>
 
 <?php $this->beginPage() ?>

@@ -26,7 +26,8 @@
         "kartik-v/yii2-widget-fileinput": "@dev",
         "rodzadra/geolocation": "*",
         "kartik-v/yii2-social": "@dev",
-        "demi/seo": "dev-master"
+        "demi/seo": "dev-master",
+        "sanex/yii2-simple-filter": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
