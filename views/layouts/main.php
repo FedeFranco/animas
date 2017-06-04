@@ -44,6 +44,7 @@ $this->registerJs($js, View::POS_HEAD);
 <div class="wrap">
     <?php
     $items = [
+        ['label' => 'Búsqueda', 'url' => ['/site/filtro']],
         ['label' => 'Sobre Animas', 'url' => ['/site/about']],
         Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'items' =>[['label' => 'Loguearse',
@@ -80,7 +81,7 @@ $this->registerJs($js, View::POS_HEAD);
     ]);
     NavBar::end();
     ?>
-     <br />
+    <br />
     <br />
     <br />
     <br />

@@ -91,7 +91,7 @@ class SiteController extends Controller
 
         $ajaxViewFile = '@app/views/site/filtro-ajax';
         $query = new \yii\db\ActiveQuery($model);
-        $query->select('titulo, categoria_id');/*->where(['country' => 'Canada'])->orderBy(['price' => SORT_ASC]);*/
+        $query->select('titulo, categoria_id, tipo_animal_id');/*->where(['country' => 'Canada'])->orderBy(['price' => SORT_ASC]);*/
         $filter = SimpleFilter::getInstance();
         $filter->setParams([
             'model' => $model,

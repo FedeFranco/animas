@@ -78,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             </div>
             <div class="col-lg-5">
-                <?= Html::img(Url::to('@fotos-animas/deer-dribble2.png'))?>
+                <?= Html::img(Url::to('@web/fotos-animas/deer-dribble2.png'))?>
             </div>
         </div>
 

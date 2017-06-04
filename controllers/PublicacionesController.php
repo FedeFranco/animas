@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Publicacion;
 use app\models\Categoria;
+use app\models\TipoAnimal;
 use app\models\PublicacionSearch;
 use app\models\UploadForm;
 use app\models\Upload;
@@ -129,10 +130,13 @@ class PublicacionesController extends Controller
                 }
             }
         } else {
+            $tipos = TipoAnimal::find()->select('nombre_tipo_animal, id')->indexBy('id')->column();
             $categorias = Categoria::find()->select('nombre_categoria, id')->indexBy('id')->column();
+
 
             return $this->render('create', [
                 'model' => $model,
+                'tipos' => $tipos,
                 'categorias' => $categorias,
             ]);
         }

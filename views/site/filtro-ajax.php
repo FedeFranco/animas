@@ -8,6 +8,7 @@ use yii\grid\GridView;
         'dataProvider' => $simpleFilterData,
         'columns' => [
             'titulo',
+            'tipo.nombre_tipo_animal',
             'categoria.nombre_categoria',
         ],
         'summary' => false

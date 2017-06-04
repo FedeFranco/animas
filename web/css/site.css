@@ -22,7 +22,32 @@ div.item div.panel {
 div.panel-alerta {
     color: white;
 }
-/* Colocar categorias y clases animales*/
+
+h2#cab-contacto {
+    color: white;
+}
+
+div#contacto-telf-view {
+    visibility: hidden;
+    background-color: white;
+    width: 100%;
+    height: 0px;
+    border-radius: 10px;
+    font-size: 0px;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+    -webkit-transition:visibility 1s,height 2s,font-size 1s ;
+    transition:visibility 1s, height 2s, font-size 1s;
+
+}
+h2#cab-contacto:hover + div#contacto-telf-view{
+    visibility: visible;
+    height: 50px;
+    font-size: 18px;
+}
+
+/* Inicio Colocar categorias y clases animales*/
 a.fltr-check {
     color: white;
 }
@@ -46,6 +71,65 @@ div[data-property="categoria_id"] a.fltr-check:nth-child(5)::after {
     content: " - ALERTA";
     color: white;
 }
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(2)::after{
+    content: " - FELINO";
+}
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(3)::after{
+    content: " - CANINO";
+}
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(4)::after{
+    content: " - AVE";
+}
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(5)::after{
+    content: " - REPTIL";
+}
+
+/* Inicio Colocar categorias y clases animales*/
+
+
+/* Animación botones*/
+
+button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/* fin de animar botones*/
+
 
 table.table-striped {
     background-color: white;
@@ -140,6 +224,9 @@ a.desc:after {
  .navbar-nav > li > a {
      font-family: 'Ruda', sans-serif;
      font-size: 20px;
+     -webkit-transition: color 2s;
+     -moz-transition: color 2s;
+     transition: color 2s;
  }
 
 /* align the logout "link" (button in form) of the navbar */
@@ -148,6 +235,15 @@ a.desc:after {
     border: none;
     font-family: 'Ruda', sans-serif;
     font-size: 20px;
+}
+/* transformación de los enlaces de navegación*/
+
+.navbar-nav > li > a:hover {
+    color: white;
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+
 }
 
 .navbar-brand img{

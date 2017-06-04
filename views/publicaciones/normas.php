@@ -31,6 +31,6 @@ ul {
             <li>El título de la publicación debe ser una frase relacionado con el contenido en general de la publicación. No inlcuya palabras como "ayuda" o "porfavor"</li>
             <li>Si el animal al que referencia la publicación tiene alguna necesidad así como una enfermedad, no olvide incluirlo</li>
         </ul>
-        <?=Html::img(Url::to('@fotos-animas/dolphin.jpg'),['atl' => 'delfin-animas', 'id' => 'delf-anim', 'class' => 'col-lg']) ?>
+        <?=Html::img(Url::to('@web/fotos-animas/dolphin.jpg'),['atl' => 'delfin-animas', 'id' => 'delf-anim', 'class' => 'col-lg']) ?>
     </div>
 </div>

@@ -99,12 +99,12 @@ $this->registerCss("
 </div>
 
 <div class="banners-imagenes">
-    <div><?= Html::img(Url::to('@banners/banner-cabecera-teaming.jpg'),['class' => 'img-banner']) ?></div>
-    <div><?= Html::img(Url::to('@banners/slider-animales-infiernos.jpg'),['class' => 'img-banner']) ?></div>
-    <div><?= Html::img(Url::to('@banners/slider-mascotas-avila.jpg'),['class' => 'img-banner']) ?></div>
-    <div><?= Html::img(Url::to('@banners/slider-asoc-suerte.png'),['class' => 'img-banner']) ?></div>
-    <div><?= Html::img(Url::to('@banners/slider-tienda-mascotas.jpg'),['class' => 'img-banner'])?></div>
-    <div><?= Html::img(Url::to('@banners/slider-veterinaria-landeta.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@web/banners/banner-cabecera-teaming.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@web/banners/slider-animales-infiernos.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@web/banners/slider-mascotas-avila.jpg'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@web/banners/slider-asoc-suerte.png'),['class' => 'img-banner']) ?></div>
+    <div><?= Html::img(Url::to('@web/banners/slider-tienda-mascotas.jpg'),['class' => 'img-banner'])?></div>
+    <div><?= Html::img(Url::to('@web/banners/slider-veterinaria-landeta.jpg'),['class' => 'img-banner']) ?></div>
   </div>
 
 <script type="text/javascript">

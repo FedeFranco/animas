@@ -50,6 +50,7 @@ class Publicacion extends \yii\db\ActiveRecord
             ['imageFile', 'image', 'skipOnEmpty' => false, 'extensions' => ['png','jpg'],
                 'minWidth' => 400, 'maxWidth' => 2000,
                 'minHeight' => 200, 'maxHeight' => 20000,],
+            [['tipo_animal_id'], 'exist', 'skipOnError' => true, 'targetClass' => TipoAnimal::className(), 'targetAttribute' => ['tipo_animal_id' => 'id']],
             [['categoria_id'], 'exist', 'skipOnError' => true, 'targetClass' => Categoria::className(), 'targetAttribute' => ['categoria_id' => 'id']],
             [['usuario_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['usuario_id' => 'id']],
         ];
@@ -70,7 +71,8 @@ class Publicacion extends \yii\db\ActiveRecord
             'latitud' => 'Latitud',
             'longitud' => 'Longitud',
             'confirm_pub' => 'He leído las normas de publicación',
-            'categoria_id' => 'Categoria ID',
+            'tipo_animal_id' => 'Tipo',
+            'categoria_id' => 'Categoría',
             'usuario_id' => 'Usuario ID',
             'fecha_publicacion' => 'Fecha',
             'telf_contact' => 'Teléfono de contacto',
@@ -112,7 +114,12 @@ class Publicacion extends \yii\db\ActiveRecord
      */
     public function getCategoria()
     {
-        return $this->hasOne(Categoria::className(), ['id' => 'categoria_id'])->inverseOf('publicacion');
+        return $this->hasOne(Categoria::className(), ['id' => 'categoria_id'])->inverseOf('publicacionCategoria');
+    }
+
+    public function getTipo()
+    {
+        return $this->hasOne(TipoAnimal::className(), ['id' => 'tipo_animal_id'])->inverseOf('publicacionTipo');
     }
 
     /**

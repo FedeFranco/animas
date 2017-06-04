@@ -37,7 +37,7 @@ $this->registerCss('html, body {
                  </p>
             </div>
             <div class="col-lg-5">
-                <?= Html::img(Url::to('@fotos-animas/dribble.jpg'),['alt' => 'lobo animas', 'id' => 'img-about']) ?>
+                <?= Html::img(Url::to('@web/fotos-animas/dribble.jpg'),['alt' => 'lobo animas', 'id' => 'img-about']) ?>
             </div>
         </div>
     </div>

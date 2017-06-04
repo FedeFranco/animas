@@ -18,11 +18,13 @@ $this->title = "Filtro"
         'class' => 'horizontal'
     ],
     [
-        'property' => 'titulo',
-        'caption' => 'Titulo',
+        'property' => 'tipo_animal_id',
+        'caption' => 'Tipo',
         'values' => [
-            'dfghjklñ',
-            'OUBLBLOBLB',
+            '1',
+            '2',
+            '3',
+            '4'
         ]
     ]
 

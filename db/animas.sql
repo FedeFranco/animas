@@ -20,7 +20,7 @@ create table publicaciones(
     longitud varchar(255) not null,
     telf_contacto numeric(9) not null,
     fecha_publicacion timestamptz default current_timestamp,
-    tipo_animal_id bigint constraint fk_tipo_animal_publicacion references tipos_animales
+    tipo_animal_id bigint constraint fk_tipo_animal_publicacion references tipos_animales (id)
                 on delete no action on update cascade,
     categoria_id bigint constraint fk_categoria_publicacion references categorias (id)
                 on delete no action on update cascade,
