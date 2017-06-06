@@ -81,7 +81,7 @@ $this->registerJs($js, View::POS_HEAD);
     ]);
     NavBar::end();
     ?>
-    <br />
+     <br />
     <br />
     <br />
     <br />
@@ -95,6 +95,15 @@ $this->registerJs($js, View::POS_HEAD);
             </div>
         </div>
     <?php } ?>
+
+    <?php if (Yii::$app->session->hasFlash('alerta')): ?>
+      <div class="alert alert-danger alert-dismissable">
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+        <h4><i class="icon fa fa-check"></i>Atención!</h4>
+        <?= Yii::$app->session->getFlash('alerta') ?>
+      </div>
+    <?php endif; ?>
+
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

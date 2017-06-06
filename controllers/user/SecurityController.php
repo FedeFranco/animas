@@ -28,9 +28,8 @@ class SecurityController extends BaseSecurityController
 
         if ($model->load(\Yii::$app->getRequest()->post()) && $model->login()) {
             $this->trigger(self::EVENT_AFTER_LOGIN, $event);
-            
-            $fechas_pub = Publicacion::find()->select('fecha_publicacion')->where(['categoria_id' => '4'])->asArray()->all();
 
+            $fechas_pub = Publicacion::find()->select('fecha_publicacion')->where(['categoria_id' => '4'])->asArray()->all();
             foreach ($fechas_pub as $value) {
                 $datetime1 = new DateTime($value['fecha_publicacion']);
                 $datetime2 = new DateTime('now');

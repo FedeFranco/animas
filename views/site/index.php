@@ -30,7 +30,7 @@ $('.comprobar').click(function(){
 
   function success(pos) {
     crd = pos.coords;
-    window.location.href = '$url&lat=' + crd.latitude + '&long=' + crd.longitude;
+    window.location.href = '$url?lat=' + crd.latitude + '&long=' + crd.longitude;
   };
 
   function error(err) {
@@ -65,13 +65,7 @@ $this->registerCss("
 ");
  ?>
 
-<?php if (Yii::$app->session->hasFlash('alerta')): ?>
-  <div class="alert alert-danger alert-dismissable">
-    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
-    <h4><i class="icon fa fa-check"></i>Atención!</h4>
-    <?= Yii::$app->session->getFlash('alerta') ?>
-  </div>
-<?php endif; ?>
+
 
 <div class="site-index">
     <?php $form = ActiveForm::begin(['id' => 'comprobar-form', 'method' => 'post']); ?>

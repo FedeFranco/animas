@@ -83,7 +83,7 @@ class PublicacionesController extends Controller
         ]);
     }
 
-    public function actionComprobar($lat, $long)
+    public function actionComprobar($lat, $long, $km = 1, $ajax = false)
     {
         $publicaciones = Publicacion::find()->all();
         $cercanos = [];
@@ -91,7 +91,7 @@ class PublicacionesController extends Controller
         foreach ($publicaciones as $publicacion) {
             $distancia = $this->getDistancia( $lat, $long, $publicacion->latitud, $publicacion->longitud );
 
-            if( $distancia < 1 ) {
+            if( $distancia < $km) {
                 $cercanos[] = $publicacion;
             }
         }
@@ -106,10 +106,17 @@ class PublicacionesController extends Controller
             ],
         ]);
 
+        if ($ajax) {
+            return $this->renderPartial('comprobarPacial', [
+                'provider' => $provider,
+            ]);
+        }
+
         return $this->render('comprobar', [
             'provider' => $provider,
         ]);
     }
+
     /**
      * Creates a new Publicacion model.
      * If creation is successful, the browser will be redirected to the 'view' page.

@@ -18,9 +18,9 @@ $('.typeahead').typeahead({
     displayKey: 'titulo',
     limit: 5,
     templates: {
-        header: '<h4 class="name">Publicaciones</h4>',
+        header: '<h4 class="name" style="color: black; background-color: white;">Publicaciones</h4>',
         suggestion: function(data) {
-            html = '<div class="media">';
+            html = '<div class="media"  style=" background-color: white;>';
             html += '<p"><a href ="' + publicacionesView + data.id + '">' + data.titulo +'</a></p>';
             html += '</div></div>';
             return html;

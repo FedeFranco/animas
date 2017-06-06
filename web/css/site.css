@@ -23,6 +23,13 @@ div.panel-alerta {
     color: white;
 }
 
+div.tt-dataset-publicaciones {
+    margin-top: 2px;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: white;
+}
+
 h2#cab-contacto {
     color: white;
 }
