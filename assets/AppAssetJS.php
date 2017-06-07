@@ -26,6 +26,7 @@ class AppAssetJS extends AssetBundle
         'js/typeahead/jquery.typeahead.js',
         'js/typeahead/bloodhound.js',
         'js/typeahead/search.js',
+        'js/jquery-validation-1.16.0/dist/jquery.validate.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

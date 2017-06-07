@@ -37,12 +37,15 @@ class PublicacionesController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index'],
+                'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index'],
+                        'actions' => ['create','index'],
+                        'roles'=>['@'],
                         'allow' => true,
-                        'roles' => ['@'],
+                        'matchCallback' => function ($rule, $action) {
+                        return Yii::$app->user->identity->isAdmin;
+                        }
                     ],
                 ],
             ],
@@ -163,8 +166,13 @@ class PublicacionesController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            $tipos = TipoAnimal::find()->select('nombre_tipo_animal, id')->indexBy('id')->column();
+            $categorias = Categoria::find()->select('nombre_categoria, id')->indexBy('id')->column();
+
             return $this->render('update', [
                 'model' => $model,
+                'tipos' => $tipos,
+                'categorias' => $categorias
             ]);
         }
     }

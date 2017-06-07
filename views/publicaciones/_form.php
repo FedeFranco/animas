@@ -5,6 +5,9 @@ use yii\widgets\ActiveForm;
 use yii\imagine\Image;
 use yii\helpers\Url;
 use kartik\file\FileInput;
+use app\assets\AppAssetJS;
+
+AppAssetJS::register($this);
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
@@ -88,7 +91,7 @@ $('#normas').click(function(){
 
     <div class="form-group">
 
-        <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Update',
+        <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Modificar',
          ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary', 'id' => 'botonpub']) ?>
     </div>
 

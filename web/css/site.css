@@ -136,7 +136,10 @@ button:active:after {
     transition: 0s
 }
 /* fin de animar botones*/
-
+div i {
+    color: white;
+    font-size: 20px;
+}
 
 table.table-striped {
     background-color: white;
