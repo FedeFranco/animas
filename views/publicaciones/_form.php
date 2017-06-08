@@ -98,3 +98,11 @@ $('#normas').click(function(){
     <?php ActiveForm::end()?>
 
 </div>
+<script>
+        $(document).ready(function() {
+              $("form").validate({
+                lang: 'es'
+              });
+            });
+        $("form").validate();
+</script>

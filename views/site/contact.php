@@ -10,7 +10,9 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use app\assets\FontAsset;
 use app\assets\AppAsset;
+use app\assets\AppAssetJS;
 
+AppAssetJS::register($this);
 AppAsset::register($this);
 FontAsset::register($this);
 
@@ -85,3 +87,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php endif; ?>
 
 </div>
+<script>
+    $(document).ready(function() {
+          $("form").validate({
+            lang: 'es'
+          });
+        });
+    $("form").validate();
+</script>

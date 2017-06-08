@@ -3,10 +3,15 @@ body {
     height: 100%;
     background-color: #19254B;
 }
-h1, p, label {
+h1, h2, h3, h4, h5, h6, p, label {
     font-family: 'Ubuntu', sans-serif;
     color: white;
 }
+
+.panel h4, .panel p{
+    color:black;
+}
+
 div.banners-imagenes {
     height: 300px;
 }
@@ -19,7 +24,7 @@ div.item div.panel {
     background-color: white;
 }
 
-div.panel-alerta {
+div.panel-alerta, .panel-alerta h4{
     color: white;
 }
 
@@ -28,6 +33,25 @@ div.tt-dataset-publicaciones {
     padding: 20px;
     border-radius: 2px;
     background-color: white;
+}
+
+div#perfil-padre {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+//div.p-items-publicacion {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+//div.d-items-publicacion {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
 }
 
 h2#cab-contacto {
@@ -139,6 +163,11 @@ button:active:after {
 div i {
     color: white;
     font-size: 20px;
+}
+
+div.marco-perfil {
+    color: white;
+    font-size: 18px;
 }
 
 table.table-striped {

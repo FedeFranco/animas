@@ -14,6 +14,7 @@ class ProfileController extends BaseProfileController
         $profile = $this->finder->findProfileById($id);
         $publicaciones = Publicacion::find()->select('id, titulo')->where(['usuario_id' => $profile->user->id])->asArray()->all();
         $titulos = [];
+        //var_dump($profile->user->id); die();
         /*foreach ($publicaciones as $value) {
             $titulos[] = $value['titulo'];
         }*/

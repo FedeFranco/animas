@@ -37,15 +37,19 @@ class PublicacionesController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index'],
                 'rules' => [
                     [
-                        'actions' => ['create','index'],
+                        'actions' => ['index'],
                         'roles'=>['@'],
                         'allow' => true,
                         'matchCallback' => function ($rule, $action) {
                         return Yii::$app->user->identity->isAdmin;
                         }
+                    ],
+                    [
+                        'actions' => ['create'],
+                        'roles'=>['@'],
+                        'allow' => true,
                     ],
                 ],
             ],

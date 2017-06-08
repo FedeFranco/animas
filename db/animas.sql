@@ -44,8 +44,14 @@ create table reportes(
 
 
 insert into categorias (nombre_categoria) values ('ADOPCIÓN'),
-                                                    ('ACOGIDA'),
-                                                        ('APADRINAMIENTO'),
-                                                            ('ALERTA');
+                                                 ('ACOGIDA'),
+                                                 ('APADRINAMIENTO'),
+                                                 ('ALERTA');
 
-insert into tipos_animales (nombre_tipo_animal) values ('FELINO'),('CANINO'),('AVES'),('REPTIL')
+insert into tipos_animales (nombre_tipo_animal) values ('FELINO'),
+                                                        ('CANINO'),
+                                                        ('AVE'),
+                                                        ('REPTIL'),
+                                                        ('ROEDOR'),
+                                                        ('INSECTO'),
+                                                        ('ACUÁTICO')

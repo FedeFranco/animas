@@ -4,6 +4,7 @@ $params = require(__DIR__ . '/params.php');
 
 $config = [
     'id' => 'basic',
+    'name' => 'Animas',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => ['@uploads' => 'uploads',
@@ -25,6 +26,7 @@ $config = [
                 'recoverySubject'       => 'Recuperación de Contraseña',
             ],
             'controllerMap' => [
+                'registration' => 'app\controllers\user\RegistrationController',
                 'profile' => 'app\controllers\user\ProfileController',
                 'settings' => 'app\controllers\SettingsController',
                 'admin' => 'app\controllers\user\AdminController',

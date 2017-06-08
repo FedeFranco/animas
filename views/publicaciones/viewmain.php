@@ -10,50 +10,51 @@
 <div class="publicaciones-view">
     <div class="panel panel-default">
         <?php if ($model->categoria['nombre_categoria'] === 'ALERTA'): ?>
-            <div class="media panel-alerta" style="background-color: #F45454;">
+          <div class="media panel-alerta" style="background-color: #F45454;">
         <?php else:?>
-            <div class="media">
+          <div class="media panel">
         <?php endif; ?>
           <div class="media-left">
-             <?= Html::a(Html::img($model->imagen,['width' => '250px','height'=>'200px']), ['/publicaciones/view', 'id' => $model->id]) ?>
+             <?= Html::a(Html::img($model->imagen,['width' => '200px','height'=>'200px', 'class' => 'img-circle', 'style' => 'padding: 15px;']), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>
-          <div class="media-body">
-              <h4 class="media-heading">
-                <?= Html::a($model->titulo,['/publicaciones/view', 'id' => $model->id])?>
-              </h4>
-             <?= $model->cuerpo?>
-             <div class="row">
-                 <div class="col-md-3">
-                    Por <?= $model->usuario->username?>
+          <div class="row media-body" style="padding: 15px">
+              <div class="col-xs-8 col-sm-8">
+                  <h4>
+                     <?= $model->categoria['nombre_categoria']?>
+                 </h4>
+                  <h4 class="media-heading">
+                    <?= Html::a($model->titulo,['/publicaciones/view', 'id' => $model->id])?>
+                  </h4>
+                 <?= $model->cuerpo ?>
+                 <div class="">
+                     <div class=""> <?= Html::a($model->url,$model->url); ?></div>
                  </div>
-                 <div class="col-md-3">
-                     <?= Yii::$app->formatter->asDate($model->fecha_publicacion,'long'); ?>
+                 <div class="">
+                    Tipo: <?= $model->tipo['nombre_tipo_animal']?>
                  </div>
-                 <div class="col-md-3">
-                     <?= Html::a($model->url,$model->url); ?>
-                 </div>
-                 <div class="row">
+              </div>
+              <div class="col-xs-4 col-sm-4" style="text-align:right;">
+                  <p class="">Creado por <?=Html::a($model->usuario->username, ['/user/'.$model->usuario->id])?></p>
+                  <p class=""><?= Yii::$app->formatter->asDate($model->fecha_publicacion,'long'); ?></p>
+                  <br>
+                  <div class="">
+                      <div class="">
+                          <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
+                              'class' => 'btn btn-danger',
+                              'data' => [
+                                  'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
+                                  'method' => 'post',
+                              ],
+                          ]) ?>
+                      </div>
 
-                         <div class="col-lg-5">
-                            <?= $model->categoria['nombre_categoria']?>
-                         </div>
+                      <div class="">
+                          <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false']]) ?>
+                      </div>
+                  </div>
+              </div>
 
-                         <div class="col-lg-5">
-                             <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
-                                 'class' => 'btn btn-danger',
-                                 'data' => [
-                                     'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
-                                     'method' => 'post',
-                                 ],
-                             ]) ?>
-                         </div>
-
-                         <div class="col-lg-5">
-                             <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false']]) ?>
-                         </div>
                 </div>
-
-             </div>
              <br/>
              <br/>
             <?php
@@ -68,6 +69,5 @@
                     ]) ?>
                 <?php } ?>
           </div>
-        </div>
     </div>
 </div>
