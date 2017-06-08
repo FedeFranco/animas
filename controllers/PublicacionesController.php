@@ -51,6 +51,11 @@ class PublicacionesController extends Controller
                         'roles'=>['@'],
                         'allow' => true,
                     ],
+                    [
+                        'actions' => ['view'],
+                        'roles'=>['?','@'],
+                        'allow' => true,
+                    ],
                 ],
             ],
 
