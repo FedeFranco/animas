@@ -50,6 +50,10 @@ $config = [
                 'app_secret' => '6d473e79d6dbed62ab4a5db4a0df5620',
 
             ],
+
+            'twitter' => [
+                'screenName' => 'Proyecto Animas'
+            ],
         ],
     ],
 

@@ -1,6 +1,7 @@
 <?php
     use app\models\Publicacion;
     use yii\helpers\Html;
+    use yii\helpers\Url;
     use Imagine\Image\Box;
     use Imagine\Image\Point;
     use kartik\social\FacebookPlugin;
@@ -53,7 +54,11 @@
                       <?php endif; ?>
 
                       <div class="">
-                          <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false']]) ?>
+                          <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false', 'href' => Url::to(['publicaciones/view',$model->id])]]) ?>
+                      </div>
+
+                      <div class="">
+                         <?php echo TwitterPlugin::widget(['type'=>TwitterPlugin::SHARE, 'settings' => ['size'=>'default']]); ?>
                       </div>
                   </div>
               </div>
