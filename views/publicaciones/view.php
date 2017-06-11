@@ -177,7 +177,7 @@ $this->registerJs($js)
         <br/>
     <!--    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?=$model->latitud?>,<?=$model->longitud?>&hl=es;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q='+<?=$model->latitud?>+','+<?=$model->longitud?>+'&hl=es;z=14&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">Ver en Google Maps</a></small> -->
     <?php else:?>
-        <div><i>Para ver la información del teléfono y la ubicación de esta publicación debe estar <?= Html::a('logueado',['/user/security/login'])?></i></div>
+        <div><strong>Para ver la información del teléfono y la ubicación de esta publicación debe estar <?= Html::a('logueado',['/user/security/login'])?></strong></div>
     <?php endif; ?>
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHvxtC6tuK72E_ZcWHcyYQzYxqhZzYsbk">
