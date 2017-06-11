@@ -15,7 +15,7 @@
           <div class="media panel">
         <?php endif; ?>
           <div class="media-left">
-             <?= Html::a(Html::img($model->imagen,['width' => '200px','height'=>'200px', 'class' => 'img-circle', 'style' => 'padding: 15px;']), ['/publicaciones/view', 'id' => $model->id]) ?>
+             <?= Html::a(Html::img($model->imagen,['width' => '200px','height'=>'200px', 'alt' => 'img-publicacion', 'class' => 'img-circle', 'style' => 'padding: 15px;']), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>
           <div class="row media-body" style="padding: 15px">
               <div class="col-xs-8 col-sm-8">
