@@ -29,8 +29,5 @@ $this->title = "Filtro"
     ]
 
 ]); ?>
-<div class="text">
-    textoooooooooooo
-</div>
 <?=$filter->renderAjaxView($ajaxViewFile) ?>
 </div>

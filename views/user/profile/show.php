@@ -26,17 +26,17 @@ $this->params['breadcrumbs'][] = $this->title;
                     <ul style="padding: 0px; list-style: none outside none;">
                         <?php if (!empty($profile->location)): ?>
                             <li>
-                                <i class="glyphicon glyphicon-map-marker text-muted"></i> <?= Html::encode($profile->location) ?>
+                                <strong class="glyphicon glyphicon-map-marker text-muted"></strong> <?= Html::encode($profile->location) ?>
                             </li>
                         <?php endif; ?>
                         <?php if (!empty($profile->website)): ?>
                             <li>
-                                <i class="glyphicon glyphicon-globe text-muted"></i> <?= Html::a(Html::encode($profile->website), Html::encode($profile->website)) ?>
+                                <strong class="glyphicon glyphicon-globe text-muted"></strong> <?= Html::a(Html::encode($profile->website), Html::encode($profile->website)) ?>
                             </li>
                         <?php endif; ?>
                         <?php if (!empty($profile->public_email)): ?>
                             <li>
-                                <i class="glyphicon glyphicon-envelope text-muted"></i> <?= Html::a(Html::encode($profile->public_email), 'mailto:' . Html::encode($profile->public_email)) ?>
+                                <strong class="glyphicon glyphicon-envelope text-muted"></strong> <?= Html::a(Html::encode($profile->public_email), 'mailto:' . Html::encode($profile->public_email)) ?>
                             </li>
                         <?php endif; ?>
                         <li>

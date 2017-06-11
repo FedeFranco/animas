@@ -22,8 +22,9 @@ use yii\widgets\Pjax;
                 return Html::a(Html::encode($data['titulo']), ['/publicaciones/view', 'id' => $data['id']]);
              },
         ],
-        'categor_nom',
-        'fecha_publicacion',
+        'categoria.nombre_categoria',
+        'tipo.nombre_tipo_animal',
+        'fecha_publicacion:relativeTime',
     ],
     ]) ?>
 
