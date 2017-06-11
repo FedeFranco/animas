@@ -44,7 +44,7 @@ class PublicacionesController extends Controller
                         'roles'=>['@'],
                         'allow' => true,
                         'matchCallback' => function ($rule, $action) {
-                        return Yii::$app->user->identity->isAdmi;
+                        return Yii::$app->user->identity->isAdmin;
                         }
                     ],
                     [
@@ -221,7 +221,7 @@ class PublicacionesController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-        
+
         return $this->redirect(['site/index']);
     }
 
