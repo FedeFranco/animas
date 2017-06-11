@@ -58,6 +58,15 @@ div.site-filtro {
     color: white;
 }
 
+.search-form {
+    display: flex;
+    flex-flow: column;
+}
+
+.search-form input {
+    width: 200px
+}
+
 h2#cab-contacto {
     color: white;
 }

@@ -5,6 +5,7 @@
     use Imagine\Image\Box;
     use Imagine\Image\Point;
     use kartik\social\FacebookPlugin;
+    use kartik\social\TwitterPlugin;
     use Yii;
 ?>
 
