@@ -80,8 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 . ')' : '')
                         ) ?>
                 <?php endif ?>
-                <label for="recordar"> </label>
-                <?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '3', 'id' => 'recordar' ]) ?>
+                <?= $form->field($model, 'rememberMe')->checkbox(['tabindex' => '3', 'id' => 'recordar' ])->label(" ") ?>
 
                 <?= Html::submitButton(
                     Yii::t('user', 'Sign in'),
