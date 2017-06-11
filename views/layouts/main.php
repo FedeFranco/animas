@@ -114,21 +114,19 @@ $this->registerJs($js, View::POS_HEAD);
 </div>
 
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
+    <div class="footer-padre">
+            <div class="">
                 <p class="pull-left">&copy; Proyecto Animas <?= date('Y') ?></p>
             </div>
-            <div class="col-lg-3">
+            <div class="">
                 <p><?= Html::a('Contacta con nosotros',Url::to(['site/contact'])); ?></p>
             </div>
-            <div class="col-lg-3">
+            <div class="">
                     <?=Html::a(Html::img(Url::to('@web/icon_fb.jpg'),['width' => '30px', 'height' => '30px']),Url::to('https://www.facebook.com/sharer/sharer.php?u=https://animas.herokuapp.com')) ?>
             </div>
-            <div class="col-lg-3">
+            <div class="">
                 <?=Html::a(Html::img(Url::to('@web/icon_tw.jpg'),['width' => '30px', 'height' => '30px']),Url::to('https://twitter.com/intent/tweet?text=Proyecto+Animas+https://animas.herokuapp.com')) ?>
             </div>
-        </div
     </div>
 </footer>
 

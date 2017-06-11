@@ -58,3 +58,9 @@ $('.typeahead').typeahead({
         }
     }*/
 );
+$('#search-submit').on('click', function(event) {
+    if ($('.tt-input').val() == "") {
+        $('.input-group').off('hover');
+        return false;
+    };
+});

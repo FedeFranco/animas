@@ -14,7 +14,6 @@ AppAssetJS::register($this);
 /* @var $form yii\widgets\ActiveForm */
 $relacion = Url::to(['/publicaciones/normas']);
 $this->registerJs("
-//var confirmLoc = confirm('Animas quiere saber su ubicación');
 var crd;
 var options = {
       enableHighAccuracy: true,
@@ -77,9 +76,6 @@ $('#normas').click(function(){
         </i>
     </div>
     <?= $form->field($model, 'url')?>
-    <a id="normas">Normas de publicación</a>
-     <!--Html::a('Normas de publicaciones', ['publicaciones/normas']) -->
-    <?= $form->field($model, 'confirm_pub')->checkbox(['id'=>'checknormas'])?>
 
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
@@ -89,6 +85,9 @@ $('#normas').click(function(){
 
     <?= $form->field($model, 'imageFile')->fileInput() ?>
 
+    <a id="normas">Normas de publicación</a>
+    <!--Html::a('Normas de publicaciones', ['publicaciones/normas']) -->
+    <?= $form->field($model, 'confirm_pub')->checkbox(['id'=>'checknormas'])?>
     <div class="form-group">
 
         <?= Html::submitButton($model->isNewRecord ? 'Publicar' : 'Modificar',
@@ -103,6 +102,5 @@ $('#normas').click(function(){
               $("form").validate({
                 lang: 'es'
               });
-            });
-        $("form").validate();
+        });
 </script>

@@ -11,8 +11,6 @@ use sanex\simplefilter\SimpleFilter;
 
 AppAssetJS::register($this);
 
-//$url = Url::to(['site/comprobar']);
-
 $urlPublicaciones = Url::to(['/publicaciones/view']) . '?q=%QUERY';
 
 $url = Url::to(['/publicaciones/comprobar']);
@@ -68,22 +66,22 @@ $this->registerCss("
 
 
 <div class="site-index">
-    <?php $form = ActiveForm::begin(['id' => 'comprobar-form', 'method' => 'post']); ?>
-     <!-- <div>  Html::hiddenInput("latitud", '', ['id' => 'oculto1'])  </div> -->
-      <input type="hidden" id="oculto1" name="longitud" value="" />
-      <input type="hidden" id="oculto2" name="latitud" value=""/>
 
-      <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar']) ?>
+        <?php $form = ActiveForm::begin(['id' => 'comprobar-form', 'method' => 'post']); ?>
+        <!-- <div>  Html::hiddenInput("latitud", '', ['id' => 'oculto1'])  </div> -->
+        <input type="hidden" id="oculto1" name="longitud" value="" />
+        <input type="hidden" id="oculto2" name="latitud" value=""/>
+        <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar']) ?>
+        <br />
+        <br />
+        <form class="form-index" method="GET" action="<?=Url::to(['/site/search'])?>">
+            <div class="form-group search-form">
+                <input type="text" name="q" class="form-control typeahead" placeholder=" Busca publicaciones">
+                <button type="submit" class="btn btn-default" id="search-submit"><span class="glyphicon glyphicon-search"></span></button>
+            </div>
+        </form>
 
-      <div class="search-index">
-            <form class="form-index row" method="GET" action="<?=Url::to(['/site/search'])?>">
-                <div class="form-group search-form">
-                    <input type="text" name="q" class="form-control typeahead" placeholder=" Busca publicaciones">
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                </div>
-            </form>
-
-
+    <div class="search-index">
     <?= ListView::widget([
            'dataProvider' => $dataProvider,
            'itemOptions' => ['class' => 'item'],

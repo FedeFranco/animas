@@ -25,7 +25,9 @@
                   <h4 class="media-heading">
                     <?= Html::a($model->titulo,['/publicaciones/view', 'id' => $model->id])?>
                   </h4>
-                 <?= $model->cuerpo ?>
+                  <div class="">
+                      <?= $model->cuerpo ?>
+                  </div>
                  <div class="">
                      <div class=""> <?= Html::a($model->url,$model->url); ?></div>
                  </div>
@@ -38,15 +40,17 @@
                   <p class=""><?= Yii::$app->formatter->asDate($model->fecha_publicacion,'long'); ?></p>
                   <br>
                   <div class="">
-                      <div class="">
-                          <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
-                              'class' => 'btn btn-danger',
-                              'data' => [
-                                  'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
-                                  'method' => 'post',
-                              ],
-                          ]) ?>
-                      </div>
+                     <?php if (!(Yii::$app->user->isGuest)): ?>
+                          <div class="">
+                              <?= Html::a('Reportar usuario', ['/reportes/create', 'id' => $model->id], [
+                                  'class' => 'btn btn-danger',
+                                  'data' => [
+                                      'confirm' => 'Está seguro de denunciar a este usuario junto a su publicación?',
+                                      'method' => 'post',
+                                  ],
+                              ]) ?>
+                          </div>
+                      <?php endif; ?>
 
                       <div class="">
                           <?php echo FacebookPlugin::widget(['type'=>FacebookPlugin::SHARE, 'settings' => ['size'=>'small', 'layout'=>'button_count', 'mobile_iframe'=>'false']]) ?>

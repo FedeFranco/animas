@@ -60,7 +60,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= Html::submitButton(Yii::t('user', 'Save'), ['class' => 'btn btn-block btn-success']) ?><br>
                     </div>
                 </div>
-                <div><h1>Sobrescrito</h1></div>
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
@@ -72,14 +71,14 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="panel-body">
                     <p>
-                        <?= Yii::t('user', 'Once you delete your account, there is no going back') ?>.
-                        <?= Yii::t('user', 'It will be deleted forever') ?>.
-                        <?= Yii::t('user', 'Please be certain') ?>.
+                        <?= Yii::t('user', 'Una vez borrada la cuenta, no se podrá volver atrás') ?>.
+                        <?= Yii::t('user', 'Se borrará para siempre') ?>.
+                        <?= Yii::t('user', 'Por favor, reconsidéralo') ?>.
                     </p>
                     <?= Html::a(Yii::t('user', 'Delete account'), ['delete'], [
                         'class' => 'btn btn-danger',
                         'data-method' => 'post',
-                        'data-confirm' => Yii::t('user', 'Are you sure? There is no going back'),
+                        'data-confirm' => Yii::t('user', 'Estás seguro? No se podrá volver atrás'),
                     ]) ?>
                 </div>
             </div>

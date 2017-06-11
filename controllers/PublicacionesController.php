@@ -16,6 +16,7 @@ use yii\web\Controller;
 use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\data\ArrayDataProvider;
+use yii\helpers\Json;
 
 
 
@@ -39,20 +40,20 @@ class PublicacionesController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index','create','update','comprobar'],
                         'roles'=>['@'],
                         'allow' => true,
                         'matchCallback' => function ($rule, $action) {
-                        return Yii::$app->user->identity->isAdmin;
+                        return Yii::$app->user->identity->isAdmi;
                         }
                     ],
                     [
-                        'actions' => ['create'],
+                        'actions' => ['create','update','delete'],
                         'roles'=>['@'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['view'],
+                        'actions' => ['view','comprobar','mapa'],
                         'roles'=>['?','@'],
                         'allow' => true,
                     ],
@@ -168,9 +169,22 @@ class PublicacionesController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
+    public function actionUpdate($id, $long = null, $lat = null)
     {
+
         $model = $this->findModel($id);
+
+        if ($long != null && $lat != null ) {
+            $publicacionCoord = Publicacion::findOne($id);
+            $publicacionCoord->longitud = $long;
+            $publicacionCoord->latitud = $lat;
+            $publicacionCoord->update();
+
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+        }
+
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -186,6 +200,18 @@ class PublicacionesController extends Controller
         }
     }
 
+    public function actionMapa($id, $long, $lat)
+    {
+        if ($long != null && $lat != null ) {
+            $model = Publicacion::findOne($id);
+            $model->longitud = $long;
+            $model->latitud = $lat;
+            $model->update(false);
+
+
+            $this->render('view', ['model' => $model]);
+        }
+    }
     /**
      * Deletes an existing Publicacion model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -195,8 +221,8 @@ class PublicacionesController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
+        
+        return $this->redirect(['site/index']);
     }
 
     public function actionNormas()
