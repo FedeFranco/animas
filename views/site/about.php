@@ -46,7 +46,7 @@ $this->registerCss('html, body {
                      No te olvides <?= Html::a('Registrarte', ['/user/registration/register'])?> y <?= Html::a('Loguearte', ['/user/security/login'])?> , encontrarás más servicios que ofrece <span itemprop="owns">Proyecto Animas</span>
                  </p>
 
-                 <h2>Cómo usar <span itemprop="name">Animas</span></h2>
+                 <h3>Cómo usar <span itemprop="name">Animas</span></h3>
                  <p itemprop="description">
                      Como ya sabes, los usuarios de <span itemprop="name">Animas</span> se registran en la plataforma y de esta manera pueden publicar anuncios para comunicar al restos de usuarios de la web de qué forman desean ayudar a una mascota.
                      Una vez accediendo a <?= Html::a('Publicar', ['/publicaciones/create'])?>, elemento que encontramos en el menú de navegación, se nos presentará un formulario, el cual debemos rellenar. Nos encontraremos con: el <strong>Título</strong>,
