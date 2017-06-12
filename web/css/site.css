@@ -44,7 +44,15 @@ div.tt-dataset-publicaciones {
     margin-top: 2px;
     padding: 20px;
     border-radius: 2px;
-    background-color: white;
+    background-color: blue;
+
+}
+
+div.tt-dataset-texto {
+    margin-top: 2px;
+    padding: 20px;
+    border-radius: 2px;
+    background-color: blue;
 }
 
 div#perfil-padre {
@@ -73,6 +81,11 @@ div.site-filtro {
 .search-form {
     display: flex;
     flex-flow: column;
+}
+
+div.search-form-inputs {
+    display: flex;
+    flex-flow: row;
 }
 
 .search-form input {

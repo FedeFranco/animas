@@ -177,6 +177,7 @@ class SiteController extends Controller
                $json[] = [
                    'id' => $publicacion->id,
                    'titulo' => $publicacion->titulo,
+                   'cuerpo' => $publicacion->cuerpo
 
                ];
            }
@@ -193,12 +194,17 @@ class SiteController extends Controller
    {
        if ($q !== null && $q !== '') {
            $publicacionesProvider = new ActiveDataProvider([
-               'query' => Publicacion::find()->where(['ilike', 'titulo', $q]),
+            'query' => Publicacion::find()->where(['ilike', 'titulo', $q]),
            ]);
+
+           $publicacionProvider = new ActiveDataProvider([
+                'query' => Publicacion::find()->where(['ilike', 'cuerpo', $q]),
+            ]);
 
            return $this->render('search', [
                'q' => $q,
                'publicacionesProvider' => $publicacionesProvider,
+               'publicacionProvider' => $publicacionProvider
 
            ]);
        }

@@ -1,11 +1,11 @@
 Comprobación en navegadores
 ========================================
 
-![Comprobación Chrome](img/chrome.PNG) Chrome
+![Comprobación Chrome](images/chrome.png) Chrome
 ---------------------------------------------------
 
-![Firefox](img/firefox.PNG) Mozilla Firefox
+![Firefox](images/firefox.png) Mozilla Firefox
 ---------------------------------------------------
 
-![Opera](img/opera.JPG) Opera
+![Opera](images/opera.jpg) Opera
 -------------------------------------

@@ -7,6 +7,14 @@ var publicaciones = new Bloodhound({
     }
 });
 
+var publicacion = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+        url: urlPublicaciones,
+        wildcard: '%QUERY'
+    }
+});
 
 
 $('.typeahead').typeahead({
@@ -26,7 +34,23 @@ $('.typeahead').typeahead({
             return html;
         }
     }
-} 
+}, {
+    name: 'texto',
+    source: publicacion,
+    displayKey: 'cuerpo',
+    limit: 5,
+    templates: {
+        header: '<h4 class="name" style="color: black; background-color: white;>Texto</h4>',
+        suggestion: function(data) {
+            html = '<div class="media row">';
+            html += '<div class="media-body style=" background-color: blue; ">';
+            html += '<p"><a href ="' + publicacionesView + data.id + '">' + data.cuerpo +'</a></p>';
+            html += '</div></div>';
+            return html;
+        }
+    }
+}
+
 );
 $('#search-submit').on('click', function(event) {
     if ($('.tt-input').val() == "") {

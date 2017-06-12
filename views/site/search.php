@@ -25,4 +25,15 @@ $this->title = 'Resultados de la busqueda de: "'.$q.'"';
           ]) ?>
       </div>
   </div>
+
+  <div role="tabpanel" class="tab-pane active" id="publicacion"></br>
+      <div class="row">
+          <?= ListView::widget([
+          'dataProvider' => $publicacionProvider,
+          'itemOptions' => ['class' => 'item'],
+          'itemView' => '/publicaciones/viewSearch',
+          'layout' => "{items}\n{pager}",
+          ]) ?>
+      </div>
+  </div>
 </div>

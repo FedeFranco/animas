@@ -2,21 +2,21 @@ Array
 (
     [0] => Array
         (
-            [line] => 106
+            [line] => 110
             [file] => controllers/PublicacionesController.php
             [message] => Undefined parameter documented: $id, in actionComprobar().
         )
 
     [1] => Array
         (
-            [line] => 179
+            [line] => 183
             [file] => controllers/PublicacionesController.php
             [message] => Undefined parameter documented: $id. in actionUpdate().
         )
 
     [2] => Array
         (
-            [line] => 205
+            [line] => 209
             [file] => controllers/PublicacionesController.php
             [message] => Undefined parameter documented: $id, in actionMapa().
         )

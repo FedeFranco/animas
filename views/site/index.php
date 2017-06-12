@@ -81,9 +81,10 @@ $this->registerCss("
         <form class="form-index" method="GET" action="<?=Url::to(['/site/search'])?>">
             <div class="form-group search-form">
               <label for="text-seek">¡Introduce alguna palabra para encontrar una publicación!</label>
-                <input type="text" id="text-seek" name="q" class="form-control typeahead" placeholder=" Busca publicaciones">
-
-                <button type="submit" class="btn btn-default" id="search-submit"><span class="glyphicon glyphicon-search"></span></button>
+              <div class="search-from-inputs">
+                  <input type="text" id="text-seek" name="q" class="form-control typeahead" placeholder=" Busca publicaciones">
+                  <button type="submit" class="btn btn-default" id="search-submit"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
             </div>
         </form>
 
