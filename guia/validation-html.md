@@ -9,7 +9,7 @@ En la página principal podemos encontrar cuatro errores los cuales son causados
 
 ---------
 
-![Index](img/validation-html/validacion-html-inicialIndex.png)
+![Index](img/validation-html/validacion-html-inicialIndex.PNG)
 
 -------------------------------------------------
 
@@ -20,7 +20,7 @@ En la página principal podemos encontrar cuatro errores los cuales son causados
 
 ---------
 
-![Login](img/validation-html/validacion-html-login.php)
+![Login](img/validation-html/validacion-html-login.PNG)
 
 -------------------------------------------------
 
@@ -31,7 +31,7 @@ En la página principal podemos encontrar cuatro errores los cuales son causados
 
 ---------
 
-![Publicación](img/validation-html/validacion-html-crearpub.php)
+![Publicación](img/validation-html/validacion-html-crearpub.PNG)
 
 -------------------------------------------------
 
@@ -41,4 +41,4 @@ En la página principal podemos encontrar cuatro errores los cuales son causados
 
 ---------
 
-![Registro](img/validation-html/validacion-html-registro.php)
+![Registro](img/validation-html/validacion-html-registro.PNG)

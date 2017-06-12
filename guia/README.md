@@ -1,4 +1,4 @@
-![Logo](img/animas-logo2.png) **Animas**
+![Logo](img/animas-logo2.PNG) **Animas**
 ==================================
 Descripción general del proyecto
 --------------------------------

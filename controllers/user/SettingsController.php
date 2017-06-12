@@ -8,13 +8,7 @@
  * file that was distributed with this source code.
  */
 namespace app\controllers\user;
-/*use dektrium\user\Finder;
-use dektrium\user\models\Profile;
-use dektrium\user\models\SettingsForm;
-use dektrium\user\models\User;
-use dektrium\user\Module;
-use dektrium\user\traits\AjaxValidationTrait;
-use dektrium\user\traits\EventTrait;*/
+
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -29,85 +23,6 @@ use dektrium\user\controllers\SettingsController as BaseSettingsController;
 class SettingsController extends BaseSettingsController
 {
 
-    /*use AjaxValidationTrait;
-    use EventTrait;
-
-    const EVENT_BEFORE_PROFILE_UPDATE = 'beforeProfileUpdate';
-
-    const EVENT_AFTER_PROFILE_UPDATE = 'afterProfileUpdate';
-
-    const EVENT_BEFORE_ACCOUNT_UPDATE = 'beforeAccountUpdate';
-
-    const EVENT_AFTER_ACCOUNT_UPDATE = 'afterAccountUpdate';
-
-    const EVENT_BEFORE_CONFIRM = 'beforeConfirm';
-
-    const EVENT_AFTER_CONFIRM = 'afterConfirm';
-
-    const EVENT_BEFORE_DISCONNECT = 'beforeDisconnect';
-
-    const EVENT_AFTER_DISCONNECT = 'afterDisconnect';
-
-    const EVENT_BEFORE_DELETE = 'beforeDelete';
-
-    const EVENT_AFTER_DELETE = 'afterDelete';
-
-    public $defaultAction = 'profile';
-    protected $finder;
-
-    public function __construct($id, $module,Finder $finder, $config = [])
-    {
-        $this->finder = $finder;
-        parent::__construct($id, $module, $config);
-    }
-
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'disconnect' => ['post'],
-                    'delete'     => ['post'],
-                ],
-            ],
-            'access' => [
-                'class' => AccessControl::className(),
-                'rules' => [
-                    [
-                        'allow'   => true,
-                        'actions' => ['profile', 'account', 'networks', 'disconnect', 'delete'],
-                        'roles'   => ['@'],
-                    ],
-                    [
-                        'allow'   => true,
-                        'actions' => ['confirm'],
-                        'roles'   => ['?', '@'],
-                    ],
-                ],
-            ],
-        ];
-    }
-
-    public function actionProfile()
-    {
-        $model = $this->finder->findProfileById(\Yii::$app->user->identity->getId());
-        if ($model == null) {
-            $model = \Yii::createObject(Profile::className());
-            $model->link('user', \Yii::$app->user->identity);
-        }
-        $event = $this->getProfileEvent($model);
-        $this->performAjaxValidation($model);
-        $this->trigger(self::EVENT_BEFORE_PROFILE_UPDATE, $event);
-        if ($model->load(\Yii::$app->request->post()) && $model->save()) {
-            \Yii::$app->getSession()->setFlash('success', \Yii::t('user', 'Your profile has been updated'));
-            $this->trigger(self::EVENT_AFTER_PROFILE_UPDATE, $event);
-            return $this->refresh();
-        }
-        return $this->render('profile', [
-            'model' => $model,
-        ]);
-    }*/
 
     /**
      *  Muestra la cuenta de un usuario
@@ -132,42 +47,6 @@ class SettingsController extends BaseSettingsController
             'model' => $model,
         ]);
     }
-
-    /*public function actionConfirm($id, $code)
-    {
-        $user = $this->finder->findUserById($id);
-        if ($user === null || $this->module->emailChangeStrategy == Module::STRATEGY_INSECURE) {
-            throw new NotFoundHttpException();
-        }
-        $event = $this->getUserEvent($user);
-        $this->trigger(self::EVENT_BEFORE_CONFIRM, $event);
-        $user->attemptEmailChange($code);
-        $this->trigger(self::EVENT_AFTER_CONFIRM, $event);
-        return $this->redirect(['account']);
-    }
-
-    public function actionNetworks()
-    {
-        return $this->render('networks', [
-            'user' => \Yii::$app->user->identity,
-        ]);
-    }
-
-    public function actionDisconnect($id)
-    {
-        $account = $this->finder->findAccount()->byId($id)->one();
-        if ($account === null) {
-            throw new NotFoundHttpException();
-        }
-        if ($account->user_id != \Yii::$app->user->id) {
-            throw new ForbiddenHttpException();
-        }
-        $event = $this->getConnectEvent($account, $account->user);
-        $this->trigger(self::EVENT_BEFORE_DISCONNECT, $event);
-        $account->delete();
-        $this->trigger(self::EVENT_AFTER_DISCONNECT, $event);
-        return $this->redirect(['networks']);
-    }*/
     /**
      *  Borra la cuenta de un usuario
      *

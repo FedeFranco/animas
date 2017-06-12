@@ -6,11 +6,11 @@ La validación sobre accesibilidad se ha llevado a cabo sobre las siguientes pá
 [Index](http://animas.herokuapp.com/index.php)
 ---------
 
-![Index](img/accesibilidad/accesibilidad-index1.png)
+![Index](img/accesibilidad/accesibilidad-index1.PNG)
 
 En este apartado se muetran fallos alts en las imágenes y label y en los checkbox. Se puede solucionar con facilidad y cumple el nivel AA
 
-![Index](img/accesibilidad/accesibilidad-index.png)
+![Index](img/accesibilidad/accesibilidad-index.PNG)
 
 Tras crear una publicación, el propio framework (Yii2) generá automáticamente una etiqueta  `<b>` que no puede ser reemplazada o eliminada
 
@@ -20,7 +20,7 @@ Tras crear una publicación, el propio framework (Yii2) generá automáticamente
 ---------
 
 
-![Login](img/accesibilidad/accesibilidad-login.png)
+![Login](img/accesibilidad/accesibilidad-login.PNG)
 
 La sección de "Login" presenta dos fallo que representan la falta de un label en un checkbox en un input de texto. Aún así, aunque a nivel de código presente un fallo de accesibilidad, se mantiene informado en todo momento al usuario de la acción de dicho checkbox. Este fallo, el cual es generado por el propio framework, no es accesible mediante código HTML o CSS
 -------------------------------------------------
@@ -29,7 +29,7 @@ La sección de "Login" presenta dos fallo que representan la falta de un label e
 ---------
 
 
-![Registro](img/accesibilidad/accesibilidad-registro.png)
+![Registro](img/accesibilidad/accesibilidad-registro.PNG)
 
 La página del registro cumple el nivel AA de accesibilidad.
 
@@ -39,7 +39,7 @@ La página del registro cumple el nivel AA de accesibilidad.
 ---------
 
 
-![Publicar](img/accesibilidad/accesibilidad-formulario.png)
+![Publicar](img/accesibilidad/accesibilidad-formulario.PNG)
 
 La sección de "Publicar" mediante un formulario presenta dos fallo que representan la falta de un label en un checkbox en un input de texto. Aún así, aunque a nivel de código presente un fallo de accesibilidad, se mantiene informado en todo momento al usuario de la acción de dicho checkbox. Este fallo, el cual es generado por el propio framework, no es accesible mediante código HTML o CSS
 
@@ -50,11 +50,11 @@ La sección de "Publicar" mediante un formulario presenta dos fallo que represen
 "Accediendo mediante mediante el título o imágen de las publicacioens listadas en el index"
 ---------
 
-![Información publicación](img/accesibilidad/accesibilidad-viewpub1.png)
+![Información publicación](img/accesibilidad/accesibilidad-viewpub1.PNG)
 
 A priori, la página presentaba fallos de accesibilidad, Como por ejemplo etiquetas `</i>` que deben ser reemplazadas por `</strong>`.
 
-![Información publicación](img/accesibilidad/accesibilidad-viewpublicar2.png)
+![Información publicación](img/accesibilidad/accesibilidad-viewpublicar2.PNG)
 
 -------------------------------------------------
 
@@ -62,7 +62,7 @@ A priori, la página presentaba fallos de accesibilidad, Como por ejemplo etique
 ---------
 La página cumple el con el nivel de accesibilidad AA
 
-![Filtrado](img/accesibilidad/accesibilidad-filtrado.png)
+![Filtrado](img/accesibilidad/accesibilidad-filtrado.PNG)
 
 
 -------------------------------------------------
@@ -71,7 +71,7 @@ La página cumple el con el nivel de accesibilidad AA
 ---------
 La página cumple el con el nivel de accesibilidad AA
 
-![Filtrado](img/accesibilidad/accesibilidad-filtrado.png)
+![Filtrado](img/accesibilidad/accesibilidad-filtrado.PNG)
 
 
 -------------------------------------------------
@@ -80,7 +80,7 @@ La página cumple el con el nivel de accesibilidad AA
 ---------
 La página cumple el con el nivel de accesibilidad AA
 
-![Filtrado](img/accesibilidad/accesibilidad-contacto.png)
+![Filtrado](img/accesibilidad/accesibilidad-contacto.PNG)
 
 
 -------------------------------------------------
@@ -89,7 +89,7 @@ La página cumple el con el nivel de accesibilidad AA
 ---------
 La página cumple el con el nivel de accesibilidad AA
 
-![Mi Perfil](img/accesibilidad/accesibilidad-miperfil.png)
+![Mi Perfil](img/accesibilidad/accesibilidad-miperfil.PNG)
 
 -------------------------------------------------
 
@@ -98,7 +98,7 @@ La página cumple el con el nivel de accesibilidad AA
 ---------
 La página cumple el con el nivel de accesibilidad AA
 
-![Comprobar](img/accesibilidad/publicaciones-comprobar.png)
+![Comprobar](img/accesibilidad/publicaciones-comprobar.PNG)
 
 -------------------------------------------------
 

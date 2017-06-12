@@ -1,17 +1,11 @@
 Comprobación en navegadores
 ========================================
 
-![Chrome](images/chrome-icono.png) Google Chrome
--------------------------------------------------
-
-![Comprobación Chrome](img/chrome.png)
-
-![Firefox](img/firefox.png) Mozilla Firefox
+![Comprobación Chrome](img/chrome.PNG) Chrome
 ---------------------------------------------------
 
-![Comprobación Firefox](images/firefox.png)
+![Firefox](img/firefox.PNG) Mozilla Firefox
+---------------------------------------------------
 
-![Opera](img/opera-icono.png) Opera
+![Opera](img/opera.JPG) Opera
 -------------------------------------
-
-![Comprobación Opera](images/opera.png)

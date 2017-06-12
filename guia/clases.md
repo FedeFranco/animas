@@ -5,8 +5,8 @@ Diagrama de clases
 
 #### Models
 
-![Models](img/models.png)
+![Models](img/models.PNG)
 
 #### Controllers
 
-![Models](img/controllers.png)
+![Models](img/controllers.PNG)
