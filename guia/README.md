@@ -1,4 +1,4 @@
-![Logo](images/logo.png) **Animas**
+![Logo](img/animas-logo2.png) **Animas**
 ==================================
 Descripción general del proyecto
 --------------------------------
@@ -46,8 +46,8 @@ Conclusiones
 Anexos
 ------------
 *   [Anexo I: Prueba del seis](prueba-del-seis.md)
-*   [Anexo II: Validación CSS](validacion-css.md)
-*   [Anexo III: Validación HTML](validacion-html.md)
+*   [Anexo II: Validación CSS](validation-css.md)
+*   [Anexo III: Validación HTML](validation-html.md)
 *   [Anexo IV: Validación accesibilidad](validacion-accesibilidad.md)
 *   [Anexo V: Validación microdatos](validacion-microdatos.md)
 *   [Anexo VI: Comprobación en navegadores](comprobacion.md)

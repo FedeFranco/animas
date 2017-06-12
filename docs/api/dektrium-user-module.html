@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/6f553dc3/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/9b0e7b7a/solarized_light.css" rel="stylesheet">
+<link href="./assets/894637ee/style.css" rel="stylesheet">
+<script src="./assets/2928bca5/jquery.js"></script>
+<script src="./assets/6f553dc3/js/bootstrap.js"></script>
+<script src="./assets/daf758aa/jssearch.js"></script>    <title>Module, dektrium\user\Module - Animas API</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w230" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w230-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Animas API</a></div><div id="w230-collapse" class="collapse navbar-collapse"><ul id="w231" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="../README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-224" data-toggle="collapse" data-parent="#navigation">app\assets <b class="caret"></b></a><div id="navigation-224" class="submenu panel-collapse collapse"><a class="list-group-item" href="./app-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./app-assets-appassetjs.html">AppAssetJS</a>
+<a class="list-group-item" href="./app-assets-fontasset.html">FontAsset</a></div>
+<a class="list-group-item" href="#navigation-225" data-toggle="collapse" data-parent="#navigation">app\commands <b class="caret"></b></a><div id="navigation-225" class="submenu panel-collapse collapse"><a class="list-group-item" href="./app-commands-hellocontroller.html">HelloController</a></div>
+<a class="list-group-item" href="#navigation-226" data-toggle="collapse" data-parent="#navigation">app\controllers <b class="caret"></b></a><div id="navigation-226" class="submenu panel-collapse collapse"><a class="list-group-item" href="./app-controllers-categoriascontroller.html">CategoriasController</a>
+<a class="list-group-item" href="./app-controllers-publicacionescontroller.html">PublicacionesController</a>
+<a class="list-group-item" href="./app-controllers-reportescontroller.html">ReportesController</a>
+<a class="list-group-item" href="./app-controllers-sitecontroller.html">SiteController</a>
+<a class="list-group-item" href="./app-controllers-tiposanimalescontroller.html">TiposAnimalesController</a></div>
+<a class="list-group-item" href="#navigation-227" data-toggle="collapse" data-parent="#navigation">app\controllers\user <b class="caret"></b></a><div id="navigation-227" class="submenu panel-collapse collapse"><a class="list-group-item" href="./app-controllers-user-admincontroller.html">AdminController</a>
+<a class="list-group-item" href="./app-controllers-user-profilecontroller.html">ProfileController</a>
+<a class="list-group-item" href="./app-controllers-user-registrationcontroller.html">RegistrationController</a>
+<a class="list-group-item" href="./app-controllers-user-securitycontroller.html">SecurityController</a>
+<a class="list-group-item" href="./app-controllers-user-settingscontroller.html">SettingsController</a></div>
+<a class="list-group-item" href="#navigation-228" data-toggle="collapse" data-parent="#navigation">app\models <b class="caret"></b></a><div id="navigation-228" class="submenu panel-collapse collapse"><a class="list-group-item" href="./app-models-categoria.html">Categoria</a>
+<a class="list-group-item" href="./app-models-categoriasearch.html">CategoriaSearch</a>
+<a class="list-group-item" href="./app-models-contactform.html">ContactForm</a>
+<a class="list-group-item" href="./app-models-loginform.html">LoginForm</a>
+<a class="list-group-item" href="./app-models-profile.html">Profile</a>
+<a class="list-group-item" href="./app-models-publicacion.html">Publicacion</a>
+<a class="list-group-item" href="./app-models-publicacionsearch.html">PublicacionSearch</a>
+<a class="list-group-item" href="./app-models-reporte.html">Reporte</a>
+<a class="list-group-item" href="./app-models-reportesearch.html">ReporteSearch</a>
+<a class="list-group-item" href="./app-models-settingsform.html">SettingsForm</a>
+<a class="list-group-item" href="./app-models-tipoanimal.html">TipoAnimal</a>
+<a class="list-group-item" href="./app-models-tipoanimalsearch.html">TipoAnimalSearch</a>
+<a class="list-group-item" href="./app-models-uploadform.html">UploadForm</a>
+<a class="list-group-item" href="./app-models-user.html">User</a></div>
+<a class="list-group-item active" href="#navigation-229" data-toggle="collapse" data-parent="#navigation">dektrium\user <b class="caret"></b></a><div id="navigation-229" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./dektrium-user-module.html">Module</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class dektrium\user\Module</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                        | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="dektrium-user-module.html">dektrium\user\Module</a> &raquo;
+yii\base\Module</td></tr>
+                                        </table>
+
+<div class="class-description">
+    <p><strong>This is the main module class for the Yii2-user.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$adminPermission">
+        <td><a href="dektrium-user-module.html#$adminPermission-detail">$adminPermission</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The Administrator permission name.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$admins">
+        <td><a href="dektrium-user-module.html#$admins-detail">$admins</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>An array of administrator's usernames.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$confirmWithin">
+        <td><a href="dektrium-user-module.html#$confirmWithin-detail">$confirmWithin</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The time before a confirmation token becomes invalid.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$cost">
+        <td><a href="dektrium-user-module.html#$cost-detail">$cost</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>Cost parameter used by the Blowfish hash algorithm.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$debug">
+        <td><a href="dektrium-user-module.html#$debug-detail">$debug</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Is the user module in DEBUG mode? Will be set to false automatically
+if the application leaves DEBUG mode.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$emailChangeStrategy">
+        <td><a href="dektrium-user-module.html#$emailChangeStrategy-detail">$emailChangeStrategy</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>Email changing strategy.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableAccountDelete">
+        <td><a href="dektrium-user-module.html#$enableAccountDelete-detail">$enableAccountDelete</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether user can remove his account</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableConfirmation">
+        <td><a href="dektrium-user-module.html#$enableConfirmation-detail">$enableConfirmation</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether user has to confirm his account.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableFlashMessages">
+        <td><a href="dektrium-user-module.html#$enableFlashMessages-detail">$enableFlashMessages</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to show flash messages.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableGeneratingPassword">
+        <td><a href="dektrium-user-module.html#$enableGeneratingPassword-detail">$enableGeneratingPassword</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to remove password field from registration form.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableImpersonateUser">
+        <td><a href="dektrium-user-module.html#$enableImpersonateUser-detail">$enableImpersonateUser</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Enable the 'impersonate as another user' function</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enablePasswordRecovery">
+        <td><a href="dektrium-user-module.html#$enablePasswordRecovery-detail">$enablePasswordRecovery</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable password recovery.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableRegistration">
+        <td><a href="dektrium-user-module.html#$enableRegistration-detail">$enableRegistration</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable registration.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$enableUnconfirmedLogin">
+        <td><a href="dektrium-user-module.html#$enableUnconfirmedLogin-detail">$enableUnconfirmedLogin</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to allow logging in without confirmation.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$mailer">
+        <td><a href="dektrium-user-module.html#$mailer-detail">$mailer</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Mailer configuration</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$modelMap">
+        <td><a href="dektrium-user-module.html#$modelMap-detail">$modelMap</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Model map</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$recoverWithin">
+        <td><a href="dektrium-user-module.html#$recoverWithin-detail">$recoverWithin</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The time before a recovery token becomes invalid.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$rememberFor">
+        <td><a href="dektrium-user-module.html#$rememberFor-detail">$rememberFor</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The time you want the user will be remembered without asking for credentials.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$urlPrefix">
+        <td><a href="dektrium-user-module.html#$urlPrefix-detail">$urlPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix for user module URL.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+            <tr id="$urlRules">
+        <td><a href="dektrium-user-module.html#$urlRules-detail">$urlRules</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The rules to be used in URL management.</td>
+        <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="STRATEGY_DEFAULT">
+          <td id="STRATEGY_DEFAULT-detail">STRATEGY_DEFAULT</td>
+          <td>1</td>
+          <td>Email is changed after user clicks confirmation link sent to his new email address.
+                        </td>
+          <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+        </tr>
+            <tr id="STRATEGY_INSECURE">
+          <td id="STRATEGY_INSECURE-detail">STRATEGY_INSECURE</td>
+          <td>0</td>
+          <td>Email is changed right after user enter's new email address.
+                        </td>
+          <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+        </tr>
+            <tr id="STRATEGY_SECURE">
+          <td id="STRATEGY_SECURE-detail">STRATEGY_SECURE</td>
+          <td>2</td>
+          <td>Email is changed after user clicks both confirmation links sent to his old and new email addresses.
+                        </td>
+          <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+        </tr>
+            <tr id="VERSION">
+          <td id="VERSION-detail">VERSION</td>
+          <td>'0.9.12'</td>
+          <td>
+                        </td>
+          <td><a href="dektrium-user-module.html">dektrium\user\Module</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$adminPermission-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$adminPermission-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $adminPermission        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The Administrator permission name.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="dektrium-user-module.html#$adminPermission-detail">$adminPermission</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$admins-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$admins-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $admins        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>An array of administrator's usernames.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="dektrium-user-module.html#$admins-detail">$admins</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$confirmWithin-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$confirmWithin-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $confirmWithin        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The time before a confirmation token becomes invalid.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="dektrium-user-module.html#$confirmWithin-detail">$confirmWithin</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">86400</span></div>
+
+
+    <div class="detail-header h3" id="$cost-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$cost-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $cost        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Cost parameter used by the Blowfish hash algorithm.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="dektrium-user-module.html#$cost-detail">$cost</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">10</span></div>
+
+
+    <div class="detail-header h3" id="$debug-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$debug-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $debug        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Is the user module in DEBUG mode? Will be set to false automatically
+if the application leaves DEBUG mode.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$debug-detail">$debug</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$emailChangeStrategy-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$emailChangeStrategy-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $emailChangeStrategy        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Email changing strategy.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="dektrium-user-module.html#$emailChangeStrategy-detail">$emailChangeStrategy</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">STRATEGY_DEFAULT</span></div>
+
+
+    <div class="detail-header h3" id="$enableAccountDelete-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableAccountDelete-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableAccountDelete        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether user can remove his account</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableAccountDelete-detail">$enableAccountDelete</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$enableConfirmation-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableConfirmation-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableConfirmation        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether user has to confirm his account.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableConfirmation-detail">$enableConfirmation</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enableFlashMessages-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableFlashMessages-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableFlashMessages        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to show flash messages.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableFlashMessages-detail">$enableFlashMessages</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enableGeneratingPassword-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableGeneratingPassword-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableGeneratingPassword        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to remove password field from registration form.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableGeneratingPassword-detail">$enableGeneratingPassword</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$enableImpersonateUser-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableImpersonateUser-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableImpersonateUser        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Enable the 'impersonate as another user' function</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableImpersonateUser-detail">$enableImpersonateUser</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enablePasswordRecovery-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enablePasswordRecovery-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enablePasswordRecovery        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to enable password recovery.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enablePasswordRecovery-detail">$enablePasswordRecovery</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enableRegistration-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableRegistration-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableRegistration        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to enable registration.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableRegistration-detail">$enableRegistration</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enableUnconfirmedLogin-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$enableUnconfirmedLogin-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $enableUnconfirmedLogin        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to allow logging in without confirmation.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="dektrium-user-module.html#$enableUnconfirmedLogin-detail">$enableUnconfirmedLogin</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$mailer-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$mailer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $mailer        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Mailer configuration</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="dektrium-user-module.html#$mailer-detail">$mailer</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$modelMap-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$modelMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $modelMap        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Model map</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="dektrium-user-module.html#$modelMap-detail">$modelMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$recoverWithin-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$recoverWithin-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $recoverWithin        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The time before a recovery token becomes invalid.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="dektrium-user-module.html#$recoverWithin-detail">$recoverWithin</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">21600</span></div>
+
+
+    <div class="detail-header h3" id="$rememberFor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$rememberFor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $rememberFor        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The time you want the user will be remembered without asking for credentials.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="dektrium-user-module.html#$rememberFor-detail">$rememberFor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1209600</span></div>
+
+
+    <div class="detail-header h3" id="$urlPrefix-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$urlPrefix-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $urlPrefix        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The prefix for user module URL.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="dektrium-user-module.html#$urlPrefix-detail">$urlPrefix</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'user'</span></div>
+
+
+    <div class="detail-header h3" id="$urlRules-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="dektrium-user-module.html#$urlRules-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $urlRules        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The rules to be used in URL management.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="dektrium-user-module.html#$urlRules-detail">$urlRules</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'&lt;id:\d+&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'profile/show'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'&lt;action:(login|logout|auth)&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'security/&lt;action&gt;'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'&lt;action:(register|resend)&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'registration/&lt;action&gt;'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'confirm/&lt;id:\d+&gt;/&lt;code:[A-Za-z0-9_-]+&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'registration/confirm'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'forgot'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'recovery/request'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'recover/&lt;id:\d+&gt;/&lt;code:[A-Za-z0-9_-]+&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'recovery/reset'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'settings/&lt;action:\w+&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'settings/&lt;action&gt;'</span><span style="color: #007700">]</span></div>
+
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 12 Jun 2017 17:59:52 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

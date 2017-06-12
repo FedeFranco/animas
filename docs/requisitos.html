@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/6f553dc3/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/9b0e7b7a/solarized_light.css" rel="stylesheet">
+<link href="./assets/894637ee/style.css" rel="stylesheet">
+<script src="./assets/2928bca5/jquery.js"></script>
+<script src="./assets/6f553dc3/js/bootstrap.js"></script>
+<script src="./assets/daf758aa/jssearch.js"></script>    <title>Definición detallada - Catálogo de requisitos - Guía de Animas</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w178" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w178-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Guía de Animas</a></div><div id="w178-collapse" class="collapse navbar-collapse"><ul id="w179" class="navbar-nav nav"><li><a href="api/index.html">Class reference</a></li>
+<li><a href="./README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-168" data-toggle="collapse" data-parent="#navigation">Descripción general del proyecto <b class="caret"></b></a><div id="navigation-168" class="submenu panel-collapse collapse"><a class="list-group-item" href="./funcionalidad.html">Funcionalidad principal de la apllicación</a>
+<a class="list-group-item" href="./objetivos.html">Objetivos generales</a>
+<a class="list-group-item" href="https://github.com/FedeFranco/animas">Url del repositorio en GitHub</a>
+<a class="list-group-item" href="https://FedeFranco.github.io/animas/">Url de la documentación en GitHub Pages</a></div>
+<a class="list-group-item" href="#navigation-169" data-toggle="collapse" data-parent="#navigation">Instrucciones de instalación y despliegue <b class="caret"></b></a><div id="navigation-169" class="submenu panel-collapse collapse"><a class="list-group-item" href="./local.html">En local</a>
+<a class="list-group-item" href="./nube.html">En la nube</a></div>
+<a class="list-group-item active" href="#navigation-170" data-toggle="collapse" data-parent="#navigation">Catálogo de requisitos <b class="caret"></b></a><div id="navigation-170" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./requisitos.html">Definición detallada</a>
+<a class="list-group-item" href="./resumen.html">Cuadro resumen</a></div>
+<a class="list-group-item" href="#navigation-171" data-toggle="collapse" data-parent="#navigation">Manual básico de usuario <b class="caret"></b></a><div id="navigation-171" class="submenu panel-collapse collapse"><a class="list-group-item" href="./manual_usuario.html">Manual</a>
+<a class="list-group-item" href="./manual_usuario_administrador.html">Manual de administrador</a></div>
+<a class="list-group-item" href="#navigation-172" data-toggle="collapse" data-parent="#navigation">Decisiones adoptadas y su justificación <b class="caret"></b></a><div id="navigation-172" class="submenu panel-collapse collapse"><a class="list-group-item" href="./decisiones.html">Decisiones adoptadas y su justificación</a></div>
+<a class="list-group-item" href="#navigation-173" data-toggle="collapse" data-parent="#navigation">Dificultades encontradas y soluciones aplicadas <b class="caret"></b></a><div id="navigation-173" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dificultades.html">Dificultades encontradas y soluciones aplicadas</a></div>
+<a class="list-group-item" href="#navigation-174" data-toggle="collapse" data-parent="#navigation">Diagramas <b class="caret"></b></a><div id="navigation-174" class="submenu panel-collapse collapse"><a class="list-group-item" href="./clases.html">De clases</a>
+<a class="list-group-item" href="./datos.html">De estructura lógica de datos</a></div>
+<a class="list-group-item" href="#navigation-175" data-toggle="collapse" data-parent="#navigation">Glosario de términos <b class="caret"></b></a><div id="navigation-175" class="submenu panel-collapse collapse"><a class="list-group-item" href="./glosario.html">Glosario de términos</a></div>
+<a class="list-group-item" href="#navigation-176" data-toggle="collapse" data-parent="#navigation">Conclusiones <b class="caret"></b></a><div id="navigation-176" class="submenu panel-collapse collapse"><a class="list-group-item" href="./conclusiones.html">Conclusiones</a></div>
+<a class="list-group-item" href="#navigation-177" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-177" class="submenu panel-collapse collapse"><a class="list-group-item" href="./prueba-del-seis.html">Anexo I: Prueba del seis</a>
+<a class="list-group-item" href="./validation-css.html">Anexo II: Validación CSS</a>
+<a class="list-group-item" href="./validation-html.html">Anexo III: Validación HTML</a>
+<a class="list-group-item" href="./validacion-accesibilidad.html">Anexo IV: Validación accesibilidad</a>
+<a class="list-group-item" href="./validacion-microdatos.html">Anexo V: Validación microdatos</a>
+<a class="list-group-item" href="./comprobacion.html">Anexo VI: Comprobación en navegadores</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Definición detallada <span id="definicion-detallada"></span><a href="#definicion-detallada" class="hashlink">&para;</a></h1><table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R1:</strong> </th><th>Los usuarios podrán registrarse en la plataforma web</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Al entrar en la web por primera vez, un usuario será un invitado,</td></tr>
+</tbody>
+</table>
+<p>teniendo la disponibilidad de registrarse como usuario de dicha web           |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/1">1</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R2:</strong> </th><th>Los usuarios pueden modificar su perfil</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una vez que el usuario se haya registrado esté podrá cambiar su</td></tr>
+</tbody>
+</table>
+<p>perfil.            |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/2">2</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R3:</strong> </th><th>Los usuarios no pueden modificar propiedades de otros usuarios</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una vez que un usuario se haya registrado, esté no podrá cambiar la</td></tr>
+</tbody>
+</table>
+<p>configuración ni las alertas o anuncios des otros usuarios.            |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/3">3</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R4:</strong> </th><th>Los usuarios podrán darse de baja en la plataforma web</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una vez que el usuario está registrado en la web, éste podrá darse</td></tr>
+</tbody>
+</table>
+<p>de baja de la aplicación           |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/5">4</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R5:</strong> </th><th>Ningún usuario puede publicar si no está registrado</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Solo los usuarios registrados pueden publicar alertas y anuncios en</td></tr>
+</tbody>
+</table>
+<p>la aplicación web            |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/5">5</a> |</p>
+<p>| <strong>R6:</strong> | El usuario registrado debe obtener un correo para activar su
+cuenta|
+| ----------           | ---------- |
+| Descripción          |Tras el registro de una nueva cuenta de usuario, éste deberá recibir
+por parte de la aplicación web, un correo electrónico para autenticar
+dicha cuenta en la aplicación web            |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/6">6</a> |</p>
+<p>| <strong>R7:</strong> | El usuario registrado que no autentique su cuenta deberá ser
+borrada en 24h|
+| ----------           | ---------- |
+| Descripción          |  Si el usuario que registra una nueva cuenta no autentica el correo          |
+| Prioridad            | OPCIONAL   |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/7">7</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R8:</strong> </th><th>El usuario administrador podrá borrar a un usuario</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Si el administrador de la página web contempla un anuncio /</td></tr>
+</tbody>
+</table>
+<p>situación o cualquier otro aspecto de índole inapropiada en la
+aplicación web por parte de un usuario, podrá eliminarlo de la
+aplicación.           |
+| Prioridad            | OPCIONAL   |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/8">8</a> |</p>
+<p>| <strong>R9:</strong> |El borrado de un usuario por parte del usuario administrador
+será notificado|
+| ----------           | ---------- |
+| Descripción          |Cuando se produzca un borrado por parte del usuario administrador,
+éste deberá notificar por medio de un correo electrónico al usuario
+afectado con el motivo de su borrado.            |
+| Prioridad            | OPCIONAL   |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/9">9</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R10:</strong> </th><th>La web no almacenará más de dos correos electrónicos iguales</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Los correos almacenados en la base de datos deben de ser todos</td></tr>
+</tbody>
+</table>
+<p>únicos            |
+| Prioridad            | IMPORTANTE   |
+| Tipo                 | Técnico|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/10">10</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R11:</strong> </th><th>Las publicaciones que realicen los usuarios registrados deberán contener cómo máximo 200 caracteres</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Las publicaciones que realicen los usuarios registrados deberán</td></tr>
+</tbody>
+</table>
+<p>contener cómo máximo 200 caracteres           |
+| Prioridad            | OPCIONAL   |
+| Tipo                 | Técnico|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/11">11</a> |</p>
+<p>| <strong>R12:</strong> |Los usuarios no podrán acceder a los datos contenidos en la
+aplicación|
+| ----------           | ---------- |
+| Descripción          | Tanto los usuarios registrados como los usuarios invitados no
+podrán acceder a los datos registrados en la aplicación. Por ejemplo
+el registro de usuarios en la aplicación, el registro de las categorías,
+el registro de publicaciones entre otras. Solo el usuario
+administrador puede acceder a estos contenidos.           |
+| Prioridad            | IMPORTANTE   |
+| Tipo                 | Técnico|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/12">12</a> |</p>
+<p>| <strong>R13:</strong> |La paginación de publicaciones será de 10 publicaciones por
+página|
+| ----------           | ---------- |
+| Descripción          | Las publicaciones que realicen los usuarios registrados deberán se
+entablaran por un máximo de 10 en cada página           |
+| Prioridad            | OPCIONAL   |
+| Tipo                 | Técnico|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/13">13</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R14:</strong> </th><th>Un usuario registrado podrá publicar diferentes categorías</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una vez que el usuario se haya registrado, este podrá realizar</td></tr>
+</tbody>
+</table>
+<p>diferentes publicaciones sin límite de las mismas o de tiempo entre
+ellas           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/14">14</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R15:</strong> </th><th>El usuario administrador podrá eliminar publicaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Si el usuario administrador evalúa que una publicación es ofensiva,</td></tr>
+</tbody>
+</table>
+<p>no cumple las normas de publicación de una categoría o tiene un
+carácter inapropiado           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Fácil |
+| Entrega planificada  | v1 |
+| Entrega realizada    | v1 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/15">15</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R16:</strong> </th><th>Un usuario puede denunciar a otro</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado podrá denunciar a otro de que muestra</td></tr>
+</tbody>
+</table>
+<p>contenido no lícito o hace un uso inapropiado de la información y/o
+el servicio ofrecido por la plataforma           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/58">58</a> |</p>
+<p>| <strong>R17:</strong> |Un usuario registrado puede restringir que tipo de
+publicaciones que quiere ver.|
+| ----------           | ---------- |
+| Descripción          | Cuando un usuario se registra, podrá restringir el tipo de
+publicaciones que quiere que aparezcan, por ejemplo si el usuario le
+desagrada contemplar animales maltratados pero si quiere estar al
+tanto de animales en adopción/apadrinaje/acogida. Pues este mismo
+usuario podrá desactivar la categoría de “Denuncialo”           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/57">57</a> |</p>
+<p>| <strong>R18:</strong> |El usuario que haya restringido una categoría no podrá hacer
+publicaciones sobre la misma|
+| ----------           | ---------- |
+| Descripción          | Un usuario registrado no podrá hacer publicaciones de una
+categoría que haya clausurado anteriormente.           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/56">56</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R19:</strong> </th><th>Un usuario podrá comentar en publicaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado podrá comentar en varias publicaciones sin</td></tr>
+</tbody>
+</table>
+<p>límite de las mismas y sin límite de tiempo entre comentario y
+comentario.           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/55">55</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R20:</strong> </th><th>Un usuario podrá modificar o eliminar un comentario</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Si un usuario hace un comentario, este puede ser borrado solo por el</td></tr>
+</tbody>
+</table>
+<p>usuario que lo creó en cualquier momento           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/54">54</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R21:</strong> </th><th>El usuario administrador podrá eliminar comentarios</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>El usuario administrador podrá borrar comentarios si observa que el</td></tr>
+</tbody>
+</table>
+<p>comentario es ofensivo o tiene un carácter inapropiado           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/53">53</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R22:</strong> </th><th>El usuario administrador podrá eliminar comentarios</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>En el registro de un usuario debe de aparecer la opción de “Permitir</td></tr>
+</tbody>
+</table>
+<p>Acceso a tu ubicación” para poder ser avisado en el caso de un
+anuncio o alerta. En el caso de que el usuario deniegue esta opción,
+se entenderá que no está interesado en que se le notifique un
+anuncio o alerte si estos se han producido cerca de su ubicación           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/52">52</a> |</p>
+<p>| <strong>R23:</strong> | El usuario que deniegue el acceso a su ubicación no podrá
+hacer publicaciones |
+| ----------           | ---------- |
+| Descripción          | Si un usuario registrado ha declinado el acceso a su ubicación en su
+registro, éste no podrá publicar anuncios ni alertas, a no ser que
+acceda a la configuración de su perfil y permita el acceso a su
+ubicación.           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/51">51</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R24:</strong> </th><th>Un usuario registrado puede modificar su prioridad de alerta</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario que se haya registrado podrá en cualquier momento</td></tr>
+</tbody>
+</table>
+<p>modificar, cambiar la preferencia de notificaciones (por ejemplo si
+desea que solo le lleguen notificaciones por “Mascota Perdida”) y
+modificar el rango de difusión de una ubicación a recibir           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/50">50</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R25:</strong> </th><th>Los anuncios tendrán normas de publicación</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Cuando un usuario registrado quiera publicar un anuncio deberá</td></tr>
+</tbody>
+</table>
+<p>aceptar previamente unas normas de publicación antes de rellenar
+cualquier campo. Una vez que un usuario registrado ya haya
+aceptado estas normas, la aplicación no volverá a recurrir a ello           |
+| Prioridad            | OPCIONAL  |
+| Tipo                 | Funcional|
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/49">49</a> |</p>
+<p>|<strong>R26:</strong> | Cuando un usuario registrado publique una anuncio deberá
+aceptar que ha leído las normas de publicación. |
+| ----------           | ---------- |
+| Descripción          | Cuando un usuario decida publicar un anuncio, previamente ha de
+aceptar que ha leído las normas de publicaciones           |
+| Prioridad            | IMPORTANTE  |
+| Tipo                 | Funcional|
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/48">48</a> |</p>
+<p>|<strong>R27:</strong> | El servicio de alerta para localizar mascotas perdidas exigirá
+obligatoriamente una foto de dicha mascota adjunta. |
+| ----------           | ---------- |
+| Descripción          | El usuario que desee realizar una alerta deberá adjuntar una foto a
+dicha alerta           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional|
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/47">47</a> |</p>
+<p>|<strong>R28:</strong> |El usuario podrá subir una imagen como avatar en su
+configuración |
+| ----------           | ---------- |
+| Descripción          | Una vez que el usuario se haya registrado en la página web, podrá
+subir como avatar una imagen que identifique ante otros usuarios
+(junto con su nombre) su identidad como usuario           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional|
+| Complejidad          | Media |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/46">46</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R29:</strong> </th><th>La imagen de avatar de usuario tendrá un tamaño predeterminado</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una vez que el usuario se haya registrado y desee configurar su</td></tr>
+</tbody>
+</table>
+<p>perfil, subirá una foto la cual podrá redimensionar su imagen para
+encajar con este requisito           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Ténico |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/45">45</a> |</p>
+<p>|<strong>R30:</strong> | Las imágenes subidas por el usuario deberá ser aceptada por
+un solo formato |
+| ----------           | ---------- |
+| Descripción          | Una vez que el usuario se haya registrado y desee configurar su
+perfil o adjuntar una foto a una alerta o a un anuncio, subirá una
+imagen la cual podrá ser solo de un formato (jpg, png, entre otros)           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Ténico |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/44">44</a> |</p>
+<p>|<strong>R31:</strong> | Las organizaciones pro-animalistas y otras organizaciones de
+índole similar podrán registrarse en la web |
+| ----------           | ---------- |
+| Descripción          | Las organizaciones que se dediquen a la protección de los animales
+podrán registrarse en la web, con la diferencia del resto de usuarios
+en que las organizaciones podrán publicar noticias propias, eventos
+o noticias sobre cualquier relación sobre los animales. También
+tienen acceso al resto de acciones que dispone un usuario registrado           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/43">43</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R32:</strong> </th><th>Las organizaciones deben de ser verificadas</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Las organizaciones deben de ser verificadas por el usuario</td></tr>
+</tbody>
+</table>
+<p>administrador antes de que las mismas puedan autenticar su cuenta.
+Para ello deberán de rellenar requisitos adicionales como sitio web
+de la organización, sede, año de inicio, entre otras.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/42">42</a> |</p>
+<p>|<strong>R33:</strong> | Las organizaciones deben de cumplir normas de publicación
+antes de realizar una noticia |
+| ----------           | ---------- |
+| Descripción          | Una vez que una organización se ha registrado como usuario debe
+marcar como leído las normas de publicación de la web.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/41">41</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R34:</strong> </th><th>Las publicaciones podrán tener foto</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Una publicación o noticia puede tener adjuntada una foto junto con</td></tr>
+</tbody>
+</table>
+<p>su título           |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v2 |
+| Entrega realizada    | v2 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/40">40</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R35:</strong> </th><th>Las publicaciones podrán tener enlaces</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Los títulos de las publicaciones podrán contener enlaces o no</td></tr>
+<tr><td>Prioridad            </td><td>IMPORTANTE</td></tr>
+<tr><td>Tipo                 </td><td>Funcional</td></tr>
+<tr><td>Complejidad          </td><td>Fácil</td></tr>
+<tr><td>Entrega planificada  </td><td>v2</td></tr>
+<tr><td>Entrega realizada    </td><td>v2</td></tr>
+<tr><td>Nº issue             </td><td><a href="https://github.com/FedeFranco/animas/issues/39">39</a></td></tr>
+</tbody>
+</table>
+<p>|<strong>R36:</strong> | El servicio de alerta será privado. Cuando un usuario reciba
+una notificación por alerta |
+| ----------           | ---------- |
+| Descripción          | Ésta no se mostrará en el documento principal sino en otra página
+de la web destinada a ellas. Cuando el usuario que lanza la alerta
+decida eliminarla se borrará el acceso a su esta información de los
+usuarios notificados por la misma.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Fácil |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/59">59</a> |</p>
+<p>|<strong>R37:</strong> | El servicio de alerta para localizar mascotas perdidas será
+de un radio de 100 metros si se trata de animales terrestres. |
+| ----------           | ---------- |
+| Descripción          | Si el usuario marca como opción que se ha perdido una mascota y
+que su tipo es terrestre, por defecto se lanzará una notificación a
+usuarios que se encuentren al rededor de 100 metros de donde se
+lanzó la alerta, pero el radio de estas notificaciones son
+configurables solo para el usuario que lanza la alerta actual           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/60">60</a> |</p>
+<p>|<strong>R38:</strong> | El servicio de alerta para localizar mascotas perdidas será de
+un radio de 200 metros si se trata de aves |
+| ----------           | ---------- |
+| Descripción          | Si el usuario marca como opción que se ha perdido una mascota y
+que su tipo es ave, por defecto se lanzará una notificación a usuarios
+que se encuentren al rededor de 200 metros de donde se lanzó la
+alerta, pero el radio de estas notificaciones son configurables solo
+para el usuario que lanza la alerta actual           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/61">61</a> |</p>
+<p>|<strong>R39:</strong> | El servicio de publicación para las categorías: “Denuncialo”
+y “Protección de animales” será de un radio de 500 metros |
+| ----------           | ---------- |
+| Descripción          | Si el usuario marca como opción que se ha perdido una mascota y
+que su tipo es ave, por defecto se lanzará una notificación a usuarios
+que se encuentren al rededor de 200 metros de donde se lanzó la
+alerta, pero el radio de estas notificaciones son configurables solo
+para el usuario que lanza la alerta actual           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/62">62</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R40:</strong> </th><th>Las notificaciones aparecerán en el icono de notificaciones</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Las notificaciones aparecerán situadas en la barra de menú</td></tr>
+</tbody>
+</table>
+<p>indicando el número de notificaciones que tiene el usuario. Cuando
+un usuario reciba una notificación sea de la categoría que sea. Se
+añadirá/sumará al correspondiente icono situado en la barra de
+menú          |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/63">63</a> |</p>
+<p>|<strong>R41:</strong> | Se dispondrá de un buscador que ofrezca búsqueda por
+palabras |
+| ----------           | ---------- |
+| Descripción          | La página principal y las secciones de anuncios dispondrán de un
+buscador para buscar palabras que le interesen al usuario en dichas
+publicaciones.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/64">64</a> |</p>
+<p>|<strong>R42:</strong> | un usuario podrá contactar mediante mensaje con un
+publicante |
+| ----------           | ---------- |
+| Descripción          | Un usuario registrado podrá contactar con el publicante de un
+anuncio mediante un mensaje privado           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/65">65</a> |</p>
+<p>|<strong>R43:</strong> | Los usuarios pueden obtener reconocimiento por otros
+usuarios. |
+| ----------           | ---------- |
+| Descripción          | Los usuarios que consigan encontrar animales perdidos, rescaten
+animales, acojan/apadrinen animales o cualquier otra acción de
+protección que se realice mediante el servicio de la propia web,
+podrán ser recompensados mediante un rating           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/66">66</a> |</p>
+<p>|<strong>R44:</strong> | Los ratings pueden publicarse en la página principal si van
+acompañados de un mensaje de texto |
+| ----------           | ---------- |
+| Descripción          | Los usuarios registrados que quieran agradecer y valorar a otros
+usuarios podrán valorar con un rating acompañado de una mensaje
+textual que se publicará en la página principal.            |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/68">67</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R45:</strong> </th><th>Los ratings que no adjunten mensaje de texto no se publicará</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado puede no adjuntar ningún mensaje de texto en</td></tr>
+</tbody>
+</table>
+<p>la valoración de otro usuario, pero este no se mostrará en ninguna
+parte de la aplicación.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/68">68</a> |</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr><th><strong>R46:</strong> </th><th>Cada usuario tendrá un perfil propio</th></tr>
+</thead>
+<tbody>
+<tr><td>Descripción          </td><td>Un usuario registrado puede no adjuntar ningún mensaje de texto en</td></tr>
+</tbody>
+</table>
+<p>la valoración de otro usuario, pero este no se mostrará en ninguna
+parte de la aplicación.           |
+| Prioridad            | OPCIONAL |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/69">69</a> |</p>
+<p>|<strong>R47:</strong> | Los usuarios invitados no podrán acceder a los perfiles de
+usuario pero si los registrados |
+| ----------           | ---------- |
+| Descripción          | Si un usuario no está registrado, no podrá acceder a perfiles de otros
+usuarios. Solo serán accesibles a ellos los usuarios registrados.           |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/70">70</a> |</p>
+<p>|<strong>R48:</strong> | Se deberá implementar el control de acceso basado en roles
+(RBAC) |
+| ----------           | ---------- |
+| Descripción          |Se deberá implementar la tecnología de control de acceso basado en
+roles ya que diferentes usuarios que accedan a la web tendrán
+distintos roles; como las organizaciones y usuarios comunes.           |
+| Prioridad            | IMPORTANTE |
+| Tipo                 | Funcional |
+| Complejidad          | Media |
+| Entrega planificada  | v3 |
+| Entrega realizada    | v3 |
+| Nº issue             | <a href="https://github.com/FedeFranco/animas/issues/71">71</a> |</p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 12 Jun 2017 17:59:52 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

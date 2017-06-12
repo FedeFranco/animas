@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/6f553dc3/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/9b0e7b7a/solarized_light.css" rel="stylesheet">
+<link href="./assets/894637ee/style.css" rel="stylesheet">
+<script src="./assets/2928bca5/jquery.js"></script>
+<script src="./assets/6f553dc3/js/bootstrap.js"></script>
+<script src="./assets/daf758aa/jssearch.js"></script>    <title>Anexo IV: Validación accesibilidad - Anexos - Guía de Animas</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w214" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w214-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Guía de Animas</a></div><div id="w214-collapse" class="collapse navbar-collapse"><ul id="w215" class="navbar-nav nav"><li><a href="api/index.html">Class reference</a></li>
+<li><a href="./README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-204" data-toggle="collapse" data-parent="#navigation">Descripción general del proyecto <b class="caret"></b></a><div id="navigation-204" class="submenu panel-collapse collapse"><a class="list-group-item" href="./funcionalidad.html">Funcionalidad principal de la apllicación</a>
+<a class="list-group-item" href="./objetivos.html">Objetivos generales</a>
+<a class="list-group-item" href="https://github.com/FedeFranco/animas">Url del repositorio en GitHub</a>
+<a class="list-group-item" href="https://FedeFranco.github.io/animas/">Url de la documentación en GitHub Pages</a></div>
+<a class="list-group-item" href="#navigation-205" data-toggle="collapse" data-parent="#navigation">Instrucciones de instalación y despliegue <b class="caret"></b></a><div id="navigation-205" class="submenu panel-collapse collapse"><a class="list-group-item" href="./local.html">En local</a>
+<a class="list-group-item" href="./nube.html">En la nube</a></div>
+<a class="list-group-item" href="#navigation-206" data-toggle="collapse" data-parent="#navigation">Catálogo de requisitos <b class="caret"></b></a><div id="navigation-206" class="submenu panel-collapse collapse"><a class="list-group-item" href="./requisitos.html">Definición detallada</a>
+<a class="list-group-item" href="./resumen.html">Cuadro resumen</a></div>
+<a class="list-group-item" href="#navigation-207" data-toggle="collapse" data-parent="#navigation">Manual básico de usuario <b class="caret"></b></a><div id="navigation-207" class="submenu panel-collapse collapse"><a class="list-group-item" href="./manual_usuario.html">Manual</a>
+<a class="list-group-item" href="./manual_usuario_administrador.html">Manual de administrador</a></div>
+<a class="list-group-item" href="#navigation-208" data-toggle="collapse" data-parent="#navigation">Decisiones adoptadas y su justificación <b class="caret"></b></a><div id="navigation-208" class="submenu panel-collapse collapse"><a class="list-group-item" href="./decisiones.html">Decisiones adoptadas y su justificación</a></div>
+<a class="list-group-item" href="#navigation-209" data-toggle="collapse" data-parent="#navigation">Dificultades encontradas y soluciones aplicadas <b class="caret"></b></a><div id="navigation-209" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dificultades.html">Dificultades encontradas y soluciones aplicadas</a></div>
+<a class="list-group-item" href="#navigation-210" data-toggle="collapse" data-parent="#navigation">Diagramas <b class="caret"></b></a><div id="navigation-210" class="submenu panel-collapse collapse"><a class="list-group-item" href="./clases.html">De clases</a>
+<a class="list-group-item" href="./datos.html">De estructura lógica de datos</a></div>
+<a class="list-group-item" href="#navigation-211" data-toggle="collapse" data-parent="#navigation">Glosario de términos <b class="caret"></b></a><div id="navigation-211" class="submenu panel-collapse collapse"><a class="list-group-item" href="./glosario.html">Glosario de términos</a></div>
+<a class="list-group-item" href="#navigation-212" data-toggle="collapse" data-parent="#navigation">Conclusiones <b class="caret"></b></a><div id="navigation-212" class="submenu panel-collapse collapse"><a class="list-group-item" href="./conclusiones.html">Conclusiones</a></div>
+<a class="list-group-item active" href="#navigation-213" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-213" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./prueba-del-seis.html">Anexo I: Prueba del seis</a>
+<a class="list-group-item" href="./validation-css.html">Anexo II: Validación CSS</a>
+<a class="list-group-item" href="./validation-html.html">Anexo III: Validación HTML</a>
+<a class="list-group-item active" href="./validacion-accesibilidad.html">Anexo IV: Validación accesibilidad</a>
+<a class="list-group-item" href="./validacion-microdatos.html">Anexo V: Validación microdatos</a>
+<a class="list-group-item" href="./comprobacion.html">Anexo VI: Comprobación en navegadores</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Anexo IV: Validación accesibilidad <span id="anexo-iv-validacion-accesibilidad"></span><a href="#anexo-iv-validacion-accesibilidad" class="hashlink">&para;</a></h1>
+<div class="toc"><ol><li><a href="#index">Index</a></li>
+<li><a href="#login">Login</a></li>
+<li><a href="#la-seccion-de-login-presenta-dos-fallo-que-representan-la-falta-de-un-label-en-un-checkbox-en-un-input-de-texto-aun-asi-aunque-a-nivel-de-codigo-presente-un-fallo-de-accesibilidad-se-mantiene-informado-en-todo-momento-al-usuario-de-la-accion-de-dicho-checkbox-este-fallo-el-cual-es-generado-por-el-propio-framework-no-es-accesible-mediante-codigo-html-o-css">La sección de "Login" presenta dos fallo que representan la falta de un label en un checkbox en un input de texto. Aún así, aunque a nivel de código presente un fallo de accesibilidad, se mantiene informado en todo momento al usuario de la acción de dicho checkbox. Este fallo, el cual es generado por el propio framework, no es accesible mediante código HTML o CSS</a></li>
+<li><a href="#registro">Registro</a></li>
+<li><a href="#publicar">Publicar</a></li>
+<li><a href="#accediendo-mediante-mediante-el-titulo-o-imagen-de-las-publicacioens-listadas-en-el-index">"Accediendo mediante mediante el título o imágen de las publicacioens listadas en el index"</a></li>
+<li><a href="#busqueda-filtrada">Búsqueda Filtrada</a></li>
+<li><a href="#busqueda-filtrada">Búsqueda Filtrada</a></li>
+<li><a href="#contacto">Contacto</a></li>
+<li><a href="#mi-perfil">Mi Perfil</a></li>
+<li><a href="#comprobar">Comprobar</a></li>
+<li><a href="#conclusion">Conclusión</a></li></ol></div>
+<p>La validación sobre accesibilidad se ha llevado a cabo sobre las siguientes páginas:</p>
+<h2><a href="http://animas.herokuapp.com/index.php">Index</a> <span id="index"></span><a href="#index" class="hashlink">&para;</a></h2><p><img src="img/accesibilidad/accesibilidad-index1.png" alt="Index" /></p>
+<p>En este apartado se muetran fallos alts en las imágenes y label y en los checkbox. Se puede solucionar con facilidad y cumple el nivel AA</p>
+<p><img src="img/accesibilidad/accesibilidad-index.png" alt="Index" /></p>
+<p>Tras crear una publicación, el propio framework (Yii2) generá automáticamente una etiqueta  <code>&lt;b&gt;</code> que no puede ser reemplazada o eliminada</p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/user/login.php">Login</a> <span id="login"></span><a href="#login" class="hashlink">&para;</a></h2><p><img src="img/accesibilidad/accesibilidad-login.png" alt="Login" /></p>
+<h2>La sección de "Login" presenta dos fallo que representan la falta de un label en un checkbox en un input de texto. Aún así, aunque a nivel de código presente un fallo de accesibilidad, se mantiene informado en todo momento al usuario de la acción de dicho checkbox. Este fallo, el cual es generado por el propio framework, no es accesible mediante código HTML o CSS <span id="la-seccion-de-login-presenta-dos-fallo-que-representan-la-falta-de-un-label-en-un-checkbox-en-un-input-de-texto-aun-asi-aunque-a-nivel-de-codigo-presente-un-fallo-de-accesibilidad-se-mantiene-informado-en-todo-momento-al-usuario-de-la-accion-de-dicho-checkbox-este-fallo-el-cual-es-generado-por-el-propio-framework-no-es-accesible-mediante-codigo-html-o-css"></span><a href="#la-seccion-de-login-presenta-dos-fallo-que-representan-la-falta-de-un-label-en-un-checkbox-en-un-input-de-texto-aun-asi-aunque-a-nivel-de-codigo-presente-un-fallo-de-accesibilidad-se-mantiene-informado-en-todo-momento-al-usuario-de-la-accion-de-dicho-checkbox-este-fallo-el-cual-es-generado-por-el-propio-framework-no-es-accesible-mediante-codigo-html-o-css" class="hashlink">&para;</a></h2><h2><a href="http://animas.herokuapp.com/user/register.php">Registro</a> <span id="registro"></span><a href="#registro" class="hashlink">&para;</a></h2><p><img src="img/accesibilidad/accesibilidad-registro.png" alt="Registro" /></p>
+<p>La página del registro cumple el nivel AA de accesibilidad.</p>
+<hr />
+<h2><a href="https://animas.herokuapp.com/publicaciones/create.php">Publicar</a> <span id="publicar"></span><a href="#publicar" class="hashlink">&para;</a></h2><p><img src="img/accesibilidad/accesibilidad-formulario.png" alt="Publicar" /></p>
+<p>La sección de "Publicar" mediante un formulario presenta dos fallo que representan la falta de un label en un checkbox en un input de texto. Aún así, aunque a nivel de código presente un fallo de accesibilidad, se mantiene informado en todo momento al usuario de la acción de dicho checkbox. Este fallo, el cual es generado por el propio framework, no es accesible mediante código HTML o CSS</p>
+<hr />
+<p><a href="http://animas.herokuapp.com/index.php">Información publicación</a></p>
+<h2>"Accediendo mediante mediante el título o imágen de las publicacioens listadas en el index" <span id="accediendo-mediante-mediante-el-titulo-o-imagen-de-las-publicacioens-listadas-en-el-index"></span><a href="#accediendo-mediante-mediante-el-titulo-o-imagen-de-las-publicacioens-listadas-en-el-index" class="hashlink">&para;</a></h2><p><img src="img/accesibilidad/accesibilidad-viewpub1.png" alt="Información publicación" /></p>
+<p>A priori, la página presentaba fallos de accesibilidad, Como por ejemplo etiquetas <code>&lt;/i&gt;</code> que deben ser reemplazadas por <code>&lt;/strong&gt;</code>.</p>
+<p><img src="img/accesibilidad/accesibilidad-viewpublicar2.png" alt="Información publicación" /></p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/site/filtro">Búsqueda Filtrada</a> <span id="busqueda-filtrada"></span><a href="#busqueda-filtrada" class="hashlink">&para;</a></h2><p>La página cumple el con el nivel de accesibilidad AA</p>
+<p><img src="img/accesibilidad/accesibilidad-filtrado.png" alt="Filtrado" /></p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/site/filtro">Búsqueda Filtrada</a> <span id="busqueda-filtrada"></span><a href="#busqueda-filtrada" class="hashlink">&para;</a></h2><p>La página cumple el con el nivel de accesibilidad AA</p>
+<p><img src="img/accesibilidad/accesibilidad-filtrado.png" alt="Filtrado" /></p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/site/contact">Contacto</a> <span id="contacto"></span><a href="#contacto" class="hashlink">&para;</a></h2><p>La página cumple el con el nivel de accesibilidad AA</p>
+<p><img src="img/accesibilidad/accesibilidad-contacto.png" alt="Filtrado" /></p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/user/14">Mi Perfil</a> <span id="mi-perfil"></span><a href="#mi-perfil" class="hashlink">&para;</a></h2><p>La página cumple el con el nivel de accesibilidad AA</p>
+<p><img src="img/accesibilidad/accesibilidad-miperfil.png" alt="Mi Perfil" /></p>
+<hr />
+<h2><a href="http://animas.herokuapp.com/publicaciones/comprobar">Comprobar</a> <span id="comprobar"></span><a href="#comprobar" class="hashlink">&para;</a></h2><p>La página cumple el con el nivel de accesibilidad AA</p>
+<p><img src="img/accesibilidad/publicaciones-comprobar.png" alt="Comprobar" /></p>
+<hr />
+<h2>Conclusión <span id="conclusion"></span><a href="#conclusion" class="hashlink">&para;</a></h2><p>En coclusión, las mayoría de páginas cumplen las normas de accesibilidad AA, tan solo en algunas secciones no se ha podido completar el nivel de accesiblidad AA debido a etiquetas que genera el propio framework.</p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 12 Jun 2017 17:59:52 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

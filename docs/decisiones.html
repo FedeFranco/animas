@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/6f553dc3/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/9b0e7b7a/solarized_light.css" rel="stylesheet">
+<link href="./assets/894637ee/style.css" rel="stylesheet">
+<script src="./assets/2928bca5/jquery.js"></script>
+<script src="./assets/6f553dc3/js/bootstrap.js"></script>
+<script src="./assets/daf758aa/jssearch.js"></script>    <title>Decisiones adoptadas y su justificación - Decisiones adoptadas y su justificación - Guía de Animas</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w10" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w10-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Guía de Animas</a></div><div id="w10-collapse" class="collapse navbar-collapse"><ul id="w11" class="navbar-nav nav"><li><a href="api/index.html">Class reference</a></li>
+<li><a href="./README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-0" data-toggle="collapse" data-parent="#navigation">Descripción general del proyecto <b class="caret"></b></a><div id="navigation-0" class="submenu panel-collapse collapse"><a class="list-group-item" href="./funcionalidad.html">Funcionalidad principal de la apllicación</a>
+<a class="list-group-item" href="./objetivos.html">Objetivos generales</a>
+<a class="list-group-item" href="https://github.com/FedeFranco/animas">Url del repositorio en GitHub</a>
+<a class="list-group-item" href="https://FedeFranco.github.io/animas/">Url de la documentación en GitHub Pages</a></div>
+<a class="list-group-item" href="#navigation-1" data-toggle="collapse" data-parent="#navigation">Instrucciones de instalación y despliegue <b class="caret"></b></a><div id="navigation-1" class="submenu panel-collapse collapse"><a class="list-group-item" href="./local.html">En local</a>
+<a class="list-group-item" href="./nube.html">En la nube</a></div>
+<a class="list-group-item" href="#navigation-2" data-toggle="collapse" data-parent="#navigation">Catálogo de requisitos <b class="caret"></b></a><div id="navigation-2" class="submenu panel-collapse collapse"><a class="list-group-item" href="./requisitos.html">Definición detallada</a>
+<a class="list-group-item" href="./resumen.html">Cuadro resumen</a></div>
+<a class="list-group-item" href="#navigation-3" data-toggle="collapse" data-parent="#navigation">Manual básico de usuario <b class="caret"></b></a><div id="navigation-3" class="submenu panel-collapse collapse"><a class="list-group-item" href="./manual_usuario.html">Manual</a>
+<a class="list-group-item" href="./manual_usuario_administrador.html">Manual de administrador</a></div>
+<a class="list-group-item active" href="#navigation-4" data-toggle="collapse" data-parent="#navigation">Decisiones adoptadas y su justificación <b class="caret"></b></a><div id="navigation-4" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./decisiones.html">Decisiones adoptadas y su justificación</a></div>
+<a class="list-group-item" href="#navigation-5" data-toggle="collapse" data-parent="#navigation">Dificultades encontradas y soluciones aplicadas <b class="caret"></b></a><div id="navigation-5" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dificultades.html">Dificultades encontradas y soluciones aplicadas</a></div>
+<a class="list-group-item" href="#navigation-6" data-toggle="collapse" data-parent="#navigation">Diagramas <b class="caret"></b></a><div id="navigation-6" class="submenu panel-collapse collapse"><a class="list-group-item" href="./clases.html">De clases</a>
+<a class="list-group-item" href="./datos.html">De estructura lógica de datos</a></div>
+<a class="list-group-item" href="#navigation-7" data-toggle="collapse" data-parent="#navigation">Glosario de términos <b class="caret"></b></a><div id="navigation-7" class="submenu panel-collapse collapse"><a class="list-group-item" href="./glosario.html">Glosario de términos</a></div>
+<a class="list-group-item" href="#navigation-8" data-toggle="collapse" data-parent="#navigation">Conclusiones <b class="caret"></b></a><div id="navigation-8" class="submenu panel-collapse collapse"><a class="list-group-item" href="./conclusiones.html">Conclusiones</a></div>
+<a class="list-group-item" href="#navigation-9" data-toggle="collapse" data-parent="#navigation">Anexos <b class="caret"></b></a><div id="navigation-9" class="submenu panel-collapse collapse"><a class="list-group-item" href="./prueba-del-seis.html">Anexo I: Prueba del seis</a>
+<a class="list-group-item" href="./validation-css.html">Anexo II: Validación CSS</a>
+<a class="list-group-item" href="./validation-html.html">Anexo III: Validación HTML</a>
+<a class="list-group-item" href="./validacion-accesibilidad.html">Anexo IV: Validación accesibilidad</a>
+<a class="list-group-item" href="./validacion-microdatos.html">Anexo V: Validación microdatos</a>
+<a class="list-group-item" href="./comprobacion.html">Anexo VI: Comprobación en navegadores</a></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Decisiones adoptadas y su justificación <span id="decisiones-adoptadas-y-su-justificacion"></span><a href="#decisiones-adoptadas-y-su-justificacion" class="hashlink">&para;</a></h1><p>Durante el desarrollo del proyecto, muchas de las funcionalidades de los requisitos (la mayoría de ellos opcionales) han tenido que ser reemplazadas por otras. Esto se debe ha que la implementación requería aspectos más claros y menos complejos de los que se plantearon en un principio. Es decir, algunas funcionalidades de los requisitos se pueden desarrollar de otra manera y otras no se contemplan pues su desarrollo se hace un uso complejo de la aplicación.
+Por ejemplo, el requisito 47 (R47) cuyo nombre es "Los usuarios invitados no podrán acceder a los perfiles de usuarios pero si los registrados", exigía que para ver la información de un usuario, se debía de estar previamente logueado. Actualmente se difiere de la funcionalidad de este requisito ya que en los perfiles de los usuarios no guarda información relevante (como posición y teléfono de contacto), además ofrece información necesaria para todos los usuarios. No interfiriendo con la funcionalidad de la aplicación.</p>
+<p>Otra situación similar ocurre con el resto de requisitos no implementados. La aplicación debe de responder a un uso sencillo para el usuario y según el planteamiento de algunos requisitos obstaculiza el uso y la sencillez de la misma.</p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Mon, 12 Jun 2017 17:59:52 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script type="text/javascript">jQuery(document).ready(function () {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

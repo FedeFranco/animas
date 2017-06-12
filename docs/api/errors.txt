@@ -1,0 +1,220 @@
+Array
+(
+    [0] => Array
+        (
+            [line] => 106
+            [file] => controllers/PublicacionesController.php
+            [message] => Undefined parameter documented: $id, in actionComprobar().
+        )
+
+    [1] => Array
+        (
+            [line] => 179
+            [file] => controllers/PublicacionesController.php
+            [message] => Undefined parameter documented: $id. in actionUpdate().
+        )
+
+    [2] => Array
+        (
+            [line] => 205
+            [file] => controllers/PublicacionesController.php
+            [message] => Undefined parameter documented: $id, in actionMapa().
+        )
+
+    [3] => Array
+        (
+            [line] => 19
+            [file] => models/Categoria.php
+            [message] => Method tableName has no parent to inherit from in app\models\Categoria.
+        )
+
+    [4] => Array
+        (
+            [line] => 27
+            [file] => models/Categoria.php
+            [message] => Method rules has no parent to inherit from in app\models\Categoria.
+        )
+
+    [5] => Array
+        (
+            [line] => 38
+            [file] => models/Categoria.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Categoria.
+        )
+
+    [6] => Array
+        (
+            [line] => 19
+            [file] => models/Categoria.php
+            [message] => Method tableName has no parent to inherit from in app\models\Categoria.
+        )
+
+    [7] => Array
+        (
+            [line] => 27
+            [file] => models/Categoria.php
+            [message] => Method rules has no parent to inherit from in app\models\Categoria.
+        )
+
+    [8] => Array
+        (
+            [line] => 38
+            [file] => models/Categoria.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Categoria.
+        )
+
+    [9] => Array
+        (
+            [line] => 29
+            [file] => models/CategoriaSearch.php
+            [message] => Method scenarios has no parent to inherit from in app\models\CategoriaSearch.
+        )
+
+    [10] => Array
+        (
+            [line] => 25
+            [file] => models/Publicacion.php
+            [message] => Method $categor_nom has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [11] => Array
+        (
+            [line] => 38
+            [file] => models/Publicacion.php
+            [message] => Method rules has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [12] => Array
+        (
+            [line] => 62
+            [file] => models/Publicacion.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [13] => Array
+        (
+            [line] => 25
+            [file] => models/Publicacion.php
+            [message] => Method $categor_nom has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [14] => Array
+        (
+            [line] => 38
+            [file] => models/Publicacion.php
+            [message] => Method rules has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [15] => Array
+        (
+            [line] => 62
+            [file] => models/Publicacion.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Publicacion.
+        )
+
+    [16] => Array
+        (
+            [line] => 29
+            [file] => models/PublicacionSearch.php
+            [message] => Method scenarios has no parent to inherit from in app\models\PublicacionSearch.
+        )
+
+    [17] => Array
+        (
+            [line] => 25
+            [file] => models/Reporte.php
+            [message] => Method tableName has no parent to inherit from in app\models\Reporte.
+        )
+
+    [18] => Array
+        (
+            [line] => 33
+            [file] => models/Reporte.php
+            [message] => Method rules has no parent to inherit from in app\models\Reporte.
+        )
+
+    [19] => Array
+        (
+            [line] => 48
+            [file] => models/Reporte.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Reporte.
+        )
+
+    [20] => Array
+        (
+            [line] => 25
+            [file] => models/Reporte.php
+            [message] => Method tableName has no parent to inherit from in app\models\Reporte.
+        )
+
+    [21] => Array
+        (
+            [line] => 33
+            [file] => models/Reporte.php
+            [message] => Method rules has no parent to inherit from in app\models\Reporte.
+        )
+
+    [22] => Array
+        (
+            [line] => 48
+            [file] => models/Reporte.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\Reporte.
+        )
+
+    [23] => Array
+        (
+            [line] => 29
+            [file] => models/ReporteSearch.php
+            [message] => Method scenarios has no parent to inherit from in app\models\ReporteSearch.
+        )
+
+    [24] => Array
+        (
+            [line] => 20
+            [file] => models/TipoAnimal.php
+            [message] => Method tableName has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [25] => Array
+        (
+            [line] => 28
+            [file] => models/TipoAnimal.php
+            [message] => Method rules has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [26] => Array
+        (
+            [line] => 39
+            [file] => models/TipoAnimal.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [27] => Array
+        (
+            [line] => 20
+            [file] => models/TipoAnimal.php
+            [message] => Method tableName has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [28] => Array
+        (
+            [line] => 28
+            [file] => models/TipoAnimal.php
+            [message] => Method rules has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [29] => Array
+        (
+            [line] => 39
+            [file] => models/TipoAnimal.php
+            [message] => Method attributeLabels has no parent to inherit from in app\models\TipoAnimal.
+        )
+
+    [30] => Array
+        (
+            [line] => 29
+            [file] => models/TipoAnimalSearch.php
+            [message] => Method scenarios has no parent to inherit from in app\models\TipoAnimalSearch.
+        )
+
+)

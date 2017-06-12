@@ -66,7 +66,7 @@ $this->registerJs($js, View::POS_HEAD);
 
          array_unshift($items, ['label' => 'Mi Perfil', 'url' => ['/user/profile'/* . Yii::$app->user->id*/]]);
          array_unshift($items, ['label' => 'Configuración',  'url' => ['/user/settings/profile']]);
-         //array_unshift($items, ['label' => 'Publicar',  'url' => ['/publicaciones/create']]);
+         
     }
 
     NavBar::begin([
