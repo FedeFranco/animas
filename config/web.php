@@ -26,7 +26,13 @@ $config = [
                 'recoverySubject'       => 'Recuperación de Contraseña',
             ],
             'controllerMap' => [
-                'registration' => 'app\controllers\user\RegistrationController',
+                'registration' => [
+                     'class' => \dektrium\user\controllers\RegistrationController::className(),
+                     'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function ($e) {
+                         Yii::$app->response->redirect(array('/user/security/login'))->send();
+                         Yii::$app->end();
+                     }
+                ],
                 'profile' => 'app\controllers\user\ProfileController',
                 'settings' => 'app\controllers\user\SettingsController',
                 'admin' => 'app\controllers\user\AdminController',

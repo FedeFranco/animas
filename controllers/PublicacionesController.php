@@ -17,6 +17,7 @@ use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\data\ArrayDataProvider;
 use yii\helpers\Json;
+use dektrium\user\filters\AccessRule;
 
 
 
@@ -39,6 +40,9 @@ class PublicacionesController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'ruleConfig' => [
+                    'class' => AccessRule::className(),
+                 ],
                 'rules' => [
                     [
                         'actions' => ['index','create','update','comprobar'],
@@ -54,7 +58,7 @@ class PublicacionesController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['view','comprobar','mapa'],
+                        'actions' => ['view','comprobar','mapa','normas'],
                         'roles'=>['?','@'],
                         'allow' => true,
                     ],
