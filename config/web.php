@@ -40,6 +40,7 @@ $config = [
             ],
 
         ],
+        'rbac' => 'dektrium\rbac\RbacWebModule',
         'social' => [
             // the module class
             'class' => 'kartik\social\Module',

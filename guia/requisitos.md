@@ -21,7 +21,7 @@ perfil.            |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [2](https://github.com/FedeFranco/animas/issues/2) |
 
 
 | **R3:** | Los usuarios no pueden modificar propiedades de otros usuarios|
@@ -33,7 +33,7 @@ configuración ni las alertas o anuncios des otros usuarios.            |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [3](https://github.com/FedeFranco/animas/issues/3) |
 
 
 | **R4:** | Los usuarios podrán darse de baja en la plataforma web|
@@ -45,7 +45,7 @@ de baja de la aplicación           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [4](https://github.com/FedeFranco/animas/issues/5) |
 
 
 | **R5:** | Ningún usuario puede publicar si no está registrado|
@@ -57,7 +57,7 @@ la aplicación web            |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [5](https://github.com/FedeFranco/animas/issues/5) |
 
 
 
@@ -72,7 +72,7 @@ dicha cuenta en la aplicación web            |
 | Complejidad          | Media |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [6](https://github.com/FedeFranco/animas/issues/6) |
 
 
 | **R7:** | El usuario registrado que no autentique su cuenta deberá ser
@@ -84,7 +84,7 @@ borrada en 24h|
 | Complejidad          | Media |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [7](https://github.com/FedeFranco/animas/issues/7) |
 
 
 
@@ -99,7 +99,7 @@ aplicación.           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [8](https://github.com/FedeFranco/animas/issues/8) |
 
 
 
@@ -114,7 +114,7 @@ afectado con el motivo de su borrado.            |
 | Complejidad          | Media |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [9](https://github.com/FedeFranco/animas/issues/9) |
 
 
 | **R10:** |La web no almacenará más de dos correos electrónicos iguales|
@@ -126,7 +126,7 @@ afectado con el motivo de su borrado.            |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [10](https://github.com/FedeFranco/animas/issues/10) |
 
 
 | **R11:** |Las publicaciones que realicen los usuarios registrados deberán contener cómo máximo 200 caracteres|
@@ -138,7 +138,7 @@ contener cómo máximo 200 caracteres           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [11](https://github.com/FedeFranco/animas/issues/11) |
 
 
 | **R12:** |Los usuarios no podrán acceder a los datos contenidos en la
@@ -154,7 +154,7 @@ administrador puede acceder a estos contenidos.           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [12](https://github.com/FedeFranco/animas/issues/12) |
 
 
 | **R13:** |La paginación de publicaciones será de 10 publicaciones por
@@ -167,7 +167,7 @@ entablaran por un máximo de 10 en cada página           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [13](https://github.com/FedeFranco/animas/issues/13) |
 
 
 | **R14:** |Un usuario registrado podrá publicar diferentes categorías|
@@ -180,7 +180,7 @@ ellas           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [14](https://github.com/FedeFranco/animas/issues/14) |
 
 
 | **R15:** |El usuario administrador podrá eliminar publicaciones|
@@ -193,7 +193,7 @@ carácter inapropiado           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v1 |
 | Entrega realizada    | v1 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/1) |
+| Nº issue             | [15](https://github.com/FedeFranco/animas/issues/15) |
 
 
 | **R16:** |Un usuario puede denunciar a otro|
@@ -206,7 +206,7 @@ el servicio ofrecido por la plataforma           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [58](https://github.com/FedeFranco/animas/issues/58) |
 
 
 | **R17:** |Un usuario registrado puede restringir que tipo de
@@ -222,7 +222,7 @@ usuario podrá desactivar la categoría de “Denuncialo”           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [57](https://github.com/FedeFranco/animas/issues/57) |
 
 
 | **R18:** |El usuario que haya restringido una categoría no podrá hacer
@@ -235,7 +235,7 @@ categoría que haya clausurado anteriormente.           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [56](https://github.com/FedeFranco/animas/issues/56) |
 
 | **R19:** |Un usuario podrá comentar en publicaciones|
 | ----------           | ---------- |
@@ -247,7 +247,7 @@ comentario.           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [55](https://github.com/FedeFranco/animas/issues/55) |
 
 
 | **R20:** |Un usuario podrá modificar o eliminar un comentario|
@@ -259,7 +259,7 @@ usuario que lo creó en cualquier momento           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [54](https://github.com/FedeFranco/animas/issues/54) |
 
 
 | **R21:** | El usuario administrador podrá eliminar comentarios |
@@ -271,7 +271,7 @@ comentario es ofensivo o tiene un carácter inapropiado           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [53](https://github.com/FedeFranco/animas/issues/53) |
 
 
 | **R22:** | El usuario administrador podrá eliminar comentarios |
@@ -286,7 +286,7 @@ anuncio o alerte si estos se han producido cerca de su ubicación           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [52](https://github.com/FedeFranco/animas/issues/52) |
 
 
 | **R23:** | El usuario que deniegue el acceso a su ubicación no podrá
@@ -301,7 +301,7 @@ ubicación.           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [51](https://github.com/FedeFranco/animas/issues/51) |
 
 
 |**R24:** | Un usuario registrado puede modificar su prioridad de alerta |
@@ -315,7 +315,7 @@ modificar el rango de difusión de una ubicación a recibir           |
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [50](https://github.com/FedeFranco/animas/issues/50) |
 
 
 |**R25:** | Los anuncios tendrán normas de publicación |
@@ -329,7 +329,7 @@ aceptado estas normas, la aplicación no volverá a recurrir a ello           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [49](https://github.com/FedeFranco/animas/issues/49) |
 
 
 |**R26:** | Cuando un usuario registrado publique una anuncio deberá
@@ -342,7 +342,7 @@ aceptar que ha leído las normas de publicaciones           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [48](https://github.com/FedeFranco/animas/issues/48) |
 
 
 |**R27:** | El servicio de alerta para localizar mascotas perdidas exigirá
@@ -355,7 +355,7 @@ dicha alerta           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [47](https://github.com/FedeFranco/animas/issues/47) |
 
 
 |**R28:** |El usuario podrá subir una imagen como avatar en su
@@ -369,7 +369,7 @@ subir como avatar una imagen que identifique ante otros usuarios
 | Complejidad          | Media |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [46](https://github.com/FedeFranco/animas/issues/46) |
 
 
 |**R29:** |La imagen de avatar de usuario tendrá un tamaño predeterminado |
@@ -382,7 +382,7 @@ encajar con este requisito           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [45](https://github.com/FedeFranco/animas/issues/45) |
 
 
 |**R30:** | Las imágenes subidas por el usuario deberá ser aceptada por
@@ -396,7 +396,7 @@ imagen la cual podrá ser solo de un formato (jpg, png, entre otros)           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [44](https://github.com/FedeFranco/animas/issues/44) |
 
 
 |**R31:** | Las organizaciones pro-animalistas y otras organizaciones de
@@ -412,7 +412,7 @@ tienen acceso al resto de acciones que dispone un usuario registrado           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [43](https://github.com/FedeFranco/animas/issues/43) |
 
 
 |**R32:** | Las organizaciones deben de ser verificadas |
@@ -426,7 +426,7 @@ de la organización, sede, año de inicio, entre otras.           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [42](https://github.com/FedeFranco/animas/issues/42) |
 
 
 |**R33:** | Las organizaciones deben de cumplir normas de publicación
@@ -439,7 +439,7 @@ marcar como leído las normas de publicación de la web.           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [41](https://github.com/FedeFranco/animas/issues/41) |
 
 
 |**R34:** | Las publicaciones podrán tener foto |
@@ -451,7 +451,7 @@ su título           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [40](https://github.com/FedeFranco/animas/issues/40) |
 
 
 |**R35:** | Las publicaciones podrán tener enlaces |
@@ -462,7 +462,7 @@ su título           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v2 |
 | Entrega realizada    | v2 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [39](https://github.com/FedeFranco/animas/issues/39) |
 
 
 |**R36:** | El servicio de alerta será privado. Cuando un usuario reciba
@@ -477,7 +477,7 @@ usuarios notificados por la misma.           |
 | Complejidad          | Fácil |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [59](https://github.com/FedeFranco/animas/issues/59) |
 
 
 |**R37:** | El servicio de alerta para localizar mascotas perdidas será
@@ -493,7 +493,7 @@ configurables solo para el usuario que lanza la alerta actual           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [60](https://github.com/FedeFranco/animas/issues/60) |
 
 
 |**R38:** | El servicio de alerta para localizar mascotas perdidas será de
@@ -509,7 +509,7 @@ para el usuario que lanza la alerta actual           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/2) |
+| Nº issue             | [61](https://github.com/FedeFranco/animas/issues/61) |
 
 
 |**R39:** | El servicio de publicación para las categorías: “Denuncialo”
@@ -525,7 +525,7 @@ para el usuario que lanza la alerta actual           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [62](https://github.com/FedeFranco/animas/issues/62) |
 
 
 |**R40:** | Las notificaciones aparecerán en el icono de notificaciones |
@@ -540,7 +540,7 @@ menú          |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [63](https://github.com/FedeFranco/animas/issues/63) |
 
 
 |**R41:** | Se dispondrá de un buscador que ofrezca búsqueda por
@@ -554,7 +554,7 @@ publicaciones.           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [64](https://github.com/FedeFranco/animas/issues/64) |
 
 
 |**R42:** | un usuario podrá contactar mediante mensaje con un
@@ -567,7 +567,7 @@ anuncio mediante un mensaje privado           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [65](https://github.com/FedeFranco/animas/issues/65) |
 
 
 |**R43:** | Los usuarios pueden obtener reconocimiento por otros
@@ -582,7 +582,7 @@ podrán ser recompensados mediante un rating           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [66](https://github.com/FedeFranco/animas/issues/66) |
 
 
 |**R44:** | Los ratings pueden publicarse en la página principal si van
@@ -596,7 +596,7 @@ textual que se publicará en la página principal.            |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [67](https://github.com/FedeFranco/animas/issues/68) |
 
 
 |**R45:** | Los ratings que no adjunten mensaje de texto no se publicará |
@@ -609,7 +609,7 @@ parte de la aplicación.           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [68](https://github.com/FedeFranco/animas/issues/68) |
 
 
 |**R46:** | Cada usuario tendrá un perfil propio |
@@ -622,20 +622,7 @@ parte de la aplicación.           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
-
-
-|**R46:** | Cada usuario tendrá un perfil propio |
-| ----------           | ---------- |
-| Descripción          | Un usuario registrado puede no adjuntar ningún mensaje de texto en
-la valoración de otro usuario, pero este no se mostrará en ninguna
-parte de la aplicación.           |
-| Prioridad            | OPCIONAL |
-| Tipo                 | Funcional |
-| Complejidad          | Media |
-| Entrega planificada  | v3 |
-| Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [69](https://github.com/FedeFranco/animas/issues/69) |
 
 
 |**R47:** | Los usuarios invitados no podrán acceder a los perfiles de
@@ -648,7 +635,7 @@ usuarios. Solo serán accesibles a ellos los usuarios registrados.           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [70](https://github.com/FedeFranco/animas/issues/70) |
 
 
 |**R48:** | Se deberá implementar el control de acceso basado en roles
@@ -662,4 +649,4 @@ distintos roles; como las organizaciones y usuarios comunes.           |
 | Complejidad          | Media |
 | Entrega planificada  | v3 |
 | Entrega realizada    | v3 |
-| Nº issue             | [1](https://github.com/FedeFranco/animas/issues/3) |
+| Nº issue             | [71](https://github.com/FedeFranco/animas/issues/71) |

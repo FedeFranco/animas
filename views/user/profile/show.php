@@ -63,7 +63,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         </div>
                         <div class="perfil-img">
-                            <?=Html::img(Url::to('@web/fotos-animas/animas-med-lin-alt220.png'),['atl' => 'gorila-animas', 'id' => 'gor-anim', 'class' => 'col-lg']) ?>
+                            <?=Html::img(Url::to('@web/fotos-animas/animas-med-lin-alt220.png'),['atl' => 'medusa-animas', 'id' => 'gor-anim',]) ?>
                         </div>
                     </div>
             </div>

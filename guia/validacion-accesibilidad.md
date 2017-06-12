@@ -93,6 +93,16 @@ La página cumple el con el nivel de accesibilidad AA
 
 -------------------------------------------------
 
+
+[Comprobar](http://animas.herokuapp.com/publicaciones/comprobar)
+---------
+La página cumple el con el nivel de accesibilidad AA
+
+![Comprobar](img/accesibilidad/publicaciones-comprobar.png)
+
+-------------------------------------------------
+
+
 Conclusión
 -----------------
 
