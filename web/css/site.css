@@ -67,7 +67,7 @@ div.site-filtro {
     width: 200px
 }
 
-h2#cab-contacto {
+div#cab-contacto h3 {
     color: white;
 }
 
@@ -85,10 +85,15 @@ div#contacto-telf-view {
     transition:visibility 1s, height 2s, font-size 1s;
 
 }
-h2#cab-contacto:hover + div#contacto-telf-view{
+div#cab-contacto:hover  div#contacto-telf-view{
     visibility: visible;
     height: 50px;
     font-size: 18px;
+}
+
+img.img-social {
+    width: 30px;
+    height: 30px;
 }
 
 /* Inicio Colocar categorias y clases animales*/
@@ -177,10 +182,11 @@ button:active:after {
     transition: 0s
 }
 /* fin de animar botones*/
-div i {
+div strong {
     color: white;
     font-size: 20px;
 }
+
 
 div.marco-perfil {
     color: white;

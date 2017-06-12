@@ -164,16 +164,17 @@ $this->registerJs($js)
     <br>
     <br>
     <br>
-    <div id="map-canvas" style="height: 280px;width: 100%;"></div>
     <?php if (!(Yii::$app->user->isGuest)): ?>
-        <h2 id="cab-contacto">Ver Contacto &#x21B6;</h3>
-
-        <div id="contacto-telf-view">
-            Teléfono: <?= $model->telf_contacto?>
-        </div>
+		<div id="cab-contacto">
+	        <h3>Ver Contacto &#x21B6;</h3>
+	        <div id="contacto-telf-view">
+	            Teléfono: <?= $model->telf_contacto?>
+	    	</div>
+		</div>
         <br/>
         <br/>
         <br/>
+		<div id="map-canvas" style="height: 280px;width: 100%;"></div>
     <!--    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?=$model->latitud?>,<?=$model->longitud?>&hl=es;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q='+<?=$model->latitud?>+','+<?=$model->longitud?>+'&hl=es;z=14&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">Ver en Google Maps</a></small> -->
     <?php else:?>
         <div><strong>Para ver la información del teléfono y la ubicación de esta publicación debe estar <?= Html::a('logueado',['/user/security/login'])?></strong></div>

@@ -122,10 +122,10 @@ $this->registerJs($js, View::POS_HEAD);
                 <p><?= Html::a('Contacta con nosotros',Url::to(['site/contact'])); ?></p>
             </div>
             <div class="">
-                    <?=Html::a(Html::img(Url::to('@web/icon_fb.jpg'),['width' => '30px', 'height' => '30px', 'alt' => 'enlace-facebook']),Url::to('https://www.facebook.com/sharer/sharer.php?u=https://animas.herokuapp.com')) ?>
+                    <?=Html::a(Html::img(Url::to('@web/icon_fb.jpg'),['class' => 'img-social','alt' => 'enlace-facebook']),Url::to('https://www.facebook.com/sharer/sharer.php?u=https://animas.herokuapp.com')) ?>
             </div>
             <div class="">
-                <?=Html::a(Html::img(Url::to('@web/icon_tw.jpg'),['width' => '30px', 'height' => '30px', 'alt' => 'enlace-twitter']),Url::to('https://twitter.com/intent/tweet?text=Proyecto+Animas+https://animas.herokuapp.com')) ?>
+                <?=Html::a(Html::img(Url::to('@web/icon_tw.jpg'),['class' => 'img-social', 'alt' => 'enlace-twitter']),Url::to('https://twitter.com/intent/tweet?text=Proyecto+Animas+https://animas.herokuapp.com')) ?>
             </div>
     </div>
 </footer>

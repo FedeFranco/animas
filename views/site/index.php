@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<head>
+  <title>Animas</title>
+</head>
 <?php
-
 /* @var $this yii\web\View */
 use yii\widgets\ListView;
 use yii\web\View;

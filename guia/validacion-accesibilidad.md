@@ -82,6 +82,15 @@ La página cumple el con el nivel de accesibilidad AA
 
 ![Filtrado](img/accesibilidad/accesibilidad-contacto.png)
 
+
+-------------------------------------------------
+
+[Mi Perfil](http://animas.herokuapp.com/user/14)
+---------
+La página cumple el con el nivel de accesibilidad AA
+
+![Mi Perfil](img/accesibilidad/accesibilidad-miperfil.png)
+
 -------------------------------------------------
 
 Conclusión
