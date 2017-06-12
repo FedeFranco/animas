@@ -46,7 +46,7 @@ $this->registerCss('html, body {
                      No te olvides <?= Html::a('Registrarte', ['/user/registration/register'])?> y <?= Html::a('Loguearte', ['/user/security/login'])?> , encontrarás más servicios que ofrece <span itemprop="owns">Proyecto Animas</span>
                  </p>
 
-                 <h3>Cómo usar <span itemprop="name">Animas</span></h3>
+                 <h2>Cómo usar <span itemprop="name">Animas</span></h2>
                  <p itemprop="description">
                      Como ya sabes, los usuarios de <span itemprop="name">Animas</span> se registran en la plataforma y de esta manera pueden publicar anuncios para comunicar al restos de usuarios de la web de qué forman desean ayudar a una mascota.
                      Una vez accediendo a <?= Html::a('Publicar', ['/publicaciones/create'])?>, elemento que encontramos en el menú de navegación, se nos presentará un formulario, el cual debemos rellenar. Nos encontraremos con: el <strong>Título</strong>,
@@ -61,13 +61,7 @@ $this->registerCss('html, body {
                  </p>
                  <br />
                  <br />
-                 <h3> ¿No sabes qué significa cada Categoría? ¡No hay problema!</h3>
-                 <ul style="color: white">
-                     <li>ADOPCIÓN: Aquí el animal pasa a ser propiedad del adoptante. Dentro de la adopción puede ocurrir que el animal se entregue esterilizado, vacunado, con cartilla y pasaporte</li>
-                     <li>ACOGIDA: Es Ofrecer una animal sin gasto para quien lo acoge. Quién lo acoge recibe pienso para el animal y todos los gastos veterinarios están cubiertos si quien ofrece la acogida es una protectora.</li>
-                     <li>APADRINAMIENTO: Es mantener a un animal mientras éste está en otra estancia que no sea el hogar o propiedad local del usuario que apadrina. Dicho usuario ofrece cierta cantidad de dinero por su manutención a la protectora o hogar donde se estancia el animal apadrinado.</li>
-                     <li>ALERTA: Indica que una mascota ha sido se ha escapado o perdido. El usuario que publica la alerta podrá indicar por el servicio de geolocalización de la aplicación en que lugar ha ocurrido</li>
-                 </ul>
+                 <h2> ¿No sabes qué significa cada Categoría? ¡No hay problema!</h2>
             </div>
 
 
