@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 
-$this->title = $model->titulo;
+//$this->title = $model->titulo;
 $this->params['breadcrumbs'][] = ['label' => 'Publicacions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -182,7 +182,7 @@ $this->registerJs($js)
 </div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHvxtC6tuK72E_ZcWHcyYQzYxqhZzYsbk">
 </script>
-<!-- <script> -->
+ <script>
+	$("head title:last-of-type").remove(); 
 
-
-<!-- </script> -->
+ </script>

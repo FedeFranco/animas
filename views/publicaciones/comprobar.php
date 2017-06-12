@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="row col-sm-12">
     <p class="col-sm-1">1 Km</p>
     <div class="col-sm-6">
-        <input type="range" id="rangkm" name="" value="1" min="1" max="80"/>
+        <input type="range" id="rangkm" name="rang" value="1" min="1" max="80"/>
     </div>
     <p class="col-sm-1">80 Km</p>
 </div>
