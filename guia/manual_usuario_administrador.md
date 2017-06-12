@@ -8,7 +8,7 @@ Borrar publicaciones
 -----------------------
 Cuando se accede como administrador, en el listado de publicaciones de la página principal aparecerá en cada pubicación un botón de borrar la publicación. De esta manera se pueden borrar las publicaciones de todos los usuarios.
 
-![Borrar](imgages/app/public-anuncio.png)
+![Borrar](images/app/public-anuncio.png)
 
 ---------------------------------------------
 Acceder a Reportes
