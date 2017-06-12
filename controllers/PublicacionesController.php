@@ -21,14 +21,15 @@ use yii\helpers\Json;
 
 
 /**
- * PublicacionesController implements the CRUD actions for Publicacion model.
+ * PublicacionesController implementa un CRUD de acciones para el Modelo Publicacioens
  */
 
 class PublicacionesController extends Controller
 {
     /**
-     * @inheritdoc
-     */
+    * Comportamientos de las publicaciones (permisos y accesos)
+    *
+    */
 
     public $categorias = [];
 
@@ -70,7 +71,7 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Lists all Publicacion models.
+     * Lista las publicaciones
      * @return mixed
      */
     public function actionIndex()
@@ -85,7 +86,7 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Displays a single Publicacion model.
+     * Mustra la información completa de la publicación.
      * @param integer $id
      * @return mixed
      */
@@ -95,6 +96,12 @@ class PublicacionesController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
+
+    /**
+     * Muestra la información completa de la publicación.
+     * @param integer $id, string $lat, $long string, $km integer, $ajax boolean
+     * @return mixed
+     */
 
     public function actionComprobar($lat, $long, $km = 1, $ajax = false)
     {
@@ -131,8 +138,8 @@ class PublicacionesController extends Controller
     }
 
     /**
-     * Creates a new Publicacion model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Crea una nueva publicación.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -164,27 +171,15 @@ class PublicacionesController extends Controller
 
 
     /**
-     * Updates an existing Publicacion model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * Modifica una publicación.
+     *
+     * @param integer $id.
      * @return mixed
      */
-    public function actionUpdate($id, $long = null, $lat = null)
+    public function actionUpdate($id)
     {
 
         $model = $this->findModel($id);
-
-        if ($long != null && $lat != null ) {
-            $publicacionCoord = Publicacion::findOne($id);
-            $publicacionCoord->longitud = $long;
-            $publicacionCoord->latitud = $lat;
-            $publicacionCoord->update();
-
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }
-
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -200,6 +195,13 @@ class PublicacionesController extends Controller
         }
     }
 
+    /**
+     * Crea un nuevo mapa.
+     *
+     * @param integer $id, string $long, string $lat.
+     * @return mixed
+     */
+
     public function actionMapa($id, $long, $lat)
     {
         if ($long != null && $lat != null ) {
@@ -213,8 +215,7 @@ class PublicacionesController extends Controller
         }
     }
     /**
-     * Deletes an existing Publicacion model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Borra una publicación existente.
      * @param integer $id
      * @return mixed
      */
@@ -225,17 +226,22 @@ class PublicacionesController extends Controller
         return $this->redirect(['site/index']);
     }
 
+    /**
+     * Muestra las normas
+     *
+     * @return mixed
+     */
+
     public function actionNormas()
     {
         return $this->render('normas');
     }
 
     /**
-     * Finds the Publicacion model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * Encuentra una publicación basada en el modelo
      * @param integer $id
-     * @return Publicacion the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return Publicación basada en el modelo
+     * @throws NotFoundHttpException si el modelo no puede ser encontrado
      */
     protected function findModel($id)
     {
@@ -245,6 +251,14 @@ class PublicacionesController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    /**
+     * Calcula la distancia entre un usuario y las publicaciones
+     * Encuentra una publicación basada en el modelo
+     * @param string $latitud1,string $longitud1,string $latitud2,string $longitud2
+     * @return integer $d
+     *
+     */
 
     private function getDistancia( $latitud1, $longitud1, $latitud2, $longitud2 ) {
         $earth_radius = 6371;

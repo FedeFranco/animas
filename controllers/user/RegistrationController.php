@@ -7,9 +7,17 @@ use Yii;
 use dektrium\user\models\RegistrationForm;
 use dektrium\user\controllers\RegistrationController as BaseRegistrationController;
 
+/**
+ * RegistrarionController implementa un CRUD de acciones para el modelo Registration.
+ */
 class RegistrationController extends BaseRegistrationController
 {
-
+    /**
+     * Registro de un usuario
+     *
+     *
+     * @return mixed
+     */
     public function actionRegister()
     {
         if (!$this->module->enableRegistration) {

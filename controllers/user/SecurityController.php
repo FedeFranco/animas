@@ -8,9 +8,18 @@ use \DateTime;
 use dektrium\user\models\LoginForm;
 use dektrium\user\controllers\SecurityController as BaseSecurityController;
 
+/**
+ * SecurityController implementa un CRUD de acciones para el modelo Security.
+ */
 class SecurityController extends BaseSecurityController
 {
 
+    /**
+     *  Logueo de un usuario
+     *
+     *
+     * @return mixed
+     */
     public function actionLogin()
     {
 

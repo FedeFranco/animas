@@ -22,14 +22,10 @@ use yii\web\ForbiddenHttpException;
 use yii\web\NotFoundHttpException;
 use app\models\SettingsForm;
 use dektrium\user\controllers\SettingsController as BaseSettingsController;
-/**
- * SettingsController manages updating user settings (e.g. profile, email and password).
- *
- * @property \dektrium\user\Module $module
- *
- * @author Dmitry Erofeev <dmeroff@gmail.com>
- */
 
+/**
+ * SettingsController implementa un CRUD de acciones para el modelo Setting.
+ */
 class SettingsController extends BaseSettingsController
 {
 
@@ -113,6 +109,12 @@ class SettingsController extends BaseSettingsController
         ]);
     }*/
 
+    /**
+     *  Muestra la cuenta de un usuario
+     *
+     *
+     * @return mixed
+     */
     public function actionAccount()
     {
         $this->module->enableAccountDelete = true;
@@ -166,6 +168,12 @@ class SettingsController extends BaseSettingsController
         $this->trigger(self::EVENT_AFTER_DISCONNECT, $event);
         return $this->redirect(['networks']);
     }*/
+    /**
+     *  Borra la cuenta de un usuario
+     *
+     *
+     * @return mixed
+     */
 
     public function actionDelete()
     {

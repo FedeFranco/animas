@@ -19,7 +19,7 @@ use sanex\simplefilter\SimpleFilter;
 class SiteController extends Controller
 {
     /**
-     * @inheritdoc
+     * Muestra el comportamiento de acciones para Index (permisos y accesos)
      */
 
     public function behaviors()
@@ -46,7 +46,7 @@ class SiteController extends Controller
     }
 
     /**
-     * @inheritdoc
+     * Acciones
      */
     public function actions()
     {
@@ -62,7 +62,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Muestra la página principal.
      *
      * @return string
      */
@@ -84,6 +84,11 @@ class SiteController extends Controller
         ]);
 
     }
+    /**
+     * Filtra publicaciones.
+     *
+     * @return mixed
+     */
 
     public function actionFiltro()
     {
@@ -108,7 +113,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
+     * Logueo.
      *
      * @return string
      */
@@ -128,7 +133,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
+     * Logout.
      *
      * @return string
      */
@@ -140,7 +145,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays contact page.
+     * Muestra la página de contacto.
      *
      * @return string
      */
@@ -157,6 +162,12 @@ class SiteController extends Controller
         ]);
     }
 
+
+    /**
+     * Muestra las publicaciones filtradas por una búsqueda.
+     * @param string $q
+     * @return mixed
+     */
     public function actionPublicaciones($q = null)
     {
        if ($q !== null && $q !== '') {
@@ -166,46 +177,46 @@ class SiteController extends Controller
                $json[] = [
                    'id' => $publicacion->id,
                    'titulo' => $publicacion->titulo,
-                   /*'artista' => $cancion->idAlbum->idArtista->nombre,
-                   'artistaId' => $cancion->idAlbum->idArtista->id,*/
+
                ];
            }
            return json_encode($json);
        }
    }
 
-
-
+   /**
+    * Muestra el resultado de la búsqueda filtrada
+    * @param string $q
+    * @return mixed
+    */
    public function actionSearch($q = null)
    {
        if ($q !== null && $q !== '') {
            $publicacionesProvider = new ActiveDataProvider([
                'query' => Publicacion::find()->where(['ilike', 'titulo', $q]),
            ]);
-           /*$artistasProvider = new ActiveDataProvider([
-               'query' => Artista::find()->where(['ilike', 'nombre', $q]),
-           ]);
-           $albumesProvider = new ActiveDataProvider([
-               'query' => Album::find()->where(['ilike', 'nombre', $q]),
-           ]);*/
+
            return $this->render('search', [
                'q' => $q,
                'publicacionesProvider' => $publicacionesProvider,
-               /*'artistasProvider' => $artistasProvider,
-               'albumesProvider' => $albumesProvider,*/
+
            ]);
        }
        return $this->refresh();
    }
 
-
+  /**
+   * Comprueba la posición mediante POST
+   *
+   * @return mixed
+   */
     public function actionComprobar($pos = null)
     {
         return Json::encode(Yii::$app->request->post('pos'));
     }
 
     /**
-     * Displays about page.
+     * Muestra la página "Sobre Animas".
      *
      * @return string
      */

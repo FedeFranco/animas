@@ -10,12 +10,12 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * TipoAnimalController implements the CRUD actions for TipoAnimal model.
+ * TipoAnimalController implementa un CRUD de acciones para el modelo TipoAnimal.
  */
 class TiposAnimalesController extends Controller
 {
     /**
-     * @inheritdoc
+     * Comportamiento de acciones de TipoAnimalController (accesos y permisos)
      */
     public function behaviors()
     {
@@ -30,7 +30,7 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Lists all TipoAnimal models.
+     * Lists los TiposAnimales.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Displays a single TipoAnimal model.
+     * Muestra un TipoAnimal.
      * @param integer $id
      * @return mixed
      */
@@ -57,8 +57,8 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Creates a new TipoAnimal model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Crea un nuevo TipoAnimal.
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -75,8 +75,8 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Updates an existing TipoAnimal model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Modifica un nuevo TipoAnimal.
+     *
      * @param integer $id
      * @return mixed
      */
@@ -94,8 +94,9 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Deletes an existing TipoAnimal model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     *
+     * Borra un tipo Animal Existente.
+     *
      * @param integer $id
      * @return mixed
      */
@@ -107,11 +108,11 @@ class TiposAnimalesController extends Controller
     }
 
     /**
-     * Finds the TipoAnimal model based on its primary key value.
+     * Encuentra un TipoAnimal basado en el id
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return TipoAnimal the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return TipoAnimal cargado desde el modelo
+     * @throws NotFoundHttpException si el modelo no puede ser encontrado
      */
     protected function findModel($id)
     {

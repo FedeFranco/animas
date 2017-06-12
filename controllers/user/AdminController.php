@@ -4,10 +4,14 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use Yii;
 use dektrium\user\controllers\AdminController as BaseAdminController;
-
+/**
+ * AdminController implementa el CRUD de acciones para Admin.
+ */
 class AdminController extends BaseAdminController
 {
-
+    /**
+     * Comportamiento de acciones para AdminController (acciones y permisos)
+     */
     public function behaviors()
     {
         return [
@@ -33,9 +37,11 @@ class AdminController extends BaseAdminController
         ];
     }
 
-
+    /**
+     * Borra un usuario existente.
+     */
     public function actionDelete($id)
     {
-        //var_dump($id); die();
+
     }
 }  ?>

@@ -13,12 +13,12 @@ use app\models\Publicacion;
 use yii\filters\AccessControl;
 
 /**
- * ReportesController implements the CRUD actions for Reporte model.
+ * ReportesController implemente un CRUD de acciones para el modelo Reporte.
  */
 class ReportesController extends Controller
 {
     /**
-     * @inheritdoc
+     * Comportamientos de los Reportes (accesos y permisos)
      */
     public function behaviors()
     {
@@ -48,7 +48,7 @@ class ReportesController extends Controller
     }
 
     /**
-     * Lists all Reporte models.
+     * Lista el modelo Reporte.
      * @return mixed
      */
     public function actionIndex()
@@ -63,7 +63,7 @@ class ReportesController extends Controller
     }
 
     /**
-     * Displays a single Reporte model.
+     * Muestra la información de un Reporte.
      * @param integer $id
      * @return mixed
      */
@@ -75,8 +75,8 @@ class ReportesController extends Controller
     }
 
     /**
-     * Creates a new Reporte model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
+     * Crea un nuevo Reporte.
+     *
      * @return mixed
      */
     public function actionCreate($id)
@@ -97,8 +97,8 @@ class ReportesController extends Controller
     }
 
     /**
-     * Updates an existing Reporte model.
-     * If update is successful, the browser will be redirected to the 'view' page.
+     * Modifica un Reporte
+     *
      * @param integer $id
      * @return mixed
      */
@@ -116,8 +116,8 @@ class ReportesController extends Controller
     }
 
     /**
-     * Deletes an existing Reporte model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * Borra un Reporte
+     *
      * @param integer $id
      * @return mixed
      */
@@ -129,11 +129,12 @@ class ReportesController extends Controller
     }
 
     /**
-     * Finds the Reporte model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
+     * Encuentra un reporte basado en el modelo
+     *
+     *
      * @param integer $id
-     * @return Reporte the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
+     * @return El Reporte cargado
+     * @throws NotFoundHttpException si el modelo no puede ser encontrado
      */
     protected function findModel($id)
     {

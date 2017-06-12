@@ -35,6 +35,7 @@ $this->registerCss('html, body {
                  </p>
 
                  <h2>¿Nuevo en <span itemprop="name">animas</span>?</h2>
+
                  <p itemprop="description">
                      <span itemprop="name">Animas</span> Muestra las publicaciones de usuarios que quieren dar en ADOPCIÓN, APADRINAMIENTO o ACOGIDA mascotas o publicaciones de ALERTAS para animales que han podido escaparse
                      Echa un vistazo a la barra de menú. En la sección de <?= Html::a('Publicar', ['/publicaciones/create'])?> podrás dar a conocer al
@@ -47,6 +48,7 @@ $this->registerCss('html, body {
                  </p>
 
                  <h3>Cómo usar <span itemprop="name">Animas</span></h3>
+                 
                  <p itemprop="description">
                      Como ya sabes, los usuarios de <span itemprop="name">Animas</span> se registran en la plataforma y de esta manera pueden publicar anuncios para comunicar al restos de usuarios de la web de qué forman desean ayudar a una mascota.
                      Una vez accediendo a <?= Html::a('Publicar', ['/publicaciones/create'])?>, elemento que encontramos en el menú de navegación, se nos presentará un formulario, el cual debemos rellenar. Nos encontraremos con: el <strong>Título</strong>,
@@ -60,11 +62,7 @@ $this->registerCss('html, body {
                      También puedes ver las publicaciones de otros usuarios accediendo por el nombre de usuario que se encuentra en cada publicación anunciada en la página principal.
                  </p>
                  <br />
-                 <br />
             </div>
-
-
-
             <div class="">
                 <?= Html::img(Url::to('@web/fotos-animas/dribble.jpg'),['alt' => 'lobo animas', 'id' => 'img-about']) ?>
             </div>
