@@ -61,7 +61,6 @@ $this->registerCss('html, body {
                  </p>
                  <br />
                  <br />
-                 <h2> ¿No sabes qué significa cada Categoría? ¡No hay problema!</h2>
             </div>
 
 
