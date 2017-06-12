@@ -34,7 +34,7 @@ $this->registerCss('html, body {
                     Te animamos a que te sumes al mundo Animas, si es que no lo has hecho ya.
                  </p>
 
-                 <h3>¿Nuevo en <span itemprop="name">animas</span>?</h3>
+                 <h2>¿Nuevo en <span itemprop="name">animas</span>?</h2>
                  <p itemprop="description">
                      <span itemprop="name">Animas</span> Muestra las publicaciones de usuarios que quieren dar en ADOPCIÓN, APADRINAMIENTO o ACOGIDA mascotas o publicaciones de ALERTAS para animales que han podido escaparse
                      Echa un vistazo a la barra de menú. En la sección de <?= Html::a('Publicar', ['/publicaciones/create'])?> podrás dar a conocer al
@@ -63,10 +63,10 @@ $this->registerCss('html, body {
                  <br />
                  <h3> ¿No sabes qué significa cada Categoría? ¡No hay problema!</h3>
                  <ul style="color: white">
-                     <li><strong>ADOPCIÓN:</strong>Aquí el animal pasa a ser propiedad del adoptante. Dentro de la adopción puede ocurrir que el animal se entregue esterilizado, vacunado, con cartilla y pasaporte</li>
-                     <li><strong>ACOGIDA:</strong>Es Ofrecer una animal sin gasto para quien lo acoge. Quién lo acoge recibe pienso para el animal y todos los gastos veterinarios están cubiertos si quien ofrece la acogida es una protectora.</li>
-                     <li><strong>APADRINAMIENTO:</strong>Es mantener a un animal mientras éste está en otra estancia que no sea el hogar o propiedad local del usuario que apadrina. Dicho usuario ofrece cierta cantidad de dinero por su manutención a la protectora o hogar donde se estancia el animal apadrinado.</li>
-                     <li><strong>ALERTA:</strong>Indica que una mascota ha sido se ha escapado o perdido. El usuario que publica la alerta podrá indicar por el servicio de geolocalización de la aplicación en que lugar ha ocurrido</li>
+                     <li>ADOPCIÓN: Aquí el animal pasa a ser propiedad del adoptante. Dentro de la adopción puede ocurrir que el animal se entregue esterilizado, vacunado, con cartilla y pasaporte</li>
+                     <li>ACOGIDA: Es Ofrecer una animal sin gasto para quien lo acoge. Quién lo acoge recibe pienso para el animal y todos los gastos veterinarios están cubiertos si quien ofrece la acogida es una protectora.</li>
+                     <li>APADRINAMIENTO: Es mantener a un animal mientras éste está en otra estancia que no sea el hogar o propiedad local del usuario que apadrina. Dicho usuario ofrece cierta cantidad de dinero por su manutención a la protectora o hogar donde se estancia el animal apadrinado.</li>
+                     <li>ALERTA: Indica que una mascota ha sido se ha escapado o perdido. El usuario que publica la alerta podrá indicar por el servicio de geolocalización de la aplicación en que lugar ha ocurrido</li>
                  </ul>
             </div>
 
