@@ -66,7 +66,7 @@ $this->registerJs($js, View::POS_HEAD);
 
          array_unshift($items, ['label' => 'Mi Perfil', 'url' => ['/user/profile'/* . Yii::$app->user->id*/]]);
          array_unshift($items, ['label' => 'Configuración',  'url' => ['/user/settings/profile']]);
-         
+
     }
 
     NavBar::begin([
@@ -89,10 +89,10 @@ $this->registerJs($js, View::POS_HEAD);
     <br />
     <?php if(!(Yii::$app->user->isGuest) && Yii::$app->user->identity->isAdmin) { ?>
         <div class="nav-pills" style="background-color:black;">
-            <div class="row">
-                <div class="col-lg-3"><?= Html::a("Reportes",['/reportes/index'],['class' => 'btn btn-default']) ?></div>
-                <div class="col-lg-3"><?= Html::a("Usuarios",['/user/admin/index'],['class' => 'btn btn-default']) ?></div>
-                <div class="col-lg-3"><?= Html::a("Publicaciones",['/publicaciones/index'],['class' => 'btn btn-default']) ?></div>
+            <div class="menu-admin">
+                <div class=""><?= Html::a("Reportes",['/reportes/index'],['class' => 'btn btn-info']) ?></div>
+                <div class=""><?= Html::a("Usuarios",['/user/admin/index'],['class' => 'btn btn-info']) ?></div>
+                <div class=""><?= Html::a("Publicaciones",['/publicaciones/index'],['class' => 'btn btn-info']) ?></div>
             </div>
         </div>
     <?php } ?>

@@ -8,6 +8,14 @@ body {
     color:black;
 }
 
+.menu-admin {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 140px
+}
+
 h1, h2, h3, h4, h5, h6, p, label {
     font-family: 'Ubuntu', sans-serif;
     color: white;
@@ -44,6 +52,10 @@ div#perfil-padre {
     flex-flow: row;
     justify-content: space-around;
     align-items: center;
+}
+
+div.padre-sobre-nosotros {
+    text-align : justify;
 }
 
 div.summary {
