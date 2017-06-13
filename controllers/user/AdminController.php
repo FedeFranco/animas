@@ -37,11 +37,4 @@ class AdminController extends BaseAdminController
         ];
     }
 
-    /**
-     * Borra un usuario existente.
-     */
-    public function actionDelete($id)
-    {
-
-    }
 }  ?>

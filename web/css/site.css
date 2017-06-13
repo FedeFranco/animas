@@ -1,7 +1,11 @@
 html,
 body {
     height: 100%;
-    background-color: #19254B;
+    background-color: #77CDE1;
+}
+
+a {
+    color: #060432;
 }
 
 .panel h4, .panel p{
@@ -16,10 +20,17 @@ body {
     height: 140px
 }
 
-h1, h2, h3, h4, h5, h6, p, label {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Ubuntu', sans-serif;
-    color: white;
+    color: black;
 }
+
+p, label {
+    color: black;
+}
+/*a {
+    color: #8DD8E9;
+}*/
 .panel-body p {
     color: white;
 }
@@ -29,7 +40,7 @@ div.banners-imagenes {
 }
 
 div.panel {
-    background-color: #08102C;
+    background-color: #83B9CE;
 }
 
 div.item div.panel {
@@ -37,14 +48,14 @@ div.item div.panel {
 }
 
 div.panel-alerta, .panel-alerta h4{
-    color: white;
+    color: #83B9CE;
 }
 
 div.tt-dataset-publicaciones {
     margin-top: 2px;
     padding: 20px;
     border-radius: 2px;
-    background-color: blue;
+    background-color: #83B9CE;
 
 }
 
@@ -52,7 +63,7 @@ div.tt-dataset-texto {
     margin-top: 2px;
     padding: 20px;
     border-radius: 2px;
-    background-color: blue;
+    background-color: #83B9CE;
 }
 
 div#perfil-padre {
@@ -93,7 +104,7 @@ div.search-form-inputs {
 }
 
 div#cab-contacto h3 {
-    color: white;
+    color:black;
 }
 
 div#contacto-telf-view {
@@ -122,48 +133,45 @@ img.img-social {
 }
 
 /* Inicio Colocar categorias y clases animales*/
-a.fltr-check {
-    color: white;
-}
+
 
 div[data-property="categoria_id"] a.fltr-check:nth-child(2)::after {
     content: " - ADOPCIÓN";
-    color: white;
+
 }
 
 div[data-property="categoria_id"] a.fltr-check:nth-child(3)::after {
     content: " - ACOGIDA";
-    color: white;
 }
 
 div[data-property="categoria_id"] a.fltr-check:nth-child(4)::after {
     content: " - APADRINAMIENTO";
-    color: white;
+
 }
 
 div[data-property="categoria_id"] a.fltr-check:nth-child(5)::after {
     content: " - ALERTA";
-    color: white;
+
 }
 
 div[data-property="tipo_animal_id"] a.fltr-check:nth-child(2)::after{
     content: " - FELINO";
-    color: white;
+
 }
 
 div[data-property="tipo_animal_id"] a.fltr-check:nth-child(3)::after{
     content: " - CANINO";
-    color: white;
+
 }
 
 div[data-property="tipo_animal_id"] a.fltr-check:nth-child(4)::after{
     content: " - AVE";
-    color: white;
+
 }
 
 div[data-property="tipo_animal_id"] a.fltr-check:nth-child(5)::after{
     content: " - REPTIL";
-    color: white;
+
 }
 
 /* Inicio Colocar categorias y clases animales*/
@@ -369,6 +377,10 @@ a.desc:after {
 
 .footer {
     background-color: black;
+}
+
+.footer a {
+    color: #16B3F1;
 }
 
 @media(max-width:767px) {

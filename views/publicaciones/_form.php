@@ -66,27 +66,27 @@ $('#normas').click(function(){
     <?= $form->field($model, 'latitud')->hiddenInput(['id' => 'lat'])->label(false) ?>
     <?= $form->field($model, 'longitud')->hiddenInput(['id' => 'lon'])->label(false) ?>
 
-    <?= $form->field($model, 'titulo')->textInput(['maxlength' => true]) ?>
+    <?=  $form->field($model, 'titulo')->textInput(['maxlength' => true])?>
 
-    <?= $form->field($model, 'cuerpo')->textarea(['rows' => 6]) ?>
+    <?=  $form->field($model, 'cuerpo')->textarea(['rows' => 6]) ?>
 
-    <div>
+    <div style"color: white">
         <i>
             Puede adjuntar un enlace con contenido similar a tu publicación
         </i>
     </div>
-    <?= $form->field($model, 'url')?>
+    <?=  $form->field($model, 'url')?>
 
     <?= $form->field($model, 'categoria_id')->dropDownList($categorias) ?>
 
     <?= $form->field($model, 'tipo_animal_id')->dropDownList($tipos) ?>
 
-    <?= $form->field($model, 'telf_contacto')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'telf_contacto')->textInput() ?>
 
     <?= $form->field($model, 'imageFile')->fileInput() ?>
 
     <a id="normas">Normas de publicación</a>
-    <!--Html::a('Normas de publicaciones', ['publicaciones/normas']) -->
+
     <?= $form->field($model, 'confirm_pub')->checkbox(['id'=>'checknormas'])?>
     <div class="form-group">
 

@@ -25,10 +25,10 @@
                      <?= $model->categoria['nombre_categoria']?>
                  </h4>
                   <h4 class="media-heading">
-                    <?= Html::a($model->titulo,['/publicaciones/view', 'id' => $model->id])?>
+                    <?= Html::a(Html::encode($model->titulo),['/publicaciones/view', 'id' => $model->id])?>
                   </h4>
                   <div class="">
-                      <?= $model->cuerpo ?>
+                      <?= Html::encode($model->cuerpo) ?>
                   </div>
                  <div class="">
                      <div class=""> <?= Html::a($model->url,$model->url); ?></div>
@@ -73,7 +73,7 @@
                     <?= Html::a('Borrar', ['/publicaciones/delete', 'id' => $model->id], [
                         'class' => 'btn btn-danger',
                         'data' => [
-                            'confirm' => 'Are you sure you want to delete this item?',
+                            'confirm' => '¿Está seguro de borrar esta publicación?',
                             'method' => 'post',
                         ],
                     ]) ?>

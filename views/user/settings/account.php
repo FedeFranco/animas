@@ -67,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php if (($model->module->enableAccountDelete)): ?>
             <div class="panel panel-danger">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?= Yii::t('user', 'Delete account') ?></h3>
+                    <h3 class="panel-title"><?= Yii::t('user', 'Borrar Cuenta') ?></h3>
                 </div>
                 <div class="panel-body">
                     <p>
@@ -75,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?= Yii::t('user', 'Se borrará para siempre') ?>.
                         <?= Yii::t('user', 'Por favor, reconsidéralo') ?>.
                     </p>
-                    <?= Html::a(Yii::t('user', 'Delete account'), ['delete'], [
+                    <?= Html::a(Yii::t('user', 'Borrar Cuenta'), ['delete'], [
                         'class' => 'btn btn-danger',
                         'data-method' => 'post',
                         'data-confirm' => Yii::t('user', 'Estás seguro? No se podrá volver atrás'),

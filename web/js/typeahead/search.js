@@ -26,7 +26,7 @@ $('.typeahead').typeahead({
     displayKey: 'titulo',
     limit: 5,
     templates: {
-        header: '<h4 class="name" style="color: black; background-color: white;">Publicaciones</h4>',
+        header: '<h4 class="name" style="color: black; background-color: white; border: 1px solid black;">Publicaciones</h4>',
         suggestion: function(data) {
             html = '<div class="media"  style=" background-color: white;>';
             html += '<p"><a href ="' + publicacionesView + data.id + '">' + data.titulo +'</a></p>';
@@ -40,10 +40,10 @@ $('.typeahead').typeahead({
     displayKey: 'cuerpo',
     limit: 5,
     templates: {
-        header: '<h4 class="name" style="color: black; background-color: white;>Texto</h4>',
+        header: '<h4 class="name" style="color: black; background-color: white; border: 1px solid black;>Texto</h4>',
         suggestion: function(data) {
             html = '<div class="media row">';
-            html += '<div class="media-body style=" background-color: blue; ">';
+            html += '<div class="media-body style=" background-color: white; ">';
             html += '<p"><a href ="' + publicacionesView + data.id + '">' + data.cuerpo +'</a></p>';
             html += '</div></div>';
             return html;

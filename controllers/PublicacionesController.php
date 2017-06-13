@@ -157,6 +157,7 @@ class PublicacionesController extends Controller
             if ($imagen !== null) {
                 $model->imageFile = $imagen;
                 if ($model->save() && $model->upload()) {
+                    
                     return $this->redirect(['site/index']);
                 }
             }
@@ -194,7 +195,8 @@ class PublicacionesController extends Controller
             return $this->render('update', [
                 'model' => $model,
                 'tipos' => $tipos,
-                'categorias' => $categorias
+                'categorias' => $categorias,
+
             ]);
         }
     }

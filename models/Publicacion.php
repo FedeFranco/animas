@@ -63,10 +63,10 @@ class Publicacion extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'cuerpo' => 'Cuerpo',
+            'cuerpo' => 'Descripción',
             'titulo' => 'Titulo',
             'categor_nom' => 'Categoría',
-            'url' => 'URL',
+            'url' => 'Enlace',
             'imageFile' => 'Subir imagen',
             'latitud' => 'Latitud',
             'longitud' => 'Longitud',
@@ -75,7 +75,7 @@ class Publicacion extends \yii\db\ActiveRecord
             'categoria_id' => 'Categoría',
             'usuario_id' => 'Usuario ID',
             'fecha_publicacion' => 'Fecha',
-            'telf_contact' => 'Teléfono de contacto',
+            'telf_contacto' => 'Contacto',
         ];
     }
 
@@ -92,6 +92,7 @@ class Publicacion extends \yii\db\ActiveRecord
             }
         }
     }
+
 
     public function getImagen()
     {

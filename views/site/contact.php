@@ -21,6 +21,10 @@ $this->registerCss('
         background-color: #262233;
     }
 
+    h1, h2, p, div, label {
+        color: white;
+    }
+
 
 ');
 $this->title = 'Contacta con Animas';

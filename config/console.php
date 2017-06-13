@@ -8,6 +8,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
+    'modules' => [
+        'rbac' => 'dektrium\rbac\RbacConsoleModule',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',

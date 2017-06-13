@@ -7,7 +7,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Publicacion */
 
-//$this->title = $model->titulo;
+$this->title = $model->titulo;
 $this->params['breadcrumbs'][] = ['label' => 'Publicacions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
@@ -155,10 +155,9 @@ $this->registerJs($js)
             'categoria.nombre_categoria',
             'tipo.nombre_tipo_animal',
             'url',
-            'latitud',
-            'longitud',
             'usuario.username',
             'fecha_publicacion:relativeTime',
+
         ],
     ]) ?>
     <br>
@@ -174,6 +173,7 @@ $this->registerJs($js)
         <br/>
         <br/>
         <br/>
+		<strong style="color: black;">¡Para cambiar la ubicación tan solo pincha y arrastra! ¡se guardará automáticamente!</strong>
 		<div id="map-canvas" style="height: 280px;width: 100%;"></div>
     <!--    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?=$model->latitud?>,<?=$model->longitud?>&hl=es;z=14&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?q='+<?=$model->latitud?>+','+<?=$model->longitud?>+'&hl=es;z=14&amp;output=embed" style="color:#0000FF;text-align:left" target="_blank">Ver en Google Maps</a></small> -->
     <?php else:?>

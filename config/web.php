@@ -19,20 +19,14 @@ $config = [
             'cost' => 12,
             'admins' => ['admin'],
             'mailer' => [
-                'sender'                => 'animasporject15@gmail.com', // or ['no-reply@myhost.com' => 'Sender name']
-                'welcomeSubject'        => 'Bienvenido al proyecto animas',
+                'sender'                => ['animas@firemail.cc' => "Proyecto Animas"],
+                'welcomeSubject'        => 'Bienvenido al proyecto Animas',
                 'confirmationSubject'   => 'Mensaje de Confirmación',
                 'reconfirmationSubject' => 'Cambio de Email',
                 'recoverySubject'       => 'Recuperación de Contraseña',
             ],
             'controllerMap' => [
-                'registration' => [
-                     'class' => \dektrium\user\controllers\RegistrationController::className(),
-                     'on ' . \dektrium\user\controllers\RegistrationController::EVENT_AFTER_REGISTER => function ($e) {
-                         Yii::$app->response->redirect(array('/user/security/login'))->send();
-                         Yii::$app->end();
-                     }
-                ],
+                'registration' => 'app\controllers\user\RegistrationController',
                 'profile' => 'app\controllers\user\ProfileController',
                 'settings' => 'app\controllers\user\SettingsController',
                 'admin' => 'app\controllers\user\AdminController',
@@ -65,6 +59,7 @@ $config = [
     ],
 
     'components' => [
+
         'assetManager' => [
             'bundles' => [
                 'yii\web\JqueryAsset' => [
@@ -103,8 +98,8 @@ $config = [
             'useFileTransport' => false,
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
-                'host' => 'smtp.gmail.com',
-                'username' => 'animasporject15@gmail.com',
+                'host' => 'mail.cock.li',
+                'username' => 'animas@firemail.cc',
                 'password' => getenv('PASS'),
                 'port' => '587',
                 'encryption' => 'tls',
@@ -127,8 +122,9 @@ $config = [
             'rules' => [
                 'site/index' => 'site/index',
                 'site/filtro' => 'site/filtro'
-            ],
         ],
+
+       ],
 
     ],
     'language' => 'es-ES',
