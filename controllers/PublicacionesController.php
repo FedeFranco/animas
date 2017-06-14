@@ -127,7 +127,7 @@ class PublicacionesController extends Controller
                 'pageSize' => 10,
             ],
             'sort' => [
-                'attributes' => ['fecha_publicacion'],
+                'attributes' => ['fecha_publicacion' => SORT_DESC],
             ],
         ]);
 

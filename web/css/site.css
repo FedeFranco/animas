@@ -12,6 +12,7 @@ a {
     color:black;
 }
 
+
 .menu-admin {
     display: flex;
     flex-flow: row;
@@ -49,6 +50,10 @@ div.item div.panel {
 
 div.panel-alerta, .panel-alerta p, .panel-alerta h4{
     color: white;
+}
+
+div.panel-alerta a {
+    color: #3D56C5;
 }
 
 div.tt-dataset-publicaciones {
@@ -97,6 +102,10 @@ div.cuerpo-publicacion p {
 div.search-form-inputs {
     display: flex;
     flex-flow: row;
+}
+
+div.panel-heading h3.panel-title img.img-rounded {
+    display: none;
 }
 
 .search-form input {
@@ -174,6 +183,21 @@ div[data-property="tipo_animal_id"] a.fltr-check:nth-child(5)::after{
 
 }
 
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(6)::after{
+    content: " - ROEDOR";
+
+}
+
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(7)::after{
+    content: " - INSECTO";
+
+}
+
+div[data-property="tipo_animal_id"] a.fltr-check:nth-child(8)::after{
+    content: " - ACUÁTICO";
+
+}
 /* Inicio Colocar categorias y clases animales*/
 
 
