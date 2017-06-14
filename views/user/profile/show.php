@@ -15,6 +15,17 @@ use  yii\web\Request;
  * @var \yii\web\View $this
  * @var \dektrium\user\models\Profile $profile
  */
+ $this->registerCss('
+     html, body {
+         background-color: #E3E2DD;
+     }
+
+     h1, h2, p, div, label {
+         color: black;
+     }
+
+
+ ');
 $this->title = empty($profile->name) ? Html::encode($profile->user->username) : Html::encode($profile->name);
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -46,8 +57,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php if (!empty($profile->bio)): ?>
                         <p><?= Html::encode($profile->bio) ?></p>
                     <?php endif; ?>
-                    <?php if (($profile->user->id === Yii::$app->user->id)): ?>
-                        <h3>Tus publicaciones</h3>
+
+                    <?php if (sizeof($publicaciones) === 0 && $profile->user->id === Yii::$app->user->id): ?>
+                        <h3>No tienes publicaciones todavía &#9785;</h3>
+                    <?php elseif ($profile->user->id === Yii::$app->user->id):?>
+                        <h3>Publicaciones de <?= Html::encode($this->title); ?></h3>
                     <?php else: ?>
                         <h3>Publicaciones de <?= Html::encode($this->title); ?></h3>
                     <?php endif; ?>

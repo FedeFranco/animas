@@ -46,7 +46,7 @@ $this->registerJs($js, View::POS_HEAD);
     $items = [
         ['label' => 'Publicar', 'url' => ['/publicaciones/create']],
         ['label' => 'Búsqueda', 'url' => ['/site/filtro']],
-        ['label' => 'Sobre Animas', 'url' => ['/site/about']],
+        ['label' => 'Sobre Animas', 'url' => ['/site/about'], 'id' => 'sobre-anim'],
         Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'items' =>[['label' => 'Loguearse',
                                         'url' => ['/user/security/login']],
@@ -129,7 +129,13 @@ $this->registerJs($js, View::POS_HEAD);
             </div>
     </div>
 </footer>
-
+<script type="text/javascript">
+    $('nav ul li:nth-child(3)').attr("id","sobre-anim")
+    $('nav ul li:nth-child(2)').attr("id","busqueda-anim")
+    $('nav ul li:nth-child(1)').attr("id","publicar-anim")
+    $('nav ul li:nth-child(4)').attr("id","login-anim")
+    $('div.navbar-header a img').attr("id","icon-logo-animas")
+</script>
 <?php $this->endBody() ?>
 </body>
 </html>

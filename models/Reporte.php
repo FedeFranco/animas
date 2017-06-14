@@ -48,20 +48,19 @@ class Reporte extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'reportador_id' => 'Reportador ID',
-            'reportado_id' => 'Reportado ID',
-            'publicacion_id' => 'Publicacion ID',
-            'cuerpo' => 'Cuerpo',
+            'reportador_id' => 'Reportador',
+            'reportado_id' => 'Reportado',
+            'publicacion_id' => 'Publicacion',
+            'cuerpo' => 'Descripción',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getPublicacion()
+    public function getPublicacionReporte()
     {
-        return $this->hasOne(Publicaciones::className(), ['id' => 'publicacion_id'])->inverseOf('reportes');
+        return $this->hasOne(Publicacion::className(), ['id' => 'publicacion_id'])->inverseOf('reporte');
     }
 
     /**

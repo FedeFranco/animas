@@ -127,7 +127,10 @@ function handleNoGeolocation(errorFlag) {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 JS;
-$this->registerJs($js)
+$this->registerJs($js);
+$this->registerCss('
+	html, body {background-color:#EDE4CD; }
+');
 ?>
 <div class="publicacion-view">
 

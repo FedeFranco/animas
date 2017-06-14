@@ -16,18 +16,23 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Reporte', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Reporte', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'reportador.username',
-            'reportado.username',
-            'publicacion_id',
+            [
+                'label'=>'Reportador',
+                'format' => 'raw',
+                'value'=> 'reportador.username'
+            ],
+            [
+                'label'=>'Reportado',
+                'format' => 'raw',
+                'value'=> 'reportado.username'
+            ],
             'cuerpo:ntext',
 
             ['class' => 'yii\grid\ActionColumn'],

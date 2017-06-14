@@ -1,7 +1,7 @@
 html,
 body {
     height: 100%;
-    background-color: #77CDE1;
+    background-color: white;
 }
 
 a {
@@ -28,9 +28,9 @@ h1, h2, h3, h4, h5, h6 {
 p, label {
     color: black;
 }
-/*a {
-    color: #8DD8E9;
-}*/
+a {
+    color: #1698DE;
+}
 .panel-body p {
     color: white;
 }
@@ -40,15 +40,15 @@ div.banners-imagenes {
 }
 
 div.panel {
-    background-color: #83B9CE;
+    background-color: #EDE4CD;
 }
 
 div.item div.panel {
     background-color: white;
 }
 
-div.panel-alerta, .panel-alerta h4{
-    color: #83B9CE;
+div.panel-alerta, .panel-alerta p, .panel-alerta h4{
+    color: white;
 }
 
 div.tt-dataset-publicaciones {
@@ -77,16 +77,16 @@ div.padre-sobre-nosotros {
     text-align : justify;
 }
 
-div.summary {
-    color: white;
-}
-
 div.empty {
     color: black;
 }
 
 div.site-filtro {
     color: white;
+}
+
+div.cuerpo-publicacion p {
+    word-break: break-all;
 }
 
 .search-form {
@@ -216,7 +216,7 @@ button:active:after {
 }
 /* fin de animar botones*/
 div strong {
-    color: white;
+    color: black;
     font-size: 20px;
 }
 
@@ -257,6 +257,10 @@ table.table-striped {
     flex-flow: row;
     justify-content: center;
     align-items: center;
+}
+
+.footer p {
+    color: white;
 }
 
 .footer-padre div{

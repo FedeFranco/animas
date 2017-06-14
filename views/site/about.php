@@ -13,10 +13,10 @@ FontAsset::register($this);
 
 $this->title = 'Sobre Animas';
 $this->registerCss('html, body {
-                    background-color: #101727;
+                    background-color: #E3E2DD;
                 }
 
-                h1, h2, h3, p, span { color: white;}
+                h1, h2, h3, p, span { color: black;}
                 a {color: #16B3F1;}
 
 ');
@@ -69,7 +69,7 @@ $this->registerCss('html, body {
                  <br />
             </div>
             <div class="">
-                <?= Html::img(Url::to('@web/fotos-animas/dribble.jpg'),['alt' => 'lobo animas', 'id' => 'img-about']) ?>
+                <?= Html::img(Url::to('@web/fotos-animas/dribble-trans.png'),['alt' => 'lobo animas', 'id' => 'img-about']) ?>
             </div>
             <h5>
                 <span itemprop="founder">Desarrollado por Jesús Franco</span>

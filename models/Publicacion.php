@@ -123,6 +123,11 @@ class Publicacion extends \yii\db\ActiveRecord
         return $this->hasOne(TipoAnimal::className(), ['id' => 'tipo_animal_id'])->inverseOf('publicacionTipo');
     }
 
+    public function getReporte()
+    {
+        return $this->hasOne(Categoria::className(), ['id' => 'categoria_id'])->inverseOf('publicacionReporte');
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */

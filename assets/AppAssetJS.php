@@ -20,6 +20,7 @@ class AppAssetJS extends AssetBundle
     public $css = [
         'js/slick-master/slick/slick.css',
         'js/slick-master/slick/slick-theme.css',
+        'js/bootstrap-tour-0.11.0/build/css/bootstrap-tour-standalone.min.css'
     ];
     public $js = [
         'js/slick-master/slick/slick.min.js',
@@ -27,6 +28,9 @@ class AppAssetJS extends AssetBundle
         'js/typeahead/bloodhound.js',
         'js/typeahead/search.js',
         'js/jquery-validation-1.16.0/dist/jquery.validate.js',
+        'js/bootstrap-tour-0.11.0/build/js/bootstrap-tour-standalone.js',
+        'js/bootstrap-tour-0.11.0/build/js/bootstrap-tour-standalone.min.js',
+        'js/tour.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

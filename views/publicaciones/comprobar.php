@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <br>
 
-    <h3 style="color:white;">Publicaciones a <span id="km">1</span> Km:</h3>
+    <h3 style="color: black">Publicaciones a <span id="km">1</span> Km:</h3>
 
     <div id="grid-comprobar">
 

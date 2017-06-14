@@ -45,13 +45,8 @@ $this->title = 'Animas';
 $this->registerCss("
   html, body {
       height: 100%;
-      /*background: red;
-      background: -webkit-linear-gradient(#C6E272,#86CC86, #3D8C84);
-      background: -o-linear-gradient(#C6E272,#86CC86, #3D8C84);
-      background: -moz-linear-gradient(#C6E272,#86CC86, #3D8C84);/
-      background: linear-gradient(#C6E272,#86CC86, #3D8C84);  */
 
-      background-color: #86CC86;
+      background-color: #E3E2DD;
   }
 
   .img-banner {
@@ -75,7 +70,7 @@ $this->registerCss("
         <label for="oculto2">
             <input type="hidden" id="oculto2" name="latitud" value=""/>
         </label>
-        <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar']) ?>
+        <?= Html::button('Comprobar', ['class' => 'btn btn-primary comprobar', 'id' => 'bot-comprobar-cercanos']) ?>
         <br />
         <br />
         <form class="form-index" method="GET" action="<?=Url::to(['/site/search'])?>">

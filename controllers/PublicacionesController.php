@@ -118,6 +118,7 @@ class PublicacionesController extends Controller
             if( $distancia < $km) {
                 $cercanos[] = $publicacion;
             }
+
         }
 
         $provider = new ArrayDataProvider([
@@ -157,7 +158,7 @@ class PublicacionesController extends Controller
             if ($imagen !== null) {
                 $model->imageFile = $imagen;
                 if ($model->save() && $model->upload()) {
-                    
+
                     return $this->redirect(['site/index']);
                 }
             }

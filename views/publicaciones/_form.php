@@ -81,7 +81,7 @@ $('#normas').click(function(){
 
     <?= $form->field($model, 'tipo_animal_id')->dropDownList($tipos) ?>
 
-    <?= $form->field($model, 'telf_contacto')->textInput() ?>
+    <?= $form->field($model, 'telf_contacto')->textInput(['type' => 'number', 'min' => '1', 'max' => '9', 'maxlength' => '9', "pattern"=>"[0-9]{9}"]) ?>
 
     <?= $form->field($model, 'imageFile')->fileInput() ?>
 

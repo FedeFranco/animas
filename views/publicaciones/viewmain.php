@@ -20,15 +20,15 @@
              <?= Html::a(Html::img($model->imagen,['width' => '200px','height'=>'200px', 'alt' => 'img-publicacion', 'class' => 'img-circle', 'style' => 'padding: 15px;']), ['/publicaciones/view', 'id' => $model->id]) ?>
           </div>
           <div class="row media-body" style="padding: 15px">
-              <div class="col-xs-8 col-sm-8">
+              <div class="col-xs-12 col-sm-8">
                   <h4>
                      <?= $model->categoria['nombre_categoria']?>
                  </h4>
                   <h4 class="media-heading">
                     <?= Html::a(Html::encode($model->titulo),['/publicaciones/view', 'id' => $model->id])?>
                   </h4>
-                  <div class="">
-                      <?= Html::encode($model->cuerpo) ?>
+                  <div class="cuerpo-publicacion">
+                      <p><?= Html::encode($model->cuerpo) ?><p>
                   </div>
                  <div class="">
                      <div class=""> <?= Html::a($model->url,$model->url); ?></div>
