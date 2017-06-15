@@ -12,7 +12,9 @@ html, body {
     background-color: #19254B;
 }
 
-ul {
+
+
+ul, h1, p {
     color: white;
     font-family: "Ubuntu", serif;
 }
