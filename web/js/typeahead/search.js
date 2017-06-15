@@ -7,14 +7,14 @@ var publicaciones = new Bloodhound({
     }
 });
 
-/*var publicacion = new Bloodhound({
+var publicacion = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
     queryTokenizer: Bloodhound.tokenizers.whitespace,
     remote: {
         url: urlPublicaciones,
         wildcard: '%QUERY'
     }
-});*/
+});
 
 
 $('.typeahead').typeahead({
