@@ -3,6 +3,8 @@ use yii\widgets\ListView;
 use yii\helpers\Html;
 use yii\helpers\Url;
 $this->title = 'Resultados de la busqueda de: "'.$q.'"';
+
+$this->registerCss('html, body {height: auto;}');
 ?>
 
 <h2><?=$this->title?></h2>
@@ -25,15 +27,8 @@ $this->title = 'Resultados de la busqueda de: "'.$q.'"';
           ]) ?>
       </div>
   </div>
-
-  <div role="tabpanel" class="tab-pane active" id="publicacion"></br>
-      <div class="row">
-          <?= ListView::widget([
-          'dataProvider' => $publicacionProvider,
-          'itemOptions' => ['class' => 'item'],
-          'itemView' => '/publicaciones/viewSearch',
-          'layout' => "{items}\n{pager}",
-          ]) ?>
-      </div>
-  </div>
-</div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
